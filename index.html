@@ -23,11 +23,11 @@
         font-family: "Cormorant Infant", serif;
       }
       h1, h2, h3, h4, h5, h6 { font-weight: normal; line-height: 1;}
-      h1 { font-size: 12rem; }
-      h2 { font-size: 4.44rem; }
+      h1 { font-size: 10.8rem; }
+      h2 { font-size: 4.32rem; }
       h3 { font-size: 3rem; }
-      h4 { font-size: 2rem; }
-      h5 { font-size: 1rem; }
+      h4 { font-size: 1.928rem; }
+      h5 { font-size: 1.6rem; }
       small { font-size: .5em; }
 
       section { text-align: center;}
@@ -35,7 +35,7 @@
   </head>
 
   <body>
-    <nav style="align-self: flex-end; margin: .5rem 1rem;">
+    <nav style="align-self: flex-end; margin: .5rem 1rem; position: absolute">
       <a href="#ru">Русский</a> / <a href="#en">English</a>
     </nav>
 
@@ -43,6 +43,7 @@
       <style>
         #hero {
           display: flex;
+          height: 90vh;
           flex-direction: column;
           position: relative;
           background: radial-gradient(40% 16% at 50% 0%, #1C1113 0%, #00000000 100%), var(--bg-primary);
@@ -52,7 +53,7 @@
         }
       </style>
 
-      <h4>По мотивам 6-й песни Шримад Бхагаватам</h4>
+      <h4 style="margin-top: 3.2rem; font-variant: small-caps; letter-spacing: .108ch;">Фильм по мотивам 6-й песни Шримад Бхагаватам</h4>
 
       <div id="characters" style="max-width: 1080px; align-self: center;">
         <style>
@@ -61,7 +62,7 @@
             height: 40rem;
             min-width: 54rem;
             width: 60vw;
-            margin-top: 10rem;
+            margin-top: 5.4rem;
             img {
               position: absolute;
               inset: auto 0 0; margin: 0 auto;
@@ -129,8 +130,8 @@
         -->
       </div>
 
-      <header id="header" style="z-index: 1; margin-top: -16rem;">
-        <h1 style="line-height: 0.8; text-transform: uppercase;">
+      <header id="header" style="z-index: 1; margin-top: -16rem; text-shadow: 0 2px black;">
+        <h1 style="line-height: 0.85; text-transform: uppercase;">
           <small style="text-transform: none;">Еще Один</small><br />
           Шанс
         </h1>
@@ -138,31 +139,60 @@
       </header>
     </section>
 
-    <section id="details" style="">
+    <section id="details">
+      <style>
+        #details {
+          margin: 1rem auto;
+          max-width: 1080px;
+          dl {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            dt {
+              text-transform: uppercase;
+              opacity: .5;
+              letter-spacing: .16ch;
+            }
+            dd {
+              font-size: 1.6rem;
+              font-variant-numeric: lining-nums;
+            }
+          }
+        }
+      </style>
       <dl>
-        <dt>Жанр</dt>
-        <dd>Мелодрама, драма, исторический, фэнтези</dd>
-
-        <dt>Продолжительность</dt>
-        <dd>1 час 45 минут</dd>
-
-        <dt>Рейтинг</dt>
-        <dd>12+</dd>
-
-        <dt>Дата релиза</dt>
-        <dd>2025 год</dd>
-
-        <dt>Формат</dt>
-        <dd>4K HDR • Dolby</dd>
-
-        <dt>Язык</dt>
-        <dd>Русский, Английский</dd>
-
-        <dt>Отзывы</dt>
-        <dd>Imdb, кинопоиск</dd>
-
-        <dt>Режиссёр</dt>
-        <dd>Наталия Гугуева</dd>
+        <div>
+          <dt>Жанр</dt>
+          <dd>Духовный, Драма</dd>
+        </div>
+        <div>
+          <dt>Продолжительность</dt>
+          <dd>1 час 45 минут</dd>
+        </div>
+        <div>
+          <dt>Рейтинг</dt>
+          <dd>12+</dd>
+        </div>
+        <div>
+          <dt>Дата релиза</dt>
+          <dd>2025 год</dd>
+        </div>
+        <div>
+          <dt>Формат</dt>
+          <dd>4K HDR • Dolby</dd>
+        </div>
+        <div>
+          <dt>Язык</dt>
+          <dd>Русский, Английский</dd>
+        </div>
+        <div>
+          <dt>Отзывы</dt>
+          <dd>Кинопоиск</dd>
+        </div>
+        <div>
+          <dt>Режиссёр</dt>
+          <dd>Наталия Гугуева</dd>
+        </div>
       </dl>
 
       <p id="synopsis">
