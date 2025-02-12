@@ -21,7 +21,6 @@
 * Quiz
 * Quotes from SB
 * Themes Explored
-  Discuss key themes like:
   Karma and Redemption
   Moral and Spiritual Conflict
   Freedom of Choice

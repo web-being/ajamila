@@ -1,170 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One More Chance - The Story of Ajamil</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Spectral:wght@300;400;600&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Cormorant+Infant&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: normal;
+        background: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+      }
+      small {
+        font-family: "Cormorant Infant", serif;
+      }
+      h1, h2, h3, h4, h5, h6 { font-weight: normal; line-height: 1;}
+      h1 { font-size: 12rem; }
+      h2 { font-size: 4.44rem; }
+      h3 { font-size: 3rem; }
+      h4 { font-size: 2rem; }
+      h5 { font-size: 1rem; }
+      small { font-size: .5em; }
+
+      section { text-align: center;}
+    </style>
   </head>
 
   <body>
-    <div class="hero">
+    <nav style="align-self: flex-end; margin: .5rem 1rem;">
+      <a href="#ru">Русский</a> / <a href="#en">English</a>
+    </nav>
+
+    <section id="hero">
       <style>
-        .hero {
+        #hero {
           display: flex;
           flex-direction: column;
           position: relative;
           background: radial-gradient(40% 16% at 50% 0%, #1C1113 0%, #00000000 100%), var(--bg-primary);
-          ;
           background-size: contain;
           background-position: center top;
           background-repeat: no-repeat;
         }
       </style>
 
-      </style>
-      <header style="text-align: center;">
-        <h5>По мотивам 6-й песни Шримад Бхагаватам</h5>
-      </header>
+      <h4>По мотивам 6-й песни Шримад Бхагаватам</h4>
 
-
-
-      <div class="hero-content">
+      <div id="characters" style="max-width: 1080px; align-self: center;">
         <style>
-          .hero-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            text-align: center;
-            max-width: 1080px;
-            margin: 0 auto;
-            padding-bottom: 5rem;
-            width: 100%;
-            aspect-ratio: 1.08;
-            background: url(./img/arch.svg), radial-gradient(66.26% 75.26% at 50% 82.56%, #050404 6.29%, #160A08 50.05%, #26100C 100%);
-            background-size: contain;
-            background-position: center top;
-            background-repeat: no-repeat;
+          #characters {
             position: relative;
-          }
-
-          .hero-content h1 {
-            font-family: var(--font-display);
-            font-size: 5rem;
-            margin: 0;
-            line-height: 1.1;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-            background: linear-gradient(120deg, var(--text-primary), var(--accent));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-          }
-
-          .hero-content h2 {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            margin: 0;
-            margin-bottom: var(--spacing-sm);
-            font-weight: 500;
-            letter-spacing: 0.04em;
-            opacity: 0.9;
+            height: 40rem;
+            min-width: 54rem;
+            width: 60vw;
+            margin-top: 10rem;
+            img {
+              position: absolute;
+              inset: auto 0 0; margin: 0 auto;
+            }
           }
         </style>
-        <div id="characters">
+        <img src="./img/kamali.png" style="right: -30rem; width: 27rem; bottom: 3rem;"/>
+        <img src="./img/varsha.png" style="left: -29rem; width: 27rem; bottom: 5.4rem;"/>
+        <img src="./img/ajamil.png" style="left: -3rem; width: 40rem;"/>
+        <!--
+        <div id="varsha" class="character">
+          <video muted loop width="100%" onmouseenter="this.play();"
+                  onmouseleave="this.pause()">
+            <source src="./img/Varsha.webm" type="video/webm">
+          </video>
           <style>
-            #characters {
-              position: relative;
-              width: 100%;
-              height: 80vh;
-              margin-top: 16rem;
+            #varsha {
+              position: absolute;
+              width: 30%;
+              z-index: 1;
+              top: 0;
+              left: 0;
+            }
+
+            #varsha:after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 50%;
+              background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%)
             }
           </style>
-          <div id="varsha" class="character">
-            <video muted loop width="100%" onmouseenter="this.play();"
-                   onmouseleave="this.pause()">
-              <source src="./img/Varsha.webm" type="video/webm">
-            </video>
-            <style>
-              #varsha {
-                position: absolute;
-                width: 33%;
-                z-index: 1;
-                top: 0;
-                left: 0;
-              }
-
-              #varsha:after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 50%;
-                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%)
-              }
-            </style>
-          </div>
-          <div id="ajamil" class="character">
-            <style>
-              #ajamil {
-                position: absolute;
-                top: 0;
-                width: 60%;
-                z-index: 2;
-                left: 0;
-                right: 0;
-                margin: auto
-              }
-            </style>
-            <img src="./img/ajamil.png" alt="Ajamil">
-          </div>
-          <div id="kamali" class="character">
-            <style>
-              #kamali {
-                position: absolute;
-                width: 33%;
-                right: 0;
-                top: 0;
-                z-index: 0;
-              }
-            </style>
-            <img src="./img/kamali.png" alt="Kamali">
-          </div>
         </div>
-        <h1><small>Еще один</small><br />Шанс</h1>
-        <h2>История Аджамилы</h2>
-      </div>
-    </div>
-
-    <section id="trailer" class="trailer-section">
-      <div class="container">
-        <h2>Official Trailer</h2>
-        <div class="video-container">
-          <div class="video-placeholder">
-            <img src="trailer-thumbnail.jpg" alt="Movie Trailer Thumbnail">
-            <button class="play-button">▶</button>
-          </div>
+        <div id="ajamil" class="character">
+          <style>
+            #ajamil {
+              position: absolute;
+              top: 0;
+              width: 66%;
+              z-index: 2;
+              left: 0;
+              right: 0;
+              margin: auto
+            }
+          </style>
+          <video muted loop width="100%" onmouseenter="this.play();"
+                  onmouseleave="this.pause()">
+            <source src="./img/ajamil.webm" type="video/webm">
+          </video>
         </div>
+        <div id="kamali" class="character">
+          <style>
+            #kamali {
+              position: absolute;
+              width: 33%;
+              right: 0;
+              top: 0;
+              z-index: 0;
+            }
+          </style>
+          <img src="./img/kamali.png" alt="Kamali">
+        </div>
+        -->
       </div>
+
+      <header id="header" style="z-index: 1; margin-top: -16rem;">
+        <h1 style="line-height: 0.8; text-transform: uppercase;">
+          <small style="text-transform: none;">Еще Один</small><br />
+          Шанс
+        </h1>
+        <h2 style="margin-top: 1rem"><em>История Аджамилы</em></h2>
+      </header>
     </section>
 
-    <section id="story" class="story-section">
-      <h2>The Story</h2>
+    <section id="details" style="">
+      <dl>
+        <dt>Жанр</dt>
+        <dd>Мелодрама, драма, исторический, фэнтези</dd>
+
+        <dt>Продолжительность</dt>
+        <dd>1 час 45 минут</dd>
+
+        <dt>Рейтинг</dt>
+        <dd>12+</dd>
+
+        <dt>Дата релиза</dt>
+        <dd>2025 год</dd>
+
+        <dt>Формат</dt>
+        <dd>4K HDR • Dolby</dd>
+
+        <dt>Язык</dt>
+        <dd>Русский, Английский</dd>
+
+        <dt>Отзывы</dt>
+        <dd>Imdb, кинопоиск</dd>
+
+        <dt>Режиссёр</dt>
+        <dd>Наталия Гугуева</dd>
+      </dl>
+
+      <p id="synopsis">
+        Чистота, правдивость и аскетизм были жизнью юного Аджамилы. Но неожиданная страсть к куртизанке захлестнула его, заставив мошенничать, грабить и убивать. Он пал так низко, что, казалось, врата преисподней открыты…
+        Что же ждёт его в конце жизни? Сможет ли он избежать расплаты за свои грехи? Или у Аджамилы есть ещё один шанс?
+      </p>
+
+      <button class="play-button">▶ Смотреть трейлер</button>
+
+      <a>Поделиться</a>
+    </section>
+
+    <section id="topics">
+      <ul>
+        <li>Epic Drama - Experience the grandeur of ancient Vedic times brought to life</li>
+        <li>Eternal Wisdom - Timeless teachings that resonate with modern hearts</li>
+        <li>Divine Grace - A story of ultimate redemption and spiritual transformation</li>
+        <li>Internal Conflict - Witness Ajamila's struggle between righteousness and temptation, a battle that resonates with the human experience across all times.</li>
+        <li>Karmic Journey - Explore the intricate web of karma as Ajamila's choices shape his destiny, offering insights into the cosmic laws of cause and effect.</li>
+        <li>Spiritual Reality - Delve into the hidden dimensions of existence, where divine intervention and spiritual truths shape the course of Ajamila's life.</li>
+        Karma and Redemption
+        Moral and Spiritual Conflict
+        Freedom of Choice
+        The Duality of Human Nature
+        Spiritual Awakening
+      </ul>
+    </section>
+
+    <section id="festivals">фестивали, награды</section>
+
+    <section id="quotes">
+      <h2>Философия</h2>
       <div class="story-content">
         <div class="story-text">
-          <p class="lead">A tale from ancient Puranas that resonates with the
-            eternal human struggle
-            between righteousness and temptation.</p>
+          <p class="lead">Цитата из ШБ</p>
 
           <div class="story-paragraph">
             <p>Ajamila, a young man from the spiritual class, lives a righteous
@@ -206,46 +239,19 @@
             and has real value in our lives.</p>
         </div>
       </div>
+
+      Исторический - культурный контекст
     </section>
 
-    <section id="features" class="features-section">
-      <h2>Movie Details</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">⏱️</div>
-          <span class="feature-label">Duration</span>
-          <span class="feature-value">2h 35m</span>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📅</div>
-          <span class="feature-label">Release Date</span>
-          <span class="feature-value">Dec 21, 2024</span>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎭</div>
-          <span class="feature-label">Genre</span>
-          <span class="feature-value">Epic Drama</span>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⭐</div>
-          <span class="feature-label">Rating</span>
-          <span class="feature-value">PG-13</span>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎞️</div>
-          <span class="feature-label">Format</span>
-          <span class="feature-value">IMAX • Dolby</span>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🌏</div>
-          <span class="feature-label">Languages</span>
-          <span class="feature-value">Multi-language</span>
-        </div>
-      </div>
+    <section id="frames">
+      <h2>Кадры</h2>
     </section>
 
     <section id="cast" class="cast-section">
-      <h2>Starring</h2>
+      <h2>Актерский состав</h2>
+      •	Андрей Коновалов
+      •	Лидия Бельская
+      •	Инна Ершова
       <div class="cast-grid">
         <div class="cast-card">
           <img src="cast/ajamil.jpg" alt="Actor playing Ajamil">
@@ -267,25 +273,57 @@
       </div>
     </section>
 
-    <section id="wisdom" class="wisdom-section">
-      <div class="wisdom-grid">
-        <div class="wisdom-card">
-          <h3>Divine Grace</h3>
-          <p>Explore the boundless mercy of the divine</p>
-        </div>
-        <div class="wisdom-card">
-          <h3>Redemption</h3>
-          <p>It's never too late to transform</p>
-        </div>
-        <div class="wisdom-card">
-          <h3>Eternal Truth</h3>
-          <p>Timeless wisdom for modern times</p>
-        </div>
-      </div>
+    <section id="team">
+      <h2>Творческая команда</h2>
+      Режиссёр: Юлия Брославская
+      •	Сценарий: Олег Ерёменко
+      •	Композиторы: Константин Дюжарден, Владислав Якутко, Антон Кайгородов
+      •	Оператор: Наталья Голомай
+      •	Продюсер: Юлия Брославская
+    </section>
+
+    <section id="soundtrack">
+      <h2>Музыка в фильме</h2>
+      •	Щипковая, Волшебные звуки, Шум ветра – Константин Дюжарден
+      •	Вальс пианино, Сон – Антон Кайгородов
+      •	Жена плачет – Владислав Якутко
+    </section>
+
+    <section id="outro">
+      <p>In the depths of darkness, even the faintest light can guide us home.</p>
+    </section>
+
+    <section id="news">
+      <h2>События</h2>
+    </section>
+
+    <section id="reflections">
+      <h2>Осмысление</h2>
+      <label>Что вам откликнулось? Какие мысли?</label>
+      <textarea></textarea>
+    </section>
+
+    <section id="quiz">
+      <h2>Проверь себя</h2>
+      Вопросы по Аджамиле
+    </section>
+
+    <section id="education">
+      Educational resources
+    </section>
+
+    <section id="other">
+      See also
     </section>
 
     <footer>
-      <p>&copy; 2024 One More Chance. All rights reserved.</p>
+      <nav>
+        home, watch now, trailer, merch
+        about, contact
+        ig, fb, yt, x
+        terms, privacy
+      </nav>
+      <p>© 2024 One More Chance - The Story of Ajamila. All rights reserved.</p>
     </footer>
   </body>
 
