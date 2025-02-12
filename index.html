@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Cormorant+Infant&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Cormorant+Infant&display=swap"
+          rel="stylesheet">
 
     <style>
       body {
@@ -18,19 +19,72 @@
         color: white;
         display: flex;
         flex-direction: column;
+        font-size: 1.08rem;
       }
+
       small {
         font-family: "Cormorant Infant", serif;
       }
-      h1, h2, h3, h4, h5, h6 { font-weight: normal; line-height: 1;}
-      h1 { font-size: 10.8rem; }
-      h2 { font-size: 4.32rem; }
-      h3 { font-size: 3rem; }
-      h4 { font-size: 1.928rem; }
-      h5 { font-size: 1.6rem; }
-      small { font-size: .5em; }
 
-      section { text-align: center;}
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: normal;
+        line-height: 1;
+      }
+
+      h1 {
+        font-size: 10.8rem;
+      }
+
+      h2 {
+        font-size: 4.32rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+      }
+
+      h4 {
+        font-size: 1.928rem;
+      }
+
+      h5 {
+        font-size: 1.6rem;
+      }
+
+      small {
+        font-size: .5em;
+      }
+
+      section {
+        text-align: center;
+      }
+
+      button {
+        background: floralwhite;
+        border-radius: 2rem;
+        border: none;
+        font-style: italic;
+        font-size: 1.6rem;
+        padding: .5rem 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+          background: white;
+        }
+
+        &::before {
+          content: attr(icon);
+          font-style: normal;
+          margin-right: 1ch;
+          vertical-align: middle;
+          font-size: .8em;
+        }
+      }
     </style>
   </head>
 
@@ -46,32 +100,43 @@
           height: 90vh;
           flex-direction: column;
           position: relative;
-          background: radial-gradient(40% 16% at 50% 0%, #1C1113 0%, #00000000 100%), var(--bg-primary);
+          background: linear-gradient(to top, black 0%, #00000000 50%), url(./img/arch.svg), radial-gradient(66.26% 75.26% at 50% 82.56%, #050404 6.29%, #160A08 50.05%, #26100C 100%);
           background-size: contain;
           background-position: center top;
           background-repeat: no-repeat;
+          /* radial */
+          max-width: 1080px;
+          margin: 0 auto;
         }
       </style>
 
-      <h4 style="margin-top: 3.2rem; font-variant: small-caps; letter-spacing: .108ch;">Фильм по мотивам 6-й песни Шримад Бхагаватам</h4>
+      <h4
+          style="padding: 3.2rem 0; font-variant: small-caps; letter-spacing: .108ch; background: radial-gradient(40% 100% at 50% 0%, #322326 0%, #00000000 100%) center top no-repeat">
+        Фильм по мотивам 6-й песни Шримад Бхагаватам</h4>
 
-      <div id="characters" style="max-width: 1080px; align-self: center;">
+      <div id="characters">
         <style>
           #characters {
             position: relative;
             height: 40rem;
-            min-width: 54rem;
+            min-width: 43.2rem;
             width: 60vw;
             margin-top: 5.4rem;
+            max-width: 1080px;
+            align-self: center;
+
             img {
               position: absolute;
-              inset: auto 0 0; margin: 0 auto;
+              inset: auto 0 0;
+              margin: 0 auto;
             }
           }
         </style>
-        <img src="./img/kamali.png" style="right: -30rem; width: 27rem; bottom: 3rem;"/>
-        <img src="./img/varsha.png" style="left: -29rem; width: 27rem; bottom: 5.4rem;"/>
-        <img src="./img/ajamil.png" style="left: -3rem; width: 40rem;"/>
+        <img src="./img/kamali.png"
+             style="right: -30rem; width: 27rem; bottom: 3rem;" />
+        <img src="./img/varsha.png"
+             style="left: -29rem; width: 27rem; bottom: 5.4rem;" />
+        <img src="./img/ajamil.png" style="left: -3rem; width: 40rem;" />
         <!--
         <div id="varsha" class="character">
           <video muted loop width="100%" onmouseenter="this.play();"
@@ -130,29 +195,40 @@
         -->
       </div>
 
-      <header id="header" style="z-index: 1; margin-top: -16rem; text-shadow: 0 2px black;">
+      <header id="header"
+              style="z-index: 1; margin-top: -17.28rem; text-shadow: 0 2px black;">
         <h1 style="line-height: 0.85; text-transform: uppercase;">
           <small style="text-transform: none;">Еще Один</small><br />
           Шанс
         </h1>
-        <h2 style="margin-top: 1rem"><em>История Аджамилы</em></h2>
+        <h2 style="margin: 1rem 0 0rem"><em>История Аджамилы</em></h2>
       </header>
     </section>
+
+    <button id="play" icon="▶" style="align-self: center;">Смотреть
+      трейлер</button>
 
     <section id="details">
       <style>
         #details {
-          margin: 1rem auto;
+          margin: 4rem auto;
           max-width: 1080px;
+          width: 100%;
+          padding: 0 2.7rem;
+          line-height: 1;
+
           dl {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
+            gap: 2.7rem;
+
             dt {
               text-transform: uppercase;
               opacity: .5;
               letter-spacing: .16ch;
+              margin-bottom: 0.5rem;
             }
+
             dd {
               font-size: 1.6rem;
               font-variant-numeric: lining-nums;
@@ -194,25 +270,41 @@
           <dd>Наталия Гугуева</dd>
         </div>
       </dl>
-
-      <p id="synopsis">
-        Чистота, правдивость и аскетизм были жизнью юного Аджамилы. Но неожиданная страсть к куртизанке захлестнула его, заставив мошенничать, грабить и убивать. Он пал так низко, что, казалось, врата преисподней открыты…
-        Что же ждёт его в конце жизни? Сможет ли он избежать расплаты за свои грехи? Или у Аджамилы есть ещё один шанс?
-      </p>
-
-      <button class="play-button">▶ Смотреть трейлер</button>
-
-      <a>Поделиться</a>
     </section>
 
+    <blockquote id="synopsis">
+      <style>
+        #synopsis {
+          text-align: center;
+          max-width: 1080px;
+          margin: 0 auto 1rem;
+        }
+      </style>
+      Чистота, правдивость и аскетизм были жизнью юного Аджамилы. Но неожиданная
+      страсть к куртизанке захлестнула его, заставив мошенничать, грабить и
+      убивать. Он пал так низко, что, казалось, врата преисподней открыты… Что
+      же ждёт его в конце жизни? Сможет ли он избежать расплаты за свои грехи?
+      Или у Аджамилы есть ещё один шанс?
+    </blockquote>
+
     <section id="topics">
+      <a>Поделиться</a>
       <ul>
-        <li>Epic Drama - Experience the grandeur of ancient Vedic times brought to life</li>
-        <li>Eternal Wisdom - Timeless teachings that resonate with modern hearts</li>
-        <li>Divine Grace - A story of ultimate redemption and spiritual transformation</li>
-        <li>Internal Conflict - Witness Ajamila's struggle between righteousness and temptation, a battle that resonates with the human experience across all times.</li>
-        <li>Karmic Journey - Explore the intricate web of karma as Ajamila's choices shape his destiny, offering insights into the cosmic laws of cause and effect.</li>
-        <li>Spiritual Reality - Delve into the hidden dimensions of existence, where divine intervention and spiritual truths shape the course of Ajamila's life.</li>
+        <li>Epic Drama - Experience the grandeur of ancient Vedic times brought
+          to life</li>
+        <li>Eternal Wisdom - Timeless teachings that resonate with modern hearts
+        </li>
+        <li>Divine Grace - A story of ultimate redemption and spiritual
+          transformation</li>
+        <li>Internal Conflict - Witness Ajamila's struggle between righteousness
+          and temptation, a battle that resonates with the human experience
+          across all times.</li>
+        <li>Karmic Journey - Explore the intricate web of karma as Ajamila's
+          choices shape his destiny, offering insights into the cosmic laws of
+          cause and effect.</li>
+        <li>Spiritual Reality - Delve into the hidden dimensions of existence,
+          where divine intervention and spiritual truths shape the course of
+          Ajamila's life.</li>
         Karma and Redemption
         Moral and Spiritual Conflict
         Freedom of Choice
@@ -279,9 +371,9 @@
 
     <section id="cast" class="cast-section">
       <h2>Актерский состав</h2>
-      •	Андрей Коновалов
-      •	Лидия Бельская
-      •	Инна Ершова
+      • Андрей Коновалов
+      • Лидия Бельская
+      • Инна Ершова
       <div class="cast-grid">
         <div class="cast-card">
           <img src="cast/ajamil.jpg" alt="Actor playing Ajamil">
@@ -306,21 +398,22 @@
     <section id="team">
       <h2>Творческая команда</h2>
       Режиссёр: Юлия Брославская
-      •	Сценарий: Олег Ерёменко
-      •	Композиторы: Константин Дюжарден, Владислав Якутко, Антон Кайгородов
-      •	Оператор: Наталья Голомай
-      •	Продюсер: Юлия Брославская
+      • Сценарий: Олег Ерёменко
+      • Композиторы: Константин Дюжарден, Владислав Якутко, Антон Кайгородов
+      • Оператор: Наталья Голомай
+      • Продюсер: Юлия Брославская
     </section>
 
     <section id="soundtrack">
       <h2>Музыка в фильме</h2>
-      •	Щипковая, Волшебные звуки, Шум ветра – Константин Дюжарден
-      •	Вальс пианино, Сон – Антон Кайгородов
-      •	Жена плачет – Владислав Якутко
+      • Щипковая, Волшебные звуки, Шум ветра – Константин Дюжарден
+      • Вальс пианино, Сон – Антон Кайгородов
+      • Жена плачет – Владислав Якутко
     </section>
 
     <section id="outro">
-      <p>In the depths of darkness, even the faintest light can guide us home.</p>
+      <p>In the depths of darkness, even the faintest light can guide us home.
+      </p>
     </section>
 
     <section id="news">
