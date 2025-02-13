@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Cormorant+Infant&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Cormorant+Infant&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
           rel="stylesheet">
 
     <style>
@@ -46,6 +46,7 @@
 
       h3 {
         font-size: 3rem;
+        font-weight: bold;
       }
 
       h4 {
@@ -64,14 +65,24 @@
         text-align: center;
       }
 
+      [hidden] {display: none!important;}
+
       button {
         background: floralwhite;
         border-radius: 2rem;
         border: none;
-        font-style: italic;
-        font-size: 1.6rem;
-        padding: .5rem 1.5rem;
+        /* font-style: italic; */
+        font-size: 1.08rem;
+        font-weight: bolder;
+        padding: 1rem 1.5rem;
         cursor: pointer;
+        line-height: 1;
+        max-width: 27rem;
+
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
 
         &:hover {
           background: white;
@@ -88,56 +99,55 @@
     </style>
   </head>
 
-  <body>
-    <nav style="align-self: flex-end; margin: .5rem 1rem; position: absolute">
-      <a href="#ru">Русский</a> / <a href="#en">English</a>
-    </nav>
+  <nav style="align-self: flex-end; margin: .5rem 1rem; z-index: 1; position: absolute">
+    <a href="#ru">Русский</a> / <a href="#en">English</a>
+  </nav>
 
-    <section id="hero">
+  <section id="hero">
+    <style>
+      #hero {
+        display: flex;
+        height: 90vh;
+        flex-direction: column;
+        position: relative;
+        background: linear-gradient(to top, black 0%, #00000000 50%), url(./img/arch.svg), radial-gradient(66.26% 75.26% at 50% 82.56%, #050404 6.29%, #160A08 50.05%, #26100C 100%);
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        /* radial */
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+    </style>
+
+    <h4
+        style="padding: 3.2rem 0; font-variant: small-caps; letter-spacing: .108ch; background: radial-gradient(40% 100% at 50% 0%, #322326 0%, #00000000 100%) center top no-repeat">
+      Фильм по мотивам 6-й песни Шримад Бхагаватам</h4>
+
+    <div id="characters">
       <style>
-        #hero {
-          display: flex;
-          height: 90vh;
-          flex-direction: column;
+        #characters {
           position: relative;
-          background: linear-gradient(to top, black 0%, #00000000 50%), url(./img/arch.svg), radial-gradient(66.26% 75.26% at 50% 82.56%, #050404 6.29%, #160A08 50.05%, #26100C 100%);
-          background-size: contain;
-          background-position: center top;
-          background-repeat: no-repeat;
-          /* radial */
+          height: 40rem;
+          min-width: 43.2rem;
+          width: 60vw;
+          margin-top: 5.4rem;
           max-width: 1080px;
-          margin: 0 auto;
+          align-self: center;
+
+          img {
+            position: absolute;
+            inset: auto 0 0;
+            margin: 0 auto;
+          }
         }
       </style>
-
-      <h4
-          style="padding: 3.2rem 0; font-variant: small-caps; letter-spacing: .108ch; background: radial-gradient(40% 100% at 50% 0%, #322326 0%, #00000000 100%) center top no-repeat">
-        Фильм по мотивам 6-й песни Шримад Бхагаватам</h4>
-
-      <div id="characters">
-        <style>
-          #characters {
-            position: relative;
-            height: 40rem;
-            min-width: 43.2rem;
-            width: 60vw;
-            margin-top: 5.4rem;
-            max-width: 1080px;
-            align-self: center;
-
-            img {
-              position: absolute;
-              inset: auto 0 0;
-              margin: 0 auto;
-            }
-          }
-        </style>
-        <img src="./img/kamali.png"
-             style="right: -30rem; width: 27rem; bottom: 3rem;" />
-        <img src="./img/varsha.png"
-             style="left: -29rem; width: 27rem; bottom: 5.4rem;" />
-        <img src="./img/ajamil.png" style="left: -3rem; width: 40rem;" />
-        <!--
+      <img src="./img/kamali.png"
+           style="right: -30rem; width: 27rem; bottom: 3rem;" />
+      <img src="./img/varsha.png"
+           style="left: -29rem; width: 27rem; bottom: 5.4rem;" />
+      <img src="./img/ajamil.png" style="left: -3rem; width: 40rem;" />
+      <!--
         <div id="varsha" class="character">
           <video muted loop width="100%" onmouseenter="this.play();"
                   onmouseleave="this.pause()">
@@ -193,261 +203,633 @@
           <img src="./img/kamali.png" alt="Kamali">
         </div>
         -->
-      </div>
+    </div>
 
-      <header id="header"
-              style="z-index: 1; margin-top: -17.28rem; text-shadow: 0 2px black;">
-        <h1 style="line-height: 0.85; text-transform: uppercase;">
-          <small style="text-transform: none;">Еще Один</small><br />
-          Шанс
-        </h1>
-        <h2 style="margin: 1rem 0 0rem"><em>История Аджамилы</em></h2>
-      </header>
-    </section>
+    <header id="header"
+            style="z-index: 1; margin-top: -17.28rem; text-shadow: 0 2px black;">
+      <h1 style="line-height: 0.85; text-transform: uppercase;">
+        <small style="text-transform: none;">Еще Один</small><br />
+        Шанс
+      </h1>
+      <h2 style="margin: 1rem 0 0rem"><em>История Аджамилы</em></h2>
+    </header>
+  </section>
 
+  <section id="cta" style="z-index: 1;">
     <button id="play" icon="▶" style="align-self: center;">Смотреть
       трейлер</button>
+    <style>
+      #play {
+        position: relative;
 
-    <section id="details">
-      <style>
-        #details {
-          margin: 4rem auto;
-          max-width: 1080px;
+        &::after {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: -1;
+          height: 100%;
           width: 100%;
-          padding: 0 2.7rem;
-          line-height: 1;
+          transform: scale(0.9) translateZ(0);
+          filter: blur(1rem);
+          background: conic-gradient(from 180deg at 50% 50%, black, white);
+          background-size: 200% 200%;
+          animation: animateGlow 5s linear infinite;
+          border-radius: 2rem;
+        }
+      }
 
-          dl {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2.7rem;
+      @keyframes animateGlow {
+        0% {
+          background-position: 0% 50%;
+        }
 
-            dt {
-              text-transform: uppercase;
-              opacity: .5;
-              letter-spacing: .16ch;
-              margin-bottom: 0.5rem;
-            }
+        100% {
+          background-position: -200% 50%;
+        }
+      }
+    </style>
+  </section>
 
-            dd {
-              font-size: 1.6rem;
-              font-variant-numeric: lining-nums;
-            }
+  <section id="details">
+    <style>
+      #details {
+        margin: 4rem auto;
+        max-width: 1080px;
+        width: 100%;
+        padding: 5.4rem 2.7rem 0;
+        line-height: 1;
+        border-top: 1px solid rgb(48, 48, 48);
+
+        dl {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 2.7rem;
+
+          dt {
+            text-transform: uppercase;
+            opacity: .5;
+            letter-spacing: .16ch;
+            margin-bottom: 0.5rem;
+            font-family: "Open Sans", sans-serif;
+            font-size: 0.8em;
+          }
+
+          dd {
+            font-size: 1.6rem;
+            font-variant-numeric: lining-nums;
           }
         }
-      </style>
-      <dl>
-        <div>
-          <dt>Жанр</dt>
-          <dd>Духовный, Драма</dd>
-        </div>
-        <div>
-          <dt>Продолжительность</dt>
-          <dd>1 час 45 минут</dd>
-        </div>
-        <div>
-          <dt>Рейтинг</dt>
-          <dd>12+</dd>
-        </div>
-        <div>
-          <dt>Дата релиза</dt>
-          <dd>2025 год</dd>
-        </div>
-        <div>
-          <dt>Формат</dt>
-          <dd>4K HDR • Dolby</dd>
-        </div>
-        <div>
-          <dt>Язык</dt>
-          <dd>Русский, Английский</dd>
-        </div>
-        <div>
-          <dt>Отзывы</dt>
-          <dd>Кинопоиск</dd>
-        </div>
-        <div>
-          <dt>Режиссёр</dt>
-          <dd>Наталия Гугуева</dd>
-        </div>
-      </dl>
-    </section>
+      }
+    </style>
+    <dl>
+      <div>
+        <dt>Жанр</dt>
+        <dd>Духовный, Драма</dd>
+      </div>
+      <div>
+        <dt>Продолжительность</dt>
+        <dd>1 час 45 минут</dd>
+      </div>
+      <div>
+        <dt>Рейтинг</dt>
+        <dd>12+</dd>
+      </div>
+      <div>
+        <dt>Дата релиза</dt>
+        <dd>2025 год</dd>
+      </div>
+      <div>
+        <dt>Формат</dt>
+        <dd>4K HDR • Dolby</dd>
+      </div>
+      <div>
+        <dt>Язык</dt>
+        <dd>Русский, Английский</dd>
+      </div>
+      <div>
+        <dt>Отзывы</dt>
+        <dd>Кинопоиск</dd>
+      </div>
+      <div>
+        <dt>Режиссёр</dt>
+        <dd>Наталия Гугуева</dd>
+      </div>
+    </dl>
+  </section>
 
-    <blockquote id="synopsis">
-      <style>
-        #synopsis {
-          text-align: center;
-          max-width: 1080px;
-          margin: 0 auto 1rem;
+  <section id="festivals">
+    <style>
+      #festivals {
+        letter-spacing: 10ch;
+      }
+    </style>
+    фестивали, награды
+  </section>
+
+  <blockquote id="synopsis">
+    <style>
+      #synopsis {
+        text-align: center;
+        max-width: 1080px;
+        margin: 3.6rem auto 1rem;
+        font-size: 1.726rem;
+        font-style: italic;
+      }
+    </style>
+    Чистота, правдивость и аскетизм были жизнью юного Аджамилы. Но неожиданная
+    страсть к куртизанке захлестнула его, заставив мошенничать, грабить и
+    убивать. Он пал так низко, что, казалось, врата преисподней открыты… Что
+    же ждёт его в конце жизни? Сможет ли он избежать расплаты за свои грехи?
+    Или у Аджамилы есть ещё один шанс?
+  </blockquote>
+
+  <section id="philosophy">
+    <style>
+      #philosophy {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+        max-width: 1280px;
+        margin: 0 auto;
+
+        article {
+          background: #1a1a1a;
+          border-radius: 1rem;
+          padding: 1.5rem;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: translateY(-10px);
+          }
+
+          h3 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
         }
-      </style>
-      Чистота, правдивость и аскетизм были жизнью юного Аджамилы. Но неожиданная
-      страсть к куртизанке захлестнула его, заставив мошенничать, грабить и
-      убивать. Он пал так низко, что, казалось, врата преисподней открыты… Что
-      же ждёт его в конце жизни? Сможет ли он избежать расплаты за свои грехи?
-      Или у Аджамилы есть ещё один шанс?
-    </blockquote>
+      }
+    </style>
 
-    <section id="topics">
-      <a>Поделиться</a>
-      <ul>
-        <li>Epic Drama - Experience the grandeur of ancient Vedic times brought
-          to life</li>
-        <li>Eternal Wisdom - Timeless teachings that resonate with modern hearts
-        </li>
-        <li>Divine Grace - A story of ultimate redemption and spiritual
-          transformation</li>
-        <li>Internal Conflict - Witness Ajamila's struggle between righteousness
-          and temptation, a battle that resonates with the human experience
-          across all times.</li>
-        <li>Karmic Journey - Explore the intricate web of karma as Ajamila's
-          choices shape his destiny, offering insights into the cosmic laws of
-          cause and effect.</li>
-        <li>Spiritual Reality - Delve into the hidden dimensions of existence,
-          where divine intervention and spiritual truths shape the course of
-          Ajamila's life.</li>
-        Karma and Redemption
-        Moral and Spiritual Conflict
-        Freedom of Choice
-        The Duality of Human Nature
-        Spiritual Awakening
-      </ul>
-    </section>
+    <!-- <h2>Философия</h2> -->
 
-    <section id="festivals">фестивали, награды</section>
+    <article>
+      <h3>Карма не прощает, но милость выше справедливости</h3>
+      <p>«Даже самый падший, если он искренне зовёт Господа, будет спасён.» —
+        Шримад-Бхагаватам (6.2.7)</p>
+    </article>
 
-    <section id="quotes">
-      <h2>Философия</h2>
-      <div class="story-content">
-        <div class="story-text">
-          <p class="lead">Цитата из ШБ</p>
-
-          <div class="story-paragraph">
-            <p>Ajamila, a young man from the spiritual class, lives a righteous
-              life until a chance
-              encounter with a woman turns his world upside down. Faced with a
-              powerful internal
-              conflict, Ajamila must ultimately answer life's most crucial
-              question: Yes or No.</p>
-          </div>
-
-          <div class="story-paragraph">
-            <p>The Puranas tell of his winding path - from the heights of
-              sincere righteousness
-              to the abyss of moral fall. Yet through it all, Ajamila preserves
-              something
-              invaluable, creating a story that remains profoundly relevant
-              today.</p>
-          </div>
-
-          <div class="story-paragraph">
-            <p>This ancient tale opens a window beyond our familiar reality,
-              exploring profound
-              concepts like karma, piety, and spiritual realms. Through
-              Ajamila's journey,
-              viewers will discover a new perspective on our complex,
-              ever-changing world.</p>
-          </div>
-        </div>
-
-        <div class="story-quote">
-          <blockquote>
-            "From the depths of choice to the heights of redemption"
-          </blockquote>
-        </div>
-
-        <div class="story-note">
-          <p>May this film help you come into contact with what is truly
-            important
-            and has real value in our lives.</p>
-        </div>
-      </div>
-
-      Исторический - культурный контекст
-    </section>
-
-    <section id="frames">
-      <h2>Кадры</h2>
-    </section>
-
-    <section id="cast" class="cast-section">
-      <h2>Актерский состав</h2>
-      • Андрей Коновалов
-      • Лидия Бельская
-      • Инна Ершова
-      <div class="cast-grid">
-        <div class="cast-card">
-          <img src="cast/ajamil.jpg" alt="Actor playing Ajamil">
-          <h3>Actor Name</h3>
-          <h4>as Ajamil</h4>
-        </div>
-
-        <div class="cast-card">
-          <img src="cast/narayana.jpg" alt="Actor playing Narayana">
-          <h3>Actor Name</h3>
-          <h4>as Narayana</h4>
-        </div>
-
-        <div class="cast-card">
-          <img src="cast/yamaduta.jpg" alt="Actor playing Yamaduta">
-          <h3>Actor Name</h3>
-          <h4>as Yamaduta</h4>
-        </div>
-      </div>
-    </section>
-
-    <section id="team">
-      <h2>Творческая команда</h2>
-      Режиссёр: Юлия Брославская
-      • Сценарий: Олег Ерёменко
-      • Композиторы: Константин Дюжарден, Владислав Якутко, Антон Кайгородов
-      • Оператор: Наталья Голомай
-      • Продюсер: Юлия Брославская
-    </section>
-
-    <section id="soundtrack">
-      <h2>Музыка в фильме</h2>
-      • Щипковая, Волшебные звуки, Шум ветра – Константин Дюжарден
-      • Вальс пианино, Сон – Антон Кайгородов
-      • Жена плачет – Владислав Якутко
-    </section>
-
-    <section id="outro">
-      <p>In the depths of darkness, even the faintest light can guide us home.
+    <article>
+      <h3>Имя Бога — последнее, что остаётся, когда теряешь всё</h3>
+      <p>«Святое Имя Господа могущественнее тысячи ритуалов.» — Падма-пурана
       </p>
-    </section>
+    </article>
 
-    <section id="news">
-      <h2>События</h2>
-    </section>
+    <article>
+      <h3>Даже жизнь, прожитая во грехе, не мешает спастись в последний момент
+      </h3>
+      <p>«Как река, впадая в океан, теряет своё имя и форму, так и грешник,
+        искренне взывавший к Господу, оставляет прошлое.» — Шримад-Бхагаватам
+        (6.2.8)</p>
+    </article>
+  </section>
 
-    <section id="reflections">
-      <h2>Осмысление</h2>
-      <label>Что вам откликнулось? Какие мысли?</label>
-      <textarea></textarea>
-    </section>
+  <section id="quotes">
+    <div class="story-content">
+      <div class="story-text">
+        <p class="lead">Цитата из ШБ</p>
 
-    <section id="quiz">
-      <h2>Проверь себя</h2>
-      Вопросы по Аджамиле
-    </section>
+        <div class="story-paragraph">
+          <p>Ajamila, a young man from the spiritual class, lives a righteous
+            life until a chance
+            encounter with a woman turns his world upside down. Faced with a
+            powerful internal
+            conflict, Ajamila must ultimately answer life's most crucial
+            question: Yes or No.</p>
+        </div>
 
-    <section id="education">
-      Educational resources
-    </section>
+        <div class="story-paragraph">
+          <p>The Puranas tell of his winding path - from the heights of
+            sincere righteousness
+            to the abyss of moral fall. Yet through it all, Ajamila preserves
+            something
+            invaluable, creating a story that remains profoundly relevant
+            today.</p>
+        </div>
 
-    <section id="other">
-      See also
-    </section>
+        <div class="story-paragraph">
+          <p>This ancient tale opens a window beyond our familiar reality,
+            exploring profound
+            concepts like karma, piety, and spiritual realms. Through
+            Ajamila's journey,
+            viewers will discover a new perspective on our complex,
+            ever-changing world.</p>
+        </div>
+      </div>
 
-    <footer>
-      <nav>
-        home, watch now, trailer, merch
-        about, contact
-        ig, fb, yt, x
-        terms, privacy
-      </nav>
-      <p>© 2024 One More Chance - The Story of Ajamila. All rights reserved.</p>
-    </footer>
-  </body>
+      <div class="story-quote">
+        <blockquote>
+          "From the depths of choice to the heights of redemption"
+        </blockquote>
+      </div>
+
+      <div class="story-note">
+        <p>May this film help you come into contact with what is truly
+          important
+          and has real value in our lives.</p>
+      </div>
+    </div>
+
+    Исторический - культурный контекст
+  </section>
+
+  <section id="stills">
+    <style>
+      .stills {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 20px;
+      }
+
+      .stills figure {
+        width: 300px;
+        border: 5px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .stills img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    </style>
+    <h2>Кадры</h2>
+
+    <div class="stills">
+      <figure><img /></figure>
+      <figure><img /></figure>
+      <figure><img /></figure>
+    </div>
+  </section>
+
+  <section id="cast">
+    <style>
+      .actors {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 20px;
+        text-align: center;
+      }
+
+      .actor {
+        width: 150px;
+      }
+
+      .actor img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #ccc;
+      }
+
+      .actor h3 {
+        font-size: 18px;
+        margin: 10px 0 5px;
+      }
+
+      .actor p {
+        font-size: 16px;
+        color: #666;
+      }
+    </style>
+
+    <h2>Актерский состав</h2>
+
+    <div class="actors">
+      <div class="actor">
+        <img src="actor1.jpg" alt="Андрей Коновалов">
+        <h3>Андрей Коновалов</h3>
+        <p>Аджамила, герой</p>
+      </div>
+
+      <div class="actor">
+        <img src="actor2.jpg" alt="Лидия Бельская">
+        <h3>Лидия Бельская</h3>
+        <p>Камали, жена</p>
+      </div>
+
+      <div class="actor">
+        <img src="actor3.jpg" alt="Инна Ершова">
+        <h3>Инна Ершова</h3>
+        <p>Варша, куртизанка</p>
+      </div>
+
+      <div class="actor">
+        <img src="actor3.jpg" alt="Инна Ершова">
+        <h3>Инна Ершова</h3>
+        <p>Отец</p>
+      </div>
+
+      <div class="actor">
+        <img src="actor3.jpg" alt="Инна Ершова">
+        <h3>Инна Ершова</h3>
+        <p>Гуру</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2>Творческая команда</h2>
+    Режиссёр: Юлия Брославская
+    • Сценарий: Олег Ерёменко
+    • Композиторы: Константин Дюжарден, Владислав Якутко, Антон Кайгородов
+    • Оператор: Наталья Голомай
+    • Продюсер: Юлия Брославская
+  </section>
+
+  <section id="soundtrack">
+    <h2>Музыка в фильме</h2>
+    <div class="soundtrack">
+      <div class="track">
+        <audio controls>
+          <source src="audio/track1.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <p>Щипковая, Волшебные звуки, Шум ветра – Константин Дюжарден</p>
+      </div>
+      <div class="track">
+        <audio controls>
+          <source src="audio/track2.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <p>Вальс пианино, Сон – Антон Кайгородов</p>
+      </div>
+      <div class="track">
+        <audio controls>
+          <source src="audio/track3.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <p>Жена плачет – Владислав Якутко</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="outro">
+    <p>In the depths of darkness, even the faintest light can guide us home.
+    </p>
+  </section>
+
+  <section id="news">
+    <h2>События</h2>
+  </section>
+
+  <section id="reflections">
+    <h2>Осмысление</h2>
+    <label>Что вам откликнулось? Какие мысли?</label>
+    <textarea></textarea>
+  </section>
+
+
+  <section id="quiz">
+    <style>
+      #quiz {
+        max-width: 640px;
+        margin: 10rem auto 0;
+        h4 {
+          font-variant-numeric: lining-nums;
+        }
+      }
+      .quiz-item {
+        margin: 2rem 0;
+        padding: 1rem;
+        border-radius: 8px;
+        display: none;
+        font-variant-numeric: lining-nums;
+        &.active {
+          display: block;
+        }
+      }
+      .poll {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: .5rem;
+      }
+      .poll button {
+        min-width: 50%;
+      }
+
+      .poll button.correct {
+        border-color: #4CAF50;
+      }
+
+      #results {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 3rem;
+        padding: 1rem;
+        font-size: 1.2em;
+        text-align: center;
+      }
+    </style>
+
+    <h2>Проверь себя</h2>
+
+    <div class="quiz-item active">
+      <h4>1. Кем был Аджамила по происхождению?</h4>
+      <div class="poll" data-question="1">
+        <button>Кшатрием</button>
+        <button>Вайшьей</button>
+        <button class="correct">Брахманом</button>
+        <button>Блоггером</button> <!-- Смешной вариант -->
+      </div>
+    </div>
+
+    <div class="quiz-item">
+      <h4>2. Почему Аджамила оставил праведный путь?</h4>
+      <div class="poll" data-question="2">
+        <button class="correct">Влюбился в женщину низшей касты</button>
+        <button>Потерял состояние на криптовалютах</button>
+        <button>Был проклят мудрецом</button>
+        <button>Профессиональное выгорание</button>
+        <!-- Смешной вариант -->
+      </div>
+    </div>
+
+    <div class="quiz-item">
+      <h4>3. Какое имя носил младший сын Аджамилы?</h4>
+      <div class="poll" data-question="3">
+        <button>Мадхава</button>
+        <button>Гопала</button>
+        <button class="correct">Нараяна</button>
+        <button>Джонни</button> <!-- Смешной вариант -->
+      </div>
+    </div>
+
+    <div class="quiz-item">
+      <h4>4. Почему посланники Вишну спасли Аджамилу?</h4>
+      <div class="poll" data-question="4">
+        <button>Он совершил ягью перед смертью</button>
+        <button class="correct">Произнес святое имя Нараяны</button>
+        <button>Его жена молилась за него</button>
+        <button>Он подписался на их YouTube-канал</button>
+        <!-- Смешной вариант -->
+      </div>
+    </div>
+
+    <div class="quiz-item">
+      <h4>5. Главный урок истории Аджамилы?</h4>
+      <div class="poll" data-question="5">
+        <button>Важность кастовой системы</button>
+        <button class="correct">Сила святого имени</button>
+        <button>Необходимость аскезы</button>
+        <button>Называй сына в честь босса</button> <!-- Смешной вариант -->
+      </div>
+    </div>
+
+    <div class="quiz-item">
+      <h4>6. Сколько сыновей было у Аджамилы?</h4>
+      <div class="poll" data-question="6">
+        <button class="correct">10</button>
+        <button>7</button>
+        <button>3</button>
+        <button>42</button>
+        <!-- Смешной вариант -->
+      </div>
+    </div>
+
+    <div id="results" hidden></div>
+
+    <script>
+      let currentQuestion = 0;
+      const questions = document.querySelectorAll('.quiz-item');
+      const totalQuestions = questions.length;
+
+      function showNextQuestion() {
+        questions[currentQuestion].classList.remove('active');
+        currentQuestion++;
+        if (currentQuestion < totalQuestions) {
+          questions[currentQuestion].classList.add('active');
+        } else {
+          showFinalResults();
+        }
+      }
+
+      function showFinalResults() {
+        let correctCount = 0;
+        for (let i = 1; i <= totalQuestions; i++) {
+          if (localStorage.getItem(`quiz_${i}`) === 'true') correctCount++;
+        }
+
+        let resultText = '', icon = '';
+        const percentage = Math.round((correctCount / totalQuestions) * 100);
+
+        if (percentage === 100) {
+          icon = '🌟'
+          resultText = 'Ом Намо Бхагавате Васудевая! Вы настоящий пандит! <br>Ваши знания глубже океана молока, Ваш ум сияет ярче тысячи Солнц! <br>Совет: слишком много знаний может вызвать головокружение, съешьте прасада для баланса!"';
+        } else if (percentage >= 70) {
+          icon = '📚'
+          resultText = 'Харе Кришна! Вы на пороге просветления! <br>Ваши знания сравнимы с мудростью слона, который только что прочитал Бхагавад-гиту. <br>Совет: меньше TikTok, больше джапы!';
+        } else if (percentage >= 40) {
+          icon = '📖'
+          resultText = 'Харибол! Вы на верном пути! <br>Вы как павлин - красив, но знаний маловато! <br>Совет: Может стоит перечитать Бхагаватам 6-ю песнь?';
+        } else {
+          icon = '😅'
+          resultText = 'Ом намах Шивая! Вы точно смотрели наш фильм? <br>Рекомендация: начните с 1-й песни, смотрите на север и ешьте больше прасада!';
+        }
+
+        document.getElementById('results').removeAttribute('hidden')
+        document.getElementById('results').innerHTML = `
+        <h3>${icon}</h3>
+        <h4>Ваш результат: ${correctCount} из ${totalQuestions}</h4>
+        <p>${resultText}</p>
+        <button style="margin-top: 2rem">Пройти снова</button>
+    `;
+      }
+
+      document.querySelectorAll('.poll button').forEach(button => {
+        button.addEventListener('click', function () {
+          const poll = this.parentElement;
+          const isCorrect = this.classList.contains('correct');
+
+          // Показываем результат
+          this.style.background = isCorrect ? '#4CAF50' : '#ff4444';
+          this.style.color = 'white';
+
+          // Блокируем другие ответы
+          poll.querySelectorAll('button').forEach(btn => {
+            btn.disabled = true;
+            if (btn.classList.contains('correct')) {
+              btn.style.background = '#4CAF50';
+              btn.style.color = 'white';
+            }
+          });
+
+          // Сохраняем статистику
+          const questionId = poll.dataset.question;
+          localStorage.setItem(`quiz_${questionId}`, isCorrect);
+
+          // Показываем следующий вопрос через секунду
+          setTimeout(showNextQuestion, 1000);
+        });
+      });
+
+      // Показываем первый вопрос при загрузке
+      questions[0].classList.add('active');
+    </script>
+  </section>
+
+
+  <section id="education">
+    Educational resources
+  </section>
+
+  <section id="other">
+    See also
+  </section>
+
+  <footer>
+    <style>
+      footer {
+        width: 100%;
+        max-width: 1080px;
+        margin: 1.6rem auto;
+        text-align: center;
+        padding: 1.6rem 0;
+        border-top: 1px solid rgb(48, 48, 48);
+      }
+    </style>
+    <nav
+         style="margin-bottom: 1rem; display: flex; gap: 1rem; justify-content: center;">
+      <a href="#home">Home</a>
+      <a href="#watch">Watch Now</a>
+      <a href="#trailer">Trailer</a>
+      <a href="#merch">Merch</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#terms">Terms</a>
+      <a href="#privacy">Privacy</a>
+      <br>
+      <!-- <a href="https://instagram.com" target="_blank">IG</a>
+      <a href="https://facebook.com" target="_blank">FB</a>
+      <a href="https://youtube.com" target="_blank">YT</a>
+      <a href="https://twitter.com" target="_blank">X</a><br> -->
+    </nav>
+    <p>© 2024 One More Chance - The Story of Ajamila. All rights reserved.</p>
+  </footer>
 
 </html>
