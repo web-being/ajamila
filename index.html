@@ -66,36 +66,6 @@
       }
 
       [hidden] {display: none!important;}
-
-      button {
-        background: floralwhite;
-        border-radius: 2rem;
-        border: none;
-        /* font-style: italic; */
-        font-size: 1.08rem;
-        font-weight: bolder;
-        padding: 1rem 1.5rem;
-        cursor: pointer;
-        line-height: 1;
-        max-width: 27rem;
-
-        font-family: "Open Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-variation-settings: "wdth" 100;
-
-        &:hover {
-          background: white;
-        }
-
-        &::before {
-          content: attr(icon);
-          font-style: normal;
-          margin-right: 1ch;
-          vertical-align: middle;
-          font-size: .8em;
-        }
-      }
     </style>
   </head>
 
@@ -216,8 +186,6 @@
   </section>
 
   <section id="cta" style="z-index: 1;">
-    <button id="play" icon="▶" style="align-self: center;">Смотреть
-      трейлер</button>
     <style>
       #play {
         position: relative;
@@ -249,7 +217,31 @@
           background-position: -200% 50%;
         }
       }
+
+      #cta button {
+        background: floralwhite;
+        border-radius: 2rem;
+        border: none;
+        /* font-style: italic; */
+        font-size: 1.08rem;
+        font-weight: bolder;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        line-height: 1;
+        max-width: 27rem;
+
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+
+        &:hover {
+          background: white;
+        }
+      }
     </style>
+    <button id="play" style="align-self: center;">▶ Смотреть
+      трейлер</button>
   </section>
 
   <section id="details">
@@ -422,69 +414,81 @@
         }
 
         img {
-          height: 10.8rem;
+          height: 16rem;
         }
       }
     </style>
     <h2 style="margin-bottom: 1.6rem;">Кадры</h2>
 
-    <div id="frames" onclick="showPopup(event)">
-      <figure><img src="img/frames/frame1.webp" alt="Frame 1" /></figure>
-      <figure><img src="img/frames/frame2.webp" alt="Frame 2" /></figure>
-      <figure><img src="img/frames/frame3.webp" alt="Frame 3" /></figure>
-      <figure><img src="img/frames/frame4.webp" alt="Frame 4" /></figure>
-      <figure><img src="img/frames/frame5.webp" alt="Frame 5" /></figure>
-      <figure><img src="img/frames/frame6.webp" alt="Frame 6" /></figure>
-      <figure><img src="img/frames/frame7.webp" alt="Frame 7" /></figure>
-      <figure><img src="img/frames/frame8.webp" alt="Frame 8" /></figure>
-      <figure><img src="img/frames/frame9.webp" alt="Frame 9" /></figure>
-      <figure><img src="img/frames/frame10.webp" alt="Frame 10" /></figure>
-      <figure><img src="img/frames/frame11.webp" alt="Frame 11" /></figure>
-      <figure><img src="img/frames/frame12.webp" alt="Frame 12" /></figure>
-      <figure><img src="img/frames/frame13.webp" alt="Frame 13" /></figure>
-      <figure><img src="img/frames/frame14.webp" alt="Frame 14" /></figure>
-      <figure><img src="img/frames/frame15.webp" alt="Frame 15" /></figure>
-      <figure><img src="img/frames/frame16.webp" alt="Frame 16" /></figure>
-      <figure><img src="img/frames/frame17.webp" alt="Frame 17" /></figure>
-      <figure><img src="img/frames/frame18.webp" alt="Frame 18" /></figure>
-      <figure><img src="img/frames/frame19.webp" alt="Frame 19" /></figure>
-      <figure><img src="img/frames/frame20.webp" alt="Frame 20" /></figure>
-      <figure><img src="img/frames/frame21.webp" alt="Frame 21" /></figure>
-      <figure><img src="img/frames/frame22.webp" alt="Frame 22" /></figure>
-      <figure><img src="img/frames/frame23.webp" alt="Frame 23" /></figure>
-      <figure><img src="img/frames/frame24.webp" alt="Frame 24" /></figure>
-      <figure><img src="img/frames/frame25.webp" alt="Frame 25" /></figure>
-      <figure><img src="img/frames/frame26.webp" alt="Frame 26" /></figure>
-      <figure><img src="img/frames/frame27.webp" alt="Frame 27" /></figure>
-      <figure><img src="img/frames/frame28.webp" alt="Frame 28" /></figure>
-      <figure><img src="img/frames/frame29.webp" alt="Frame 29" /></figure>
-      <figure><img src="img/frames/frame30.webp" alt="Frame 30" /></figure>
-      <figure><img src="img/frames/frame31.webp" alt="Frame 31" /></figure>
-      <figure><img src="img/frames/frame32.webp" alt="Frame 32" /></figure>
-      <figure><img src="img/frames/frame33.webp" alt="Frame 33" /></figure>
-      <figure><img src="img/frames/frame34.webp" alt="Frame 34" /></figure>
-      <figure><img src="img/frames/frame35.webp" alt="Frame 35" /></figure>
-      <figure><img src="img/frames/frame36.webp" alt="Frame 36" /></figure>
-      <figure><img src="img/frames/frame37.webp" alt="Frame 37" /></figure>
-      <figure><img src="img/frames/frame38.webp" alt="Frame 38" /></figure>
-      <figure><img src="img/frames/frame39.webp" alt="Frame 39" /></figure>
-      <figure><img src="img/frames/frame40.webp" alt="Frame 40" /></figure>
-      <figure><img src="img/frames/frame41.webp" alt="Frame 41" /></figure>
-      <figure><img src="img/frames/frame42.webp" alt="Frame 42" /></figure>
-      <figure><img src="img/frames/frame43.webp" alt="Frame 43" /></figure>
-      <figure><img src="img/frames/frame44.webp" alt="Frame 44" /></figure>
-      <figure><img src="img/frames/frame45.webp" alt="Frame 45" /></figure>
-      <figure><img src="img/frames/frame46.webp" alt="Frame 46" /></figure>
-      <figure><img src="img/frames/frame47.webp" alt="Frame 47" /></figure>
-      <figure><img src="img/frames/frame48.webp" alt="Frame 48" /></figure>
-      <figure><img src="img/frames/frame49.webp" alt="Frame 49" /></figure>
+    <div id="frames">
+      <figure><a href="img/frames/frame1.webp" data-fancybox="gallery"><img src="img/frames/frame1.webp" loading="lazy" alt="Frame 1" /></a></figure>
+      <figure><a href="img/frames/frame2.webp" data-fancybox="gallery"><img src="img/frames/frame2.webp" loading="lazy" alt="Frame 2" /></a></figure>
+      <figure><a href="img/frames/frame3.webp" data-fancybox="gallery"><img src="img/frames/frame3.webp" loading="lazy" alt="Frame 3" /></a></figure>
+      <figure><a href="img/frames/frame4.webp" data-fancybox="gallery"><img src="img/frames/frame4.webp" loading="lazy" alt="Frame 4" /></a></figure>
+      <figure><a href="img/frames/frame5.webp" data-fancybox="gallery"><img src="img/frames/frame5.webp" loading="lazy" alt="Frame 5" /></a></figure>
+      <figure><a href="img/frames/frame6.webp" data-fancybox="gallery"><img src="img/frames/frame6.webp" loading="lazy" alt="Frame 6" /></a></figure>
+      <figure><a href="img/frames/frame7.webp" data-fancybox="gallery"><img src="img/frames/frame7.webp" loading="lazy" alt="Frame 7" /></a></figure>
+      <figure><a href="img/frames/frame8.webp" data-fancybox="gallery"><img src="img/frames/frame8.webp" loading="lazy" alt="Frame 8" /></a></figure>
+      <figure><a href="img/frames/frame9.webp" data-fancybox="gallery"><img src="img/frames/frame9.webp" loading="lazy" alt="Frame 9" /></a></figure>
+      <figure><a href="img/frames/frame10.webp" data-fancybox="gallery"><img src="img/frames/frame10.webp" loading="lazy" alt="Frame 10" /></a></figure>
+      <figure><a href="img/frames/frame11.webp" data-fancybox="gallery"><img src="img/frames/frame11.webp" loading="lazy" alt="Frame 11" /></a></figure>
+      <figure><a href="img/frames/frame12.webp" data-fancybox="gallery"><img src="img/frames/frame12.webp" loading="lazy" alt="Frame 12" /></a></figure>
+      <figure><a href="img/frames/frame13.webp" data-fancybox="gallery"><img src="img/frames/frame13.webp" loading="lazy" alt="Frame 13" /></a></figure>
+      <figure><a href="img/frames/frame14.webp" data-fancybox="gallery"><img src="img/frames/frame14.webp" loading="lazy" alt="Frame 14" /></a></figure>
+      <figure><a href="img/frames/frame15.webp" data-fancybox="gallery"><img src="img/frames/frame15.webp" loading="lazy" alt="Frame 15" /></a></figure>
+      <figure><a href="img/frames/frame16.webp" data-fancybox="gallery"><img src="img/frames/frame16.webp" loading="lazy" alt="Frame 16" /></a></figure>
+      <figure><a href="img/frames/frame17.webp" data-fancybox="gallery"><img src="img/frames/frame17.webp" loading="lazy" alt="Frame 17" /></a></figure>
+      <figure><a href="img/frames/frame18.webp" data-fancybox="gallery"><img src="img/frames/frame18.webp" loading="lazy" alt="Frame 18" /></a></figure>
+      <figure><a href="img/frames/frame19.webp" data-fancybox="gallery"><img src="img/frames/frame19.webp" loading="lazy" alt="Frame 19" /></a></figure>
+      <figure><a href="img/frames/frame20.webp" data-fancybox="gallery"><img src="img/frames/frame20.webp" loading="lazy" alt="Frame 20" /></a></figure>
+      <figure><a href="img/frames/frame21.webp" data-fancybox="gallery"><img src="img/frames/frame21.webp" loading="lazy" alt="Frame 21" /></a></figure>
+      <figure><a href="img/frames/frame22.webp" data-fancybox="gallery"><img src="img/frames/frame22.webp" loading="lazy" alt="Frame 22" /></a></figure>
+      <figure><a href="img/frames/frame23.webp" data-fancybox="gallery"><img src="img/frames/frame23.webp" loading="lazy" alt="Frame 23" /></a></figure>
+      <figure><a href="img/frames/frame24.webp" data-fancybox="gallery"><img src="img/frames/frame24.webp" loading="lazy" alt="Frame 24" /></a></figure>
+      <figure><a href="img/frames/frame25.webp" data-fancybox="gallery"><img src="img/frames/frame25.webp" loading="lazy" alt="Frame 25" /></a></figure>
+      <figure><a href="img/frames/frame26.webp" data-fancybox="gallery"><img src="img/frames/frame26.webp" loading="lazy" alt="Frame 26" /></a></figure>
+      <figure><a href="img/frames/frame27.webp" data-fancybox="gallery"><img src="img/frames/frame27.webp" loading="lazy" alt="Frame 27" /></a></figure>
+      <figure><a href="img/frames/frame28.webp" data-fancybox="gallery"><img src="img/frames/frame28.webp" loading="lazy" alt="Frame 28" /></a></figure>
+      <figure><a href="img/frames/frame29.webp" data-fancybox="gallery"><img src="img/frames/frame29.webp" loading="lazy" alt="Frame 29" /></a></figure>
+      <figure><a href="img/frames/frame30.webp" data-fancybox="gallery"><img src="img/frames/frame30.webp" loading="lazy" alt="Frame 30" /></a></figure>
+      <figure><a href="img/frames/frame31.webp" data-fancybox="gallery"><img src="img/frames/frame31.webp" loading="lazy" alt="Frame 31" /></a></figure>
+      <figure><a href="img/frames/frame32.webp" data-fancybox="gallery"><img src="img/frames/frame32.webp" loading="lazy" alt="Frame 32" /></a></figure>
+      <figure><a href="img/frames/frame33.webp" data-fancybox="gallery"><img src="img/frames/frame33.webp" loading="lazy" alt="Frame 33" /></a></figure>
+      <figure><a href="img/frames/frame34.webp" data-fancybox="gallery"><img src="img/frames/frame34.webp" loading="lazy" alt="Frame 34" /></a></figure>
+      <figure><a href="img/frames/frame35.webp" data-fancybox="gallery"><img src="img/frames/frame35.webp" loading="lazy" alt="Frame 35" /></a></figure>
+      <figure><a href="img/frames/frame36.webp" data-fancybox="gallery"><img src="img/frames/frame36.webp" loading="lazy" alt="Frame 36" /></a></figure>
+      <figure><a href="img/frames/frame37.webp" data-fancybox="gallery"><img src="img/frames/frame37.webp" loading="lazy" alt="Frame 37" /></a></figure>
+      <figure><a href="img/frames/frame38.webp" data-fancybox="gallery"><img src="img/frames/frame38.webp" loading="lazy" alt="Frame 38" /></a></figure>
+      <figure><a href="img/frames/frame39.webp" data-fancybox="gallery"><img src="img/frames/frame39.webp" loading="lazy" alt="Frame 39" /></a></figure>
+      <figure><a href="img/frames/frame40.webp" data-fancybox="gallery"><img src="img/frames/frame40.webp" loading="lazy" alt="Frame 40" /></a></figure>
+      <figure><a href="img/frames/frame41.webp" data-fancybox="gallery"><img src="img/frames/frame41.webp" loading="lazy" alt="Frame 41" /></a></figure>
+      <figure><a href="img/frames/frame42.webp" data-fancybox="gallery"><img src="img/frames/frame42.webp" loading="lazy" alt="Frame 42" /></a></figure>
+      <figure><a href="img/frames/frame43.webp" data-fancybox="gallery"><img src="img/frames/frame43.webp" loading="lazy" alt="Frame 43" /></a></figure>
+      <figure><a href="img/frames/frame44.webp" data-fancybox="gallery"><img src="img/frames/frame44.webp" loading="lazy" alt="Frame 44" /></a></figure>
+      <figure><a href="img/frames/frame45.webp" data-fancybox="gallery"><img src="img/frames/frame45.webp" loading="lazy" alt="Frame 45" /></a></figure>
+      <figure><a href="img/frames/frame46.webp" data-fancybox="gallery"><img src="img/frames/frame46.webp" loading="lazy" alt="Frame 46" /></a></figure>
+      <figure><a href="img/frames/frame47.webp" data-fancybox="gallery"><img src="img/frames/frame47.webp" loading="lazy" alt="Frame 47" /></a></figure>
+      <figure><a href="img/frames/frame48.webp" data-fancybox="gallery"><img src="img/frames/frame48.webp" loading="lazy" alt="Frame 48" /></a></figure>
+      <figure><a href="img/frames/frame49.webp" data-fancybox="gallery"><img src="img/frames/frame49.webp" loading="lazy" alt="Frame 49" /></a></figure>
     </div>
 
-    <div id="popup" hidden>
-      <img id="popup-img" src="" alt="Popup Image" />
-    </div>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <script>
+      let isLightbox = false
+
+      Object.assign(Fancybox.defaults, {
+        caption: false,
+        Toolbar: false,
+        Thumbs: false,
+        wheel: 'slide',
+        closeButton: false,
+        on: {
+          activate: (e) => (console.log('ACTIVATE', e),isLightbox = true),
+          deactivate: () => (isLightbox = false)
+        }
+      });
+
       let frames = document.getElementById('frames')
 
       // cumulative scroll
@@ -496,36 +500,34 @@
       })
 
       let prevWScroll = window.scrollY
+      let isScrolling
+      let scrollTimeout
       window.addEventListener('scroll', () => {
         let delta = window.scrollY - prevWScroll
         prevWScroll = window.scrollY
         updateScroll(delta * .5)
-      });
+
+        isScrolling = true
+        if (scrollTimeout) clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => isScrolling = false, 200);
+      }, {passive: true});
 
       function updateScroll(delta) {
-        if (hover) return
+        if (hover || isLightbox) return
         frames.scrollLeft += delta
       }
 
-      frames.addEventListener('mouseenter', () => hover = true, {passive: true});
-      frames.addEventListener('mouseleave', () => hover = false, {passive: true});
-
-      function showPopup(img) {
-        const popup = document.getElementById("popup");
-        const popupImg = document.getElementById("popup-img");
-        popupImg.src = img.src;
-        popup.classList.remove("hidden");
-      }
-
-      // Close popup on click
-      document.getElementById("popup").addEventListener("click", function () {
-        this.classList.add("hidden");
-      });
+      frames.addEventListener('mouseenter', () => {if (!isScrolling) hover = true}, {passive: true});
+      frames.addEventListener('mousemove', () => {if (!isScrolling) hover = true}, {passive: true});
+      frames.addEventListener('mouseleave', () => {hover = false}, {passive: true});
     </script>
   </section>
 
   <section id="cast">
     <style>
+      #cast {
+        margin-top: 2rem;
+      }
       .actors {
         display: flex;
         justify-content: center;
@@ -543,7 +545,6 @@
         height: 150px;
         object-fit: cover;
         border-radius: 50%;
-        border: 4px solid #ccc;
       }
 
       .actor h3 {
@@ -561,31 +562,31 @@
 
     <div class="actors">
       <div class="actor">
-        <img src="actor1.jpg" alt="Андрей Коновалов">
+        <img src="actor1.jpg" alt="">
         <h3>Андрей Коновалов</h3>
         <p>Аджамила, герой</p>
       </div>
 
       <div class="actor">
-        <img src="actor2.jpg" alt="Лидия Бельская">
+        <img src="actor2.jpg" alt="">
         <h3>Лидия Бельская</h3>
         <p>Камали, жена</p>
       </div>
 
       <div class="actor">
-        <img src="actor3.jpg" alt="Инна Ершова">
+        <img src="actor3.jpg" alt="">
         <h3>Инна Ершова</h3>
         <p>Варша, куртизанка</p>
       </div>
 
       <div class="actor">
-        <img src="actor3.jpg" alt="Инна Ершова">
+        <img src="actor3.jpg" alt="">
         <h3>Инна Ершова</h3>
         <p>Отец</p>
       </div>
 
       <div class="actor">
-        <img src="actor3.jpg" alt="Инна Ершова">
+        <img src="actor3.jpg" alt="">
         <h3>Инна Ершова</h3>
         <p>Гуру</p>
       </div>
