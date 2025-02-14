@@ -403,34 +403,125 @@
 
   <section id="stills">
     <style>
-      .stills {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 50px 20px;
+      #stills {
+        margin: 3rem 0;
       }
+      #frames {
+        white-space: nowrap;
+        max-width: 100%;
+        overflow: scroll;
 
-      .stills figure {
-        width: 300px;
-        border: 5px solid #ccc;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      }
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+          display: none;  /* Chrome, Safari, and Opera */
+        }
 
-      .stills img {
-        width: 100%;
-        height: auto;
-        display: block;
+        figure {
+          display: inline-block;
+        }
+
+        img {
+          height: 10.8rem;
+        }
       }
     </style>
-    <h2>Кадры</h2>
+    <h2 style="margin-bottom: 1.6rem;">Кадры</h2>
 
-    <div class="stills">
-      <figure><img /></figure>
-      <figure><img /></figure>
-      <figure><img /></figure>
+    <div id="frames" onclick="showPopup(event)">
+      <figure><img src="img/frames/frame1.webp" alt="Frame 1" /></figure>
+      <figure><img src="img/frames/frame2.webp" alt="Frame 2" /></figure>
+      <figure><img src="img/frames/frame3.webp" alt="Frame 3" /></figure>
+      <figure><img src="img/frames/frame4.webp" alt="Frame 4" /></figure>
+      <figure><img src="img/frames/frame5.webp" alt="Frame 5" /></figure>
+      <figure><img src="img/frames/frame6.webp" alt="Frame 6" /></figure>
+      <figure><img src="img/frames/frame7.webp" alt="Frame 7" /></figure>
+      <figure><img src="img/frames/frame8.webp" alt="Frame 8" /></figure>
+      <figure><img src="img/frames/frame9.webp" alt="Frame 9" /></figure>
+      <figure><img src="img/frames/frame10.webp" alt="Frame 10" /></figure>
+      <figure><img src="img/frames/frame11.webp" alt="Frame 11" /></figure>
+      <figure><img src="img/frames/frame12.webp" alt="Frame 12" /></figure>
+      <figure><img src="img/frames/frame13.webp" alt="Frame 13" /></figure>
+      <figure><img src="img/frames/frame14.webp" alt="Frame 14" /></figure>
+      <figure><img src="img/frames/frame15.webp" alt="Frame 15" /></figure>
+      <figure><img src="img/frames/frame16.webp" alt="Frame 16" /></figure>
+      <figure><img src="img/frames/frame17.webp" alt="Frame 17" /></figure>
+      <figure><img src="img/frames/frame18.webp" alt="Frame 18" /></figure>
+      <figure><img src="img/frames/frame19.webp" alt="Frame 19" /></figure>
+      <figure><img src="img/frames/frame20.webp" alt="Frame 20" /></figure>
+      <figure><img src="img/frames/frame21.webp" alt="Frame 21" /></figure>
+      <figure><img src="img/frames/frame22.webp" alt="Frame 22" /></figure>
+      <figure><img src="img/frames/frame23.webp" alt="Frame 23" /></figure>
+      <figure><img src="img/frames/frame24.webp" alt="Frame 24" /></figure>
+      <figure><img src="img/frames/frame25.webp" alt="Frame 25" /></figure>
+      <figure><img src="img/frames/frame26.webp" alt="Frame 26" /></figure>
+      <figure><img src="img/frames/frame27.webp" alt="Frame 27" /></figure>
+      <figure><img src="img/frames/frame28.webp" alt="Frame 28" /></figure>
+      <figure><img src="img/frames/frame29.webp" alt="Frame 29" /></figure>
+      <figure><img src="img/frames/frame30.webp" alt="Frame 30" /></figure>
+      <figure><img src="img/frames/frame31.webp" alt="Frame 31" /></figure>
+      <figure><img src="img/frames/frame32.webp" alt="Frame 32" /></figure>
+      <figure><img src="img/frames/frame33.webp" alt="Frame 33" /></figure>
+      <figure><img src="img/frames/frame34.webp" alt="Frame 34" /></figure>
+      <figure><img src="img/frames/frame35.webp" alt="Frame 35" /></figure>
+      <figure><img src="img/frames/frame36.webp" alt="Frame 36" /></figure>
+      <figure><img src="img/frames/frame37.webp" alt="Frame 37" /></figure>
+      <figure><img src="img/frames/frame38.webp" alt="Frame 38" /></figure>
+      <figure><img src="img/frames/frame39.webp" alt="Frame 39" /></figure>
+      <figure><img src="img/frames/frame40.webp" alt="Frame 40" /></figure>
+      <figure><img src="img/frames/frame41.webp" alt="Frame 41" /></figure>
+      <figure><img src="img/frames/frame42.webp" alt="Frame 42" /></figure>
+      <figure><img src="img/frames/frame43.webp" alt="Frame 43" /></figure>
+      <figure><img src="img/frames/frame44.webp" alt="Frame 44" /></figure>
+      <figure><img src="img/frames/frame45.webp" alt="Frame 45" /></figure>
+      <figure><img src="img/frames/frame46.webp" alt="Frame 46" /></figure>
+      <figure><img src="img/frames/frame47.webp" alt="Frame 47" /></figure>
+      <figure><img src="img/frames/frame48.webp" alt="Frame 48" /></figure>
+      <figure><img src="img/frames/frame49.webp" alt="Frame 49" /></figure>
     </div>
+
+    <div id="popup" hidden>
+      <img id="popup-img" src="" alt="Popup Image" />
+    </div>
+
+    <script>
+      let frames = document.getElementById('frames')
+
+      // cumulative scroll
+      let hover = false
+
+      requestAnimationFrame(function tick() {
+        updateScroll(.5)
+        requestAnimationFrame(tick)
+      })
+
+      let prevWScroll = window.scrollY
+      window.addEventListener('scroll', () => {
+        let delta = window.scrollY - prevWScroll
+        prevWScroll = window.scrollY
+        updateScroll(delta * .5)
+      });
+
+      function updateScroll(delta) {
+        if (hover) return
+        frames.scrollLeft += delta
+      }
+
+      frames.addEventListener('mouseenter', () => hover = true, {passive: true});
+      frames.addEventListener('mouseleave', () => hover = false, {passive: true});
+
+      function showPopup(img) {
+        const popup = document.getElementById("popup");
+        const popupImg = document.getElementById("popup-img");
+        popupImg.src = img.src;
+        popup.classList.remove("hidden");
+      }
+
+      // Close popup on click
+      document.getElementById("popup").addEventListener("click", function () {
+        this.classList.add("hidden");
+      });
+    </script>
   </section>
 
   <section id="cast">
