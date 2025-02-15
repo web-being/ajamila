@@ -65,7 +65,9 @@
         text-align: center;
       }
 
-      [hidden] {display: none!important;}
+      [hidden] {
+        display: none !important;
+      }
 
       button {
         background: floralwhite;
@@ -91,7 +93,8 @@
     </style>
   </head>
 
-  <nav style="align-self: flex-end; margin: .5rem 1rem; z-index: 1; position: absolute">
+  <nav
+       style="align-self: flex-end; margin: .5rem 1rem; z-index: 1; position: absolute">
     <a href="#ru">Русский</a> / <a href="#en">English</a>
   </nav>
 
@@ -396,17 +399,22 @@
   <section id="stills">
     <style>
       #stills {
-        margin: 3rem 0;
+        margin: 3.6rem 0;
       }
+
       #frames {
         white-space: nowrap;
         max-width: 100%;
         overflow: scroll;
 
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+
+        /* Firefox */
         &::-webkit-scrollbar {
-          display: none;  /* Chrome, Safari, and Opera */
+          display: none;
+          /* Chrome, Safari, and Opera */
         }
 
         figure {
@@ -417,6 +425,7 @@
           height: 16rem;
         }
       }
+
       .fancybox__nav {
         button:hover {
           background: transparent;
@@ -426,59 +435,159 @@
     <h2 style="margin-bottom: 1.6rem;">Кадры</h2>
 
     <div id="frames">
-      <figure><a href="img/frames/frame1.webp" data-fancybox="gallery"><img src="img/frames/frame1.webp" loading="lazy" alt="Frame 1" /></a></figure>
-      <figure><a href="img/frames/frame2.webp" data-fancybox="gallery"><img src="img/frames/frame2.webp" loading="lazy" alt="Frame 2" /></a></figure>
-      <figure><a href="img/frames/frame3.webp" data-fancybox="gallery"><img src="img/frames/frame3.webp" loading="lazy" alt="Frame 3" /></a></figure>
-      <figure><a href="img/frames/frame4.webp" data-fancybox="gallery"><img src="img/frames/frame4.webp" loading="lazy" alt="Frame 4" /></a></figure>
-      <figure><a href="img/frames/frame5.webp" data-fancybox="gallery"><img src="img/frames/frame5.webp" loading="lazy" alt="Frame 5" /></a></figure>
-      <figure><a href="img/frames/frame6.webp" data-fancybox="gallery"><img src="img/frames/frame6.webp" loading="lazy" alt="Frame 6" /></a></figure>
-      <figure><a href="img/frames/frame7.webp" data-fancybox="gallery"><img src="img/frames/frame7.webp" loading="lazy" alt="Frame 7" /></a></figure>
-      <figure><a href="img/frames/frame8.webp" data-fancybox="gallery"><img src="img/frames/frame8.webp" loading="lazy" alt="Frame 8" /></a></figure>
-      <figure><a href="img/frames/frame9.webp" data-fancybox="gallery"><img src="img/frames/frame9.webp" loading="lazy" alt="Frame 9" /></a></figure>
-      <figure><a href="img/frames/frame10.webp" data-fancybox="gallery"><img src="img/frames/frame10.webp" loading="lazy" alt="Frame 10" /></a></figure>
-      <figure><a href="img/frames/frame11.webp" data-fancybox="gallery"><img src="img/frames/frame11.webp" loading="lazy" alt="Frame 11" /></a></figure>
-      <figure><a href="img/frames/frame12.webp" data-fancybox="gallery"><img src="img/frames/frame12.webp" loading="lazy" alt="Frame 12" /></a></figure>
-      <figure><a href="img/frames/frame13.webp" data-fancybox="gallery"><img src="img/frames/frame13.webp" loading="lazy" alt="Frame 13" /></a></figure>
-      <figure><a href="img/frames/frame14.webp" data-fancybox="gallery"><img src="img/frames/frame14.webp" loading="lazy" alt="Frame 14" /></a></figure>
-      <figure><a href="img/frames/frame15.webp" data-fancybox="gallery"><img src="img/frames/frame15.webp" loading="lazy" alt="Frame 15" /></a></figure>
-      <figure><a href="img/frames/frame16.webp" data-fancybox="gallery"><img src="img/frames/frame16.webp" loading="lazy" alt="Frame 16" /></a></figure>
-      <figure><a href="img/frames/frame17.webp" data-fancybox="gallery"><img src="img/frames/frame17.webp" loading="lazy" alt="Frame 17" /></a></figure>
-      <figure><a href="img/frames/frame18.webp" data-fancybox="gallery"><img src="img/frames/frame18.webp" loading="lazy" alt="Frame 18" /></a></figure>
-      <figure><a href="img/frames/frame19.webp" data-fancybox="gallery"><img src="img/frames/frame19.webp" loading="lazy" alt="Frame 19" /></a></figure>
-      <figure><a href="img/frames/frame20.webp" data-fancybox="gallery"><img src="img/frames/frame20.webp" loading="lazy" alt="Frame 20" /></a></figure>
-      <figure><a href="img/frames/frame21.webp" data-fancybox="gallery"><img src="img/frames/frame21.webp" loading="lazy" alt="Frame 21" /></a></figure>
-      <figure><a href="img/frames/frame22.webp" data-fancybox="gallery"><img src="img/frames/frame22.webp" loading="lazy" alt="Frame 22" /></a></figure>
-      <figure><a href="img/frames/frame23.webp" data-fancybox="gallery"><img src="img/frames/frame23.webp" loading="lazy" alt="Frame 23" /></a></figure>
-      <figure><a href="img/frames/frame24.webp" data-fancybox="gallery"><img src="img/frames/frame24.webp" loading="lazy" alt="Frame 24" /></a></figure>
-      <figure><a href="img/frames/frame25.webp" data-fancybox="gallery"><img src="img/frames/frame25.webp" loading="lazy" alt="Frame 25" /></a></figure>
-      <figure><a href="img/frames/frame26.webp" data-fancybox="gallery"><img src="img/frames/frame26.webp" loading="lazy" alt="Frame 26" /></a></figure>
-      <figure><a href="img/frames/frame27.webp" data-fancybox="gallery"><img src="img/frames/frame27.webp" loading="lazy" alt="Frame 27" /></a></figure>
-      <figure><a href="img/frames/frame28.webp" data-fancybox="gallery"><img src="img/frames/frame28.webp" loading="lazy" alt="Frame 28" /></a></figure>
-      <figure><a href="img/frames/frame29.webp" data-fancybox="gallery"><img src="img/frames/frame29.webp" loading="lazy" alt="Frame 29" /></a></figure>
-      <figure><a href="img/frames/frame30.webp" data-fancybox="gallery"><img src="img/frames/frame30.webp" loading="lazy" alt="Frame 30" /></a></figure>
-      <figure><a href="img/frames/frame31.webp" data-fancybox="gallery"><img src="img/frames/frame31.webp" loading="lazy" alt="Frame 31" /></a></figure>
-      <figure><a href="img/frames/frame32.webp" data-fancybox="gallery"><img src="img/frames/frame32.webp" loading="lazy" alt="Frame 32" /></a></figure>
-      <figure><a href="img/frames/frame33.webp" data-fancybox="gallery"><img src="img/frames/frame33.webp" loading="lazy" alt="Frame 33" /></a></figure>
-      <figure><a href="img/frames/frame34.webp" data-fancybox="gallery"><img src="img/frames/frame34.webp" loading="lazy" alt="Frame 34" /></a></figure>
-      <figure><a href="img/frames/frame35.webp" data-fancybox="gallery"><img src="img/frames/frame35.webp" loading="lazy" alt="Frame 35" /></a></figure>
-      <figure><a href="img/frames/frame36.webp" data-fancybox="gallery"><img src="img/frames/frame36.webp" loading="lazy" alt="Frame 36" /></a></figure>
-      <figure><a href="img/frames/frame37.webp" data-fancybox="gallery"><img src="img/frames/frame37.webp" loading="lazy" alt="Frame 37" /></a></figure>
-      <figure><a href="img/frames/frame38.webp" data-fancybox="gallery"><img src="img/frames/frame38.webp" loading="lazy" alt="Frame 38" /></a></figure>
-      <figure><a href="img/frames/frame39.webp" data-fancybox="gallery"><img src="img/frames/frame39.webp" loading="lazy" alt="Frame 39" /></a></figure>
-      <figure><a href="img/frames/frame40.webp" data-fancybox="gallery"><img src="img/frames/frame40.webp" loading="lazy" alt="Frame 40" /></a></figure>
-      <figure><a href="img/frames/frame41.webp" data-fancybox="gallery"><img src="img/frames/frame41.webp" loading="lazy" alt="Frame 41" /></a></figure>
-      <figure><a href="img/frames/frame42.webp" data-fancybox="gallery"><img src="img/frames/frame42.webp" loading="lazy" alt="Frame 42" /></a></figure>
-      <figure><a href="img/frames/frame43.webp" data-fancybox="gallery"><img src="img/frames/frame43.webp" loading="lazy" alt="Frame 43" /></a></figure>
-      <figure><a href="img/frames/frame44.webp" data-fancybox="gallery"><img src="img/frames/frame44.webp" loading="lazy" alt="Frame 44" /></a></figure>
-      <figure><a href="img/frames/frame45.webp" data-fancybox="gallery"><img src="img/frames/frame45.webp" loading="lazy" alt="Frame 45" /></a></figure>
-      <figure><a href="img/frames/frame46.webp" data-fancybox="gallery"><img src="img/frames/frame46.webp" loading="lazy" alt="Frame 46" /></a></figure>
-      <figure><a href="img/frames/frame47.webp" data-fancybox="gallery"><img src="img/frames/frame47.webp" loading="lazy" alt="Frame 47" /></a></figure>
-      <figure><a href="img/frames/frame48.webp" data-fancybox="gallery"><img src="img/frames/frame48.webp" loading="lazy" alt="Frame 48" /></a></figure>
-      <figure><a href="img/frames/frame49.webp" data-fancybox="gallery"><img src="img/frames/frame49.webp" loading="lazy" alt="Frame 49" /></a></figure>
+      <figure><a href="img/frames/frame1.webp" data-fancybox="gallery"><img
+               src="img/frames/frame1.webp" loading="lazy" alt="Frame 1" /></a>
+      </figure>
+      <figure><a href="img/frames/frame2.webp" data-fancybox="gallery"><img
+               src="img/frames/frame2.webp" loading="lazy" alt="Frame 2" /></a>
+      </figure>
+      <figure><a href="img/frames/frame3.webp" data-fancybox="gallery"><img
+               src="img/frames/frame3.webp" loading="lazy" alt="Frame 3" /></a>
+      </figure>
+      <figure><a href="img/frames/frame4.webp" data-fancybox="gallery"><img
+               src="img/frames/frame4.webp" loading="lazy" alt="Frame 4" /></a>
+      </figure>
+      <figure><a href="img/frames/frame5.webp" data-fancybox="gallery"><img
+               src="img/frames/frame5.webp" loading="lazy" alt="Frame 5" /></a>
+      </figure>
+      <figure><a href="img/frames/frame6.webp" data-fancybox="gallery"><img
+               src="img/frames/frame6.webp" loading="lazy" alt="Frame 6" /></a>
+      </figure>
+      <figure><a href="img/frames/frame7.webp" data-fancybox="gallery"><img
+               src="img/frames/frame7.webp" loading="lazy" alt="Frame 7" /></a>
+      </figure>
+      <figure><a href="img/frames/frame8.webp" data-fancybox="gallery"><img
+               src="img/frames/frame8.webp" loading="lazy" alt="Frame 8" /></a>
+      </figure>
+      <figure><a href="img/frames/frame9.webp" data-fancybox="gallery"><img
+               src="img/frames/frame9.webp" loading="lazy" alt="Frame 9" /></a>
+      </figure>
+      <figure><a href="img/frames/frame10.webp" data-fancybox="gallery"><img
+               src="img/frames/frame10.webp" loading="lazy"
+               alt="Frame 10" /></a></figure>
+      <figure><a href="img/frames/frame11.webp" data-fancybox="gallery"><img
+               src="img/frames/frame11.webp" loading="lazy"
+               alt="Frame 11" /></a></figure>
+      <figure><a href="img/frames/frame12.webp" data-fancybox="gallery"><img
+               src="img/frames/frame12.webp" loading="lazy"
+               alt="Frame 12" /></a></figure>
+      <figure><a href="img/frames/frame13.webp" data-fancybox="gallery"><img
+               src="img/frames/frame13.webp" loading="lazy"
+               alt="Frame 13" /></a></figure>
+      <figure><a href="img/frames/frame14.webp" data-fancybox="gallery"><img
+               src="img/frames/frame14.webp" loading="lazy"
+               alt="Frame 14" /></a></figure>
+      <figure><a href="img/frames/frame15.webp" data-fancybox="gallery"><img
+               src="img/frames/frame15.webp" loading="lazy"
+               alt="Frame 15" /></a></figure>
+      <figure><a href="img/frames/frame16.webp" data-fancybox="gallery"><img
+               src="img/frames/frame16.webp" loading="lazy"
+               alt="Frame 16" /></a></figure>
+      <figure><a href="img/frames/frame17.webp" data-fancybox="gallery"><img
+               src="img/frames/frame17.webp" loading="lazy"
+               alt="Frame 17" /></a></figure>
+      <figure><a href="img/frames/frame18.webp" data-fancybox="gallery"><img
+               src="img/frames/frame18.webp" loading="lazy"
+               alt="Frame 18" /></a></figure>
+      <figure><a href="img/frames/frame19.webp" data-fancybox="gallery"><img
+               src="img/frames/frame19.webp" loading="lazy"
+               alt="Frame 19" /></a></figure>
+      <figure><a href="img/frames/frame20.webp" data-fancybox="gallery"><img
+               src="img/frames/frame20.webp" loading="lazy"
+               alt="Frame 20" /></a></figure>
+      <figure><a href="img/frames/frame21.webp" data-fancybox="gallery"><img
+               src="img/frames/frame21.webp" loading="lazy"
+               alt="Frame 21" /></a></figure>
+      <figure><a href="img/frames/frame22.webp" data-fancybox="gallery"><img
+               src="img/frames/frame22.webp" loading="lazy"
+               alt="Frame 22" /></a></figure>
+      <figure><a href="img/frames/frame23.webp" data-fancybox="gallery"><img
+               src="img/frames/frame23.webp" loading="lazy"
+               alt="Frame 23" /></a></figure>
+      <figure><a href="img/frames/frame24.webp" data-fancybox="gallery"><img
+               src="img/frames/frame24.webp" loading="lazy"
+               alt="Frame 24" /></a></figure>
+      <figure><a href="img/frames/frame25.webp" data-fancybox="gallery"><img
+               src="img/frames/frame25.webp" loading="lazy"
+               alt="Frame 25" /></a></figure>
+      <figure><a href="img/frames/frame26.webp" data-fancybox="gallery"><img
+               src="img/frames/frame26.webp" loading="lazy"
+               alt="Frame 26" /></a></figure>
+      <figure><a href="img/frames/frame27.webp" data-fancybox="gallery"><img
+               src="img/frames/frame27.webp" loading="lazy"
+               alt="Frame 27" /></a></figure>
+      <figure><a href="img/frames/frame28.webp" data-fancybox="gallery"><img
+               src="img/frames/frame28.webp" loading="lazy"
+               alt="Frame 28" /></a></figure>
+      <figure><a href="img/frames/frame29.webp" data-fancybox="gallery"><img
+               src="img/frames/frame29.webp" loading="lazy"
+               alt="Frame 29" /></a></figure>
+      <figure><a href="img/frames/frame30.webp" data-fancybox="gallery"><img
+               src="img/frames/frame30.webp" loading="lazy"
+               alt="Frame 30" /></a></figure>
+      <figure><a href="img/frames/frame31.webp" data-fancybox="gallery"><img
+               src="img/frames/frame31.webp" loading="lazy"
+               alt="Frame 31" /></a></figure>
+      <figure><a href="img/frames/frame32.webp" data-fancybox="gallery"><img
+               src="img/frames/frame32.webp" loading="lazy"
+               alt="Frame 32" /></a></figure>
+      <figure><a href="img/frames/frame33.webp" data-fancybox="gallery"><img
+               src="img/frames/frame33.webp" loading="lazy"
+               alt="Frame 33" /></a></figure>
+      <figure><a href="img/frames/frame34.webp" data-fancybox="gallery"><img
+               src="img/frames/frame34.webp" loading="lazy"
+               alt="Frame 34" /></a></figure>
+      <figure><a href="img/frames/frame35.webp" data-fancybox="gallery"><img
+               src="img/frames/frame35.webp" loading="lazy"
+               alt="Frame 35" /></a></figure>
+      <figure><a href="img/frames/frame36.webp" data-fancybox="gallery"><img
+               src="img/frames/frame36.webp" loading="lazy"
+               alt="Frame 36" /></a></figure>
+      <figure><a href="img/frames/frame37.webp" data-fancybox="gallery"><img
+               src="img/frames/frame37.webp" loading="lazy"
+               alt="Frame 37" /></a></figure>
+      <figure><a href="img/frames/frame38.webp" data-fancybox="gallery"><img
+               src="img/frames/frame38.webp" loading="lazy"
+               alt="Frame 38" /></a></figure>
+      <figure><a href="img/frames/frame39.webp" data-fancybox="gallery"><img
+               src="img/frames/frame39.webp" loading="lazy"
+               alt="Frame 39" /></a></figure>
+      <figure><a href="img/frames/frame40.webp" data-fancybox="gallery"><img
+               src="img/frames/frame40.webp" loading="lazy"
+               alt="Frame 40" /></a></figure>
+      <figure><a href="img/frames/frame41.webp" data-fancybox="gallery"><img
+               src="img/frames/frame41.webp" loading="lazy"
+               alt="Frame 41" /></a></figure>
+      <figure><a href="img/frames/frame42.webp" data-fancybox="gallery"><img
+               src="img/frames/frame42.webp" loading="lazy"
+               alt="Frame 42" /></a></figure>
+      <figure><a href="img/frames/frame43.webp" data-fancybox="gallery"><img
+               src="img/frames/frame43.webp" loading="lazy"
+               alt="Frame 43" /></a></figure>
+      <figure><a href="img/frames/frame44.webp" data-fancybox="gallery"><img
+               src="img/frames/frame44.webp" loading="lazy"
+               alt="Frame 44" /></a></figure>
+      <figure><a href="img/frames/frame45.webp" data-fancybox="gallery"><img
+               src="img/frames/frame45.webp" loading="lazy"
+               alt="Frame 45" /></a></figure>
+      <figure><a href="img/frames/frame46.webp" data-fancybox="gallery"><img
+               src="img/frames/frame46.webp" loading="lazy"
+               alt="Frame 46" /></a></figure>
+      <figure><a href="img/frames/frame47.webp" data-fancybox="gallery"><img
+               src="img/frames/frame47.webp" loading="lazy"
+               alt="Frame 47" /></a></figure>
+      <figure><a href="img/frames/frame48.webp" data-fancybox="gallery"><img
+               src="img/frames/frame48.webp" loading="lazy"
+               alt="Frame 48" /></a></figure>
+      <figure><a href="img/frames/frame49.webp" data-fancybox="gallery"><img
+               src="img/frames/frame49.webp" loading="lazy"
+               alt="Frame 49" /></a></figure>
     </div>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script
+            src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <script>
       let isLightbox = false
 
@@ -489,7 +598,7 @@
         wheel: 'slide',
         closeButton: false,
         on: {
-          activate: (e) => (console.log('ACTIVATE', e),isLightbox = true),
+          activate: (e) => (console.log('ACTIVATE', e), isLightbox = true),
           deactivate: () => (isLightbox = false)
         }
       });
@@ -499,10 +608,7 @@
       // cumulative scroll
       let hover = false
 
-      requestAnimationFrame(function tick() {
-        updateScroll(.5)
-        requestAnimationFrame(tick)
-      })
+      setInterval(() => updateScroll(.5), 18)
 
       let prevWScroll = window.scrollY
       let isScrolling
@@ -515,51 +621,44 @@
         isScrolling = true
         if (scrollTimeout) clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => isScrolling = false, 200);
-      }, {passive: true});
+      }, { passive: true });
 
       function updateScroll(delta) {
-        if (hover || isLightbox) return
+        if (isLightbox) return
         frames.scrollLeft += delta
       }
 
-      frames.addEventListener('mouseenter', () => {if (!isScrolling) hover = true}, {passive: true});
-      frames.addEventListener('mousemove', () => {if (!isScrolling) hover = true}, {passive: true});
-      frames.addEventListener('mouseleave', () => {hover = false}, {passive: true});
+      frames.addEventListener('mouseenter', () => { if (!isScrolling) hover = true }, { passive: true });
+      frames.addEventListener('mousemove', () => { if (!isScrolling) hover = true }, { passive: true });
+      frames.addEventListener('mouseleave', () => { hover = false }, { passive: true });
     </script>
   </section>
 
   <section id="cast">
     <style>
       #cast {
-        margin-top: 2rem;
+        max-width: 1080px;
+        margin: 0 auto;
       }
+
       .actors {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 50px 20px;
-        text-align: center;
+        display: grid;
+        margin: 3.6rem 0;
+        gap: 3.6rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media (min-width: 900px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
       }
 
       .actor {
-        width: 150px;
-      }
 
-      .actor img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 50%;
-      }
-
-      .actor h3 {
-        font-size: 18px;
-        margin: 10px 0 5px;
-      }
-
-      .actor p {
-        font-size: 16px;
-        color: #666;
+        /* background: radial-gradient(circle, rgba(139,0,0,1) 0%, rgba(0,0,0,1) 100%); */
+        video {
+          overflow: hidden;
+          border-radius: 160px;
+        }
       }
     </style>
 
@@ -567,51 +666,65 @@
 
     <div class="actors">
       <div class="actor">
-        <img src="actor1.jpg" alt="">
-        <h3>Андрей Коновалов</h3>
-        <p>Аджамила, герой</p>
+        <video width="200" height="200" muted loop src="img/cast/ajamil.webm"
+               onmouseenter="this.play();" onmouseleave="this.pause();"></video>
+        <h4>Андрей Коновалов</h4>
+        <p>Аджамила</p>
       </div>
 
       <div class="actor">
-        <img src="actor2.jpg" alt="">
-        <h3>Лидия Бельская</h3>
-        <p>Камали, жена</p>
+        <video width="200" height="200" muted loop src="img/cast/kamali.webm"
+               onmouseenter="this.play();" onmouseleave="this.pause();"></video>
+        <h4>Лидия Бельская</h4>
+        <p>Жена Камали</p>
       </div>
 
       <div class="actor">
-        <img src="actor3.jpg" alt="">
-        <h3>Инна Ершова</h3>
+        <video width="200" height="200" muted loop src="img/cast/varsha.webm"
+               onmouseenter="this.play();" onmouseleave="this.pause();"></video>
+        <h4>Инна Ершова</h4>
         <p>Варша, куртизанка</p>
       </div>
 
-      <div class="actor">
+      <!-- <div class="actor">
         <img src="actor3.jpg" alt="">
-        <h3>Инна Ершова</h3>
+        <h4>Инна Ершова</h4>
         <p>Отец</p>
       </div>
 
       <div class="actor">
         <img src="actor3.jpg" alt="">
-        <h3>Инна Ершова</h3>
+        <h4>Инна Ершова</h4>
         <p>Гуру</p>
-      </div>
+      </div> -->
     </div>
   </section>
 
   <section id="team">
-    <h2>Творческая команда</h2>
+    <style>
+      #team {
+        margin: 3.6rem 0;
+      }
+    </style>
+    <h2 style="margin-bottom: 2.4rem;">Творческая команда</h2>
 
     <ul>
       <li>Режиссёр: Юлия Брославская</li>
       <li>Сценарий: Олег Ерёменко</li>
-      <li>Композиторы: Константин Дюжарден, Владислав Якутко, Антон Кайгородов</li>
+      <li>Композиторы: Константин Дюжарден, Владислав Якутко, Антон Кайгородов
+      </li>
       <li>Оператор: Наталья Голомай</li>
       <li>Продюсер: Юлия Брославская</li>
     </ul>
   </section>
 
   <section id="soundtrack">
-    <h2>Музыка в фильме</h2>
+    <style>
+      #soundtrack {
+        margin: 3.6rem 0;
+      }
+    </style>
+    <h2 style="margin-bottom: 2.4rem;">Музыка в фильме</h2>
     <div class="soundtrack">
       <div class="track">
         <audio controls>
@@ -638,9 +751,91 @@
   </section>
 
   <section id="reflections">
+    <style>
+      #reflections {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      textarea {
+        background: transparent;
+        width: 81ch;
+        border-radius: 1.6rem;
+        color: white;
+        padding: 1.2rem;
+
+        &:focus {
+          outline: none;
+          border-color: white;
+        }
+      }
+    </style>
     <h2>Осмысление</h2>
-    <label>Что вам откликнулось? Какие мысли?</label>
-    <textarea></textarea>
+    <label for="feedback">Что вам откликнулось в фильме? Какие мысли или
+      фидбек?</label>
+    <textarea placeholder="Напишите здесь..." id="feedback" name="feedback"
+              rows="3" style="resize: none; overflow: hidden;"
+              oninput="this.style.height='auto'; this.style.height = this.scrollHeight + 'px'"></textarea>
+    <button onclick="openEmailDialog()">Отправить</button>
+    <script>
+      function openEmailDialog() {
+        const feedback = document.getElementById('feedback').value;
+        const subject = encodeURIComponent('Фидбек по фильму');
+        const body = encodeURIComponent(`Вот мои мысли о фильме:\n\n${feedback}`);
+
+        const email = "example@gmail.com";
+        const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+        const mailtoURL = `mailto:${email}?subject=${subject}&body=${body}`;
+        const link = document.createElement('a')
+        link.target = "_blank";
+
+        function checkGmailLogin() {
+          fetch("https://mail.google.com/mail/u/0/", { mode: "no-cors" })
+            .then(() => {
+              link.href = gmailURL;
+              link.click();
+            })
+            .catch(() => {
+              link.href = mailtoURL;
+              link.click()
+            });
+        }
+
+        function checkGmailHandler() {
+          if (navigator.userAgent.includes("Chrome")) {
+            try {
+              navigator.registerProtocolHandler(
+                "mailto",
+                "https://mail.google.com/mail/?extsrc=mailto&url=%s",
+                "Gmail"
+              );
+              if (navigator.isProtocolHandlerRegistered) {
+                navigator.isProtocolHandlerRegistered("mailto", "https://mail.google.com/")
+                  .then(isRegistered => {
+                    if (isRegistered) {
+                      document.getElementById("emailLink").href = gmailURL;
+                    } else {
+                      checkGmailLogin();
+                    }
+                  })
+                  .catch(checkGmailLogin);
+              } else {
+                checkGmailLogin();
+              }
+            }
+            catch (e) {
+              console.warn(e)
+              checkGmailLogin();
+            }
+          } else {
+            checkGmailLogin();
+          }
+        }
+        checkGmailHandler();
+      }
+    </script>
   </section>
 
 
@@ -649,20 +844,24 @@
       #quiz {
         max-width: 640px;
         margin: 10rem auto 0;
+
         h4 {
           font-variant-numeric: lining-nums;
         }
       }
+
       .quiz-item {
         margin: 2rem 0;
         padding: 1rem;
         border-radius: 8px;
         display: none;
         font-variant-numeric: lining-nums;
+
         &.active {
           display: block;
         }
       }
+
       .poll {
         display: flex;
         flex-direction: column;
@@ -670,6 +869,7 @@
         padding: 1rem;
         gap: .5rem;
       }
+
       .poll button {
         min-width: 50%;
       }
@@ -694,10 +894,9 @@
     <div class="quiz-item active">
       <h4>1. Кем был Аджамила по происхождению?</h4>
       <div class="poll" data-question="1">
-        <button>Кшатрием</button>
-        <button>Вайшьей</button>
+        <button>Бандитом</button>
         <button class="correct">Брахманом</button>
-        <button>Блоггером</button> <!-- Смешной вариант -->
+        <button>Блоггером</button>
       </div>
     </div>
 
@@ -705,10 +904,8 @@
       <h4>2. Почему Аджамила оставил праведный путь?</h4>
       <div class="poll" data-question="2">
         <button class="correct">Влюбился в женщину низшей касты</button>
-        <button>Потерял состояние на криптовалютах</button>
         <button>Был проклят мудрецом</button>
-        <button>Профессиональное выгорание</button>
-        <!-- Смешной вариант -->
+        <button>Потерял состояние на криптовалютах</button>
       </div>
     </div>
 
@@ -718,43 +915,32 @@
         <button>Мадхава</button>
         <button>Гопала</button>
         <button class="correct">Нараяна</button>
-        <button>Джонни</button> <!-- Смешной вариант -->
       </div>
     </div>
 
     <div class="quiz-item">
       <h4>4. Почему посланники Вишну спасли Аджамилу?</h4>
       <div class="poll" data-question="4">
-        <button>Он совершил ягью перед смертью</button>
-        <button class="correct">Произнес святое имя Нараяны</button>
         <button>Его жена молилась за него</button>
+        <button class="correct">Произнес имя Нараяны</button>
         <button>Он подписался на их YouTube-канал</button>
-        <!-- Смешной вариант -->
       </div>
     </div>
 
     <div class="quiz-item">
-      <h4>5. Главный урок истории Аджамилы?</h4>
+      <h4>5. Сколько сыновей было у Аджамилы?</h4>
       <div class="poll" data-question="5">
-        <button>Важность кастовой системы</button>
-        <button class="correct">Сила святого имени</button>
-        <button>Необходимость аскезы</button>
-        <button>Называй сына в честь босса</button> <!-- Смешной вариант -->
-      </div>
-    </div>
-
-    <div class="quiz-item">
-      <h4>6. Сколько сыновей было у Аджамилы?</h4>
-      <div class="poll" data-question="6">
         <button class="correct">10</button>
-        <button>7</button>
         <button>3</button>
         <button>42</button>
         <!-- Смешной вариант -->
       </div>
     </div>
 
-    <div id="results" hidden></div>
+    <div id="results" hidden>
+      <div class="content"></div>
+      <!-- <button style="margin: 2rem auto;">Пройти снова</button> -->
+    </div>
 
     <script>
       let currentQuestion = 0;
@@ -782,25 +968,24 @@
 
         if (percentage === 100) {
           icon = '🌟'
-          resultText = 'Ом Намо Бхагавате Васудевая! Вы настоящий пандит! <br>Ваши знания глубже океана молока, Ваш ум сияет ярче тысячи Солнц! <br>Совет: слишком много знаний может вызвать головокружение, съешьте прасада для баланса!"';
+          resultText = 'Вы настоящий пандит! <br>Ваш ум сияет ярче тысячи Солнц! Вы знаете фильм наизусть, включая те сцены, которые вырезали на монтаже. <br>Совет: попробуйте прочитать оригинал истории в книге Шримад Бхагаватам.';
         } else if (percentage >= 70) {
           icon = '📚'
-          resultText = 'Харе Кришна! Вы на пороге просветления! <br>Ваши знания сравнимы с мудростью слона, который только что прочитал Бхагавад-гиту. <br>Совет: меньше TikTok, больше джапы!';
+          resultText = 'Вы на пороге просветления! <br>Ваши знания как у сценариста, который только что закончил писать сюжет. <br>Совет: Попробуйте пересмотреть фильм, не отвлекаясь на телефон, но помните – слишком много просмотров может вызвать желание цитировать диалоги!';
         } else if (percentage >= 40) {
           icon = '📖'
-          resultText = 'Харибол! Вы на верном пути! <br>Вы как павлин - красив, но знаний маловато! <br>Совет: Может стоит перечитать Бхагаватам 6-ю песнь?';
+          resultText = 'Вы на верном пути! <br>Ваши знания как у зрителя, который смотрел фильм, но пропустил пару сцен. <br>Совет: Может, стоит пересмотреть фильм?';
         } else {
           icon = '😅'
-          resultText = 'Ом намах Шивая! Вы точно смотрели наш фильм? <br>Рекомендация: начните с 1-й песни, смотрите на север и ешьте больше прасада!';
+          resultText = 'Ом намах Шивая! <br> Вы точно смотрели наш фильм, или может быть проспали? <br>Рекомендация: начните с начала фильма, возьмите попкорн и смотрите внимательно.';
         }
 
-        document.getElementById('results').removeAttribute('hidden')
-        document.getElementById('results').innerHTML = `
+        document.querySelector('#results').removeAttribute('hidden')
+        document.querySelector('#results .content').innerHTML = `
         <h3>${icon}</h3>
         <h4>Ваш результат: ${correctCount} из ${totalQuestions}</h4>
         <p>${resultText}</p>
-        <button style="margin-top: 2rem">Пройти снова</button>
-    `;
+        `;
       }
 
       document.querySelectorAll('.poll button').forEach(button => {
@@ -832,6 +1017,13 @@
 
       // Показываем первый вопрос при загрузке
       questions[0].classList.add('active');
+
+      // FIXME: add try again
+      // document.querySelector('#results button').addEventListener('click', () => {
+      //   currentQuestion = 0
+      //   questions[0].classList.add('active');
+      //   questions.forEach(q => q.classList.remove('active'))
+      // })
     </script>
   </section>
 
@@ -871,7 +1063,8 @@
       <a href="https://youtube.com" target="_blank">YT</a>
       <a href="https://twitter.com" target="_blank">X</a><br> -->
     </nav>
-    <p>© 2024 One More Chance - The Story of Ajamila. All rights reserved.</p>
+    <p>© 2024 One More Chance - The Story of Ajamila.</p>
+    <p>Сделано в <a href="https://web-being.org">web-being</a>.</p>
   </footer>
 
 </html>
