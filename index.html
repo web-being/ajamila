@@ -5,116 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Еще один шанс - История Аджамилы</title>
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Cormorant+Infant&family=Open+Sans:wdth@75..100&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Cormorant+Infant&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"
           rel="stylesheet">
-
-    <style>
-      body {
-        font-family: "Cormorant Garamond", serif;
-        font-weight: normal;
-        background: black;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        font-size: 1.32rem;
-      }
-
-      small {
-        font-family: "Cormorant Infant", serif;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-weight: normal;
-        line-height: 1;
-      }
-
-      h1 {
-        font-size: 10.8rem;
-      }
-
-      h2 {
-        font-size: 4.32rem;
-        margin-bottom: 2rem;
-      }
-
-      h3 {
-        font-size: 3rem;
-        font-weight: bold;
-      }
-
-      h4 {
-        font-size: 1.928rem;
-        margin-bottom: 1.6rem;
-      }
-
-      h5 {
-        font-size: 1.6rem;
-      }
-
-      section {
-        text-align: center;
-      }
-
-      small {
-        font-size: .5em;
-      }
-
-      [hidden] {
-        display: none !important;
-      }
-
-      button {
-        background: floralwhite;
-        border-radius: 2rem;
-        border: none;
-        /* font-style: italic; */
-        font-size: 1.08rem;
-        font-weight: bolder;
-        padding: 1rem 1.5rem;
-        cursor: pointer;
-        line-height: 1;
-        max-width: 27rem;
-
-        font-family: "Open Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-variation-settings: "wdth" 100;
-
-        &:hover {
-          background: white;
-        }
-      }
-
-      .container {
-        margin: 4rem auto;
-        max-width: 1080px;
-        width: 100%;
-        position: relative;
-        text-align: center;
-      }
-
-      hr {
-        margin: 0 auto 0;
-        width: 100%;
-        max-width: 1080px;
-        border: none;
-        border-top: 1px solid rgb(48, 48, 48);
-      }
-    </style>
   </head>
-
-  <nav
-       style="align-self: flex-end; margin: .5rem 1rem; z-index: 1; position: absolute">
-    <a href="#en">English</a>
-  </nav>
 
   <section id="hero">
     <style>
@@ -273,10 +169,11 @@
   <section id="details" class="container">
     <style>
       #details {
+
         dl {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 4rem;
+          gap: 3rem;
 
           dt {
             font-family: 'Open Sans', sans-serif;
@@ -285,10 +182,12 @@
             text-transform: uppercase;
             letter-spacing: .27ch;
             font-size: .8em;
+            margin-bottom: .5rem;
           }
 
           dd {
             font-size: 1.728rem;
+            line-height: 1;
             font-variant-numeric: lining-nums;
           }
         }
@@ -297,7 +196,7 @@
     <dl>
       <div>
         <dt>Жанр</dt>
-        <dd>Психологический</dd>
+        <dd>Психологический, Драма</dd>
       </div>
       <div>
         <dt>Продолжительность</dt>
@@ -390,18 +289,21 @@
 
     <article>
       <h4>Когда рушится всё, остаётся только правда о себе</h4>
-      <p>Он верил, что добродетель — его суть. Но страсть превратила его в преступника. Что останется, когда исчезнет даже тень прежнего «я»?</p>
+      <p>Он верил, что добродетель — его суть. Но страсть превратила его в
+        преступника. Что останется, когда исчезнет даже тень прежнего «я»?</p>
     </article>
 
     <article>
       <h4>Когда достиг дна, начинается бездна</h4>
-      <p>Украденные жизни. Преданные клятвы. Крик совести, заглушенный страхом. Как далеко
+      <p>Украденные жизни. Преданные клятвы. Крик совести, заглушенный страхом.
+        Как далеко
         можно зайти, прежде чем дорога назад исчезнет?</p>
     </article>
 
     <article>
-      <h4>Смерть не финал. Это последний свидетель</h4>
-      <p>Когда дыхание останавливается, прошлое встаёт перед глазами — остается только правда. Можно ли
+      <h4>Смерть не финал, но последний свидетель</h4>
+      <p>Когда дыхание останавливается, прошлое встаёт перед глазами — остается
+        только правда. Можно ли
         переписать историю одной фразой, или расплата неизбежна?</p>
     </article>
   </section>
@@ -770,15 +672,14 @@
 
   <section id="soundtrack" class="container">
     <style>
-      #soundtrack {
-      }
+      #soundtrack {}
 
       ul {
         list-style: none;
         padding: 0;
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 2rem;
         margin-top: 4rem;
       }
     </style>
@@ -789,14 +690,14 @@
           <source src="audio/track1.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
-        <p>Гитарный вальс – Константин Дюжарден</p>
+        <p><em>Гитарный вальс</em> – Константин Дюжарден</p>
       </li>
       <li class="track">
         <audio controls>
           <source src="audio/track2.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
-        <p>Вальс пианино – Антон Кайгородов</p>
+        <p><em>Вальс пианино</em> – Антон Кайгородов</p>
       </li>
     </ul>
   </section>
@@ -827,10 +728,11 @@
         фильме? Какие мысли или фидбек?</label></h4>
     <div style="max-width: 640px;">
       <textarea placeholder="Напишите нам..." id="feedback" name="feedback"
-                rows="3" style="resize: none; overflow: hidden; max-width: 100%; display: block;"
+                rows="3"
+                style="resize: none; overflow: hidden; max-width: 100%; display: block;"
                 oninput="this.style.height='auto'; this.style.height = this.scrollHeight + 'px'"></textarea>
       <button onclick="openEmailDialog()"
-              style="margin-top: 1rem;">Отправить</button>
+                style="margin-top: 1rem;">✉️  Отправить</button>
     </div>
     <script>
       function openEmailDialog() {
@@ -894,6 +796,8 @@
   <section id="quiz" class="container">
     <style>
       #quiz {
+        max-width: 640px;
+
         h4 {
           font-variant-numeric: lining-nums;
         }
@@ -983,7 +887,28 @@
     </div>
 
     <div id="results" hidden>
-      <div class="content"></div>
+      <div class="content">
+        <div class="result-5" hidden>
+          <h3>🌟</h3>
+          <h4>Отлично!</h4>
+          <p>Вы настоящий пандит! <br>Ваш ум сияет ярче тысячи Солнц! Вы знаете фильм наизусть, включая те сцены, которые вырезали на монтаже. <br>Совет: попробуйте прочитать оригинал истории в <a href="https://vedabase.io/ru/library/sb/6/">6-й песне Шримад Бхагаватам</a>.</p>
+        </div>
+        <div class="result-4" hidden>
+          <h3>📚</h3>
+          <h4>Хорошо!</h4>
+          <p>Вы на пороге просветления! <br>Ваши знания как у сценариста, который только что закончил писать сюжет. <br>Совет: Попробуйте пересмотреть фильм, не отвлекаясь на телефон, но помните – слишком много просмотров может вызвать желание цитировать диалоги!</p>
+        </div>
+        <div class="result-3" hidden>
+          <h3>📖</h3>
+          <h4>Нормально!</h4>
+          <p>Вы на верном пути! <br>Ваши знания как у зрителя, который смотрел фильм, но пропустил пару сцен. <br>Совет: Может, стоит пересмотреть фильм?</p>
+        </div>
+        <div class="result-2 result-1 result-0" hidden>
+          <h3>😅</h3>
+          <h4>Ом Намах Шивая!</h4>
+          <p>Вы точно смотрели наш фильм, или может быть проспали? <br>Совет: возьмите попкорн, начните с начала фильма и смотрите внимательно.</p>
+        </div>
+      </div>
       <!-- <button style="margin: 2rem auto;">Пройти снова</button> -->
     </div>
 
@@ -1009,28 +934,8 @@
         }
 
         let resultText = '', icon = '';
-        const percentage = Math.round((correctCount / totalQuestions) * 100);
-
-        if (percentage === 100) {
-          icon = '🌟'
-          resultText = 'Вы настоящий пандит! <br>Ваш ум сияет ярче тысячи Солнц! Вы знаете фильм наизусть, включая те сцены, которые вырезали на монтаже. <br>Совет: попробуйте прочитать оригинал истории в книге Шримад Бхагаватам.';
-        } else if (percentage >= 70) {
-          icon = '📚'
-          resultText = 'Вы на пороге просветления! <br>Ваши знания как у сценариста, который только что закончил писать сюжет. <br>Совет: Попробуйте пересмотреть фильм, не отвлекаясь на телефон, но помните – слишком много просмотров может вызвать желание цитировать диалоги!';
-        } else if (percentage >= 40) {
-          icon = '📖'
-          resultText = 'Вы на верном пути! <br>Ваши знания как у зрителя, который смотрел фильм, но пропустил пару сцен. <br>Совет: Может, стоит пересмотреть фильм?';
-        } else {
-          icon = '😅'
-          resultText = 'Ом намах Шивая! <br> Вы точно смотрели наш фильм, или может быть проспали? <br>Рекомендация: начните с начала фильма, возьмите попкорн и смотрите внимательно.';
-        }
-
         document.querySelector('#results').removeAttribute('hidden')
-        document.querySelector('#results .content').innerHTML = `
-        <h3>${icon}</h3>
-        <h4>Ваш результат: ${correctCount} из ${totalQuestions}</h4>
-        <p>${resultText}</p>
-        `;
+        document.querySelector(`#results .result-${correctCount}`).removeAttribute('hidden')
       }
 
       document.querySelectorAll('.poll button').forEach(button => {
@@ -1070,12 +975,6 @@
       //   questions.forEach(q => q.classList.remove('active'))
       // })
     </script>
-  </section>
-
-  <section id="education" class="container">
-    <h2>Ресурсы</h2>
-    <p><a href="https://vedabase.io/ru/library/sb/6/" target="_blank">Шримад
-        Бхагаватам, 6-я песнь</a>.</p>
   </section>
 
   <hr>
