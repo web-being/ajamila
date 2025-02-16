@@ -4,11 +4,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One More Chance - The Story of Ajamil</title>
+    <title>Еще один шанс - История Аджамилы</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Cormorant+Infant&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Cormorant+Infant&family=Open+Sans:wdth@75..100&display=swap"
           rel="stylesheet">
 
     <style>
@@ -19,7 +19,7 @@
         color: white;
         display: flex;
         flex-direction: column;
-        font-size: 1.08rem;
+        font-size: 1.32rem;
       }
 
       small {
@@ -42,6 +42,7 @@
 
       h2 {
         font-size: 4.32rem;
+        margin-bottom: 2rem;
       }
 
       h3 {
@@ -51,18 +52,19 @@
 
       h4 {
         font-size: 1.928rem;
+        margin-bottom: 1.6rem;
       }
 
       h5 {
         font-size: 1.6rem;
       }
 
-      small {
-        font-size: .5em;
-      }
-
       section {
         text-align: center;
+      }
+
+      small {
+        font-size: .5em;
       }
 
       [hidden] {
@@ -90,12 +92,28 @@
           background: white;
         }
       }
+
+      .container {
+        margin: 4rem auto;
+        max-width: 1080px;
+        width: 100%;
+        position: relative;
+        text-align: center;
+      }
+
+      hr {
+        margin: 0 auto 0;
+        width: 100%;
+        max-width: 1080px;
+        border: none;
+        border-top: 1px solid rgb(48, 48, 48);
+      }
     </style>
   </head>
 
   <nav
        style="align-self: flex-end; margin: .5rem 1rem; z-index: 1; position: absolute">
-    <a href="#ru">Русский</a> / <a href="#en">English</a>
+    <a href="#en">English</a>
   </nav>
 
   <section id="hero">
@@ -109,9 +127,7 @@
         background-size: contain;
         background-position: center top;
         background-repeat: no-repeat;
-        /* radial */
-        max-width: 1080px;
-        margin: 0 auto;
+        margin: 0 auto 0;
       }
     </style>
 
@@ -207,12 +223,17 @@
         Шанс
       </h1>
       <h2 style="margin: 0.5rem 0 0rem; font-family: 'Cormorant Garamond';">
-        <em>История Аджамилы</em></h2>
+        <em>История Аджамилы</em>
+      </h2>
     </header>
   </section>
 
-  <section id="cta" style="z-index: 1;">
+  <section id="cta" class="container">
     <style>
+      #cta {
+        margin-top: 2rem;
+      }
+
       #play {
         position: relative;
 
@@ -244,36 +265,30 @@
         }
       }
     </style>
-    <button id="play" style="align-self: center;">▶ Смотреть
-      трейлер</button>
+    <button id="play" style="align-self: center;">▶ Смотреть трейлер</button>
   </section>
 
-  <section id="details">
+  <hr />
+
+  <section id="details" class="container">
     <style>
       #details {
-        margin: 4rem auto;
-        max-width: 1080px;
-        width: 100%;
-        padding: 5.4rem 2.7rem 0;
-        line-height: 1;
-        border-top: 1px solid rgb(48, 48, 48);
-
         dl {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 2.7rem;
+          gap: 4rem;
 
           dt {
-            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
             opacity: .5;
-            letter-spacing: .16ch;
-            margin-bottom: 0.5rem;
-            font-family: "Open Sans", sans-serif;
-            font-size: 0.8em;
+            font-variation-settings: "wdth" 75;
+            text-transform: uppercase;
+            letter-spacing: .27ch;
+            font-size: .8em;
           }
 
           dd {
-            font-size: 1.6rem;
+            font-size: 1.728rem;
             font-variant-numeric: lining-nums;
           }
         }
@@ -282,7 +297,7 @@
     <dl>
       <div>
         <dt>Жанр</dt>
-        <dd>Психологический триллер</dd>
+        <dd>Психологический</dd>
       </div>
       <div>
         <dt>Продолжительность</dt>
@@ -310,26 +325,26 @@
       </div>
       <div>
         <dt>Режиссёр</dt>
-        <dd>Наталия Гугуева</dd>
+        <dd>Юлия Брославская</dd>
       </div>
     </dl>
   </section>
 
-  <section id="festivals">
+  <section id="festivals" class="container">
     <style>
       #festivals {
         letter-spacing: 10ch;
+        font-family: 'Open Sans', sans-serif;
+        opacity: .25;
       }
     </style>
-    фестивали, награды
+    фестивали награды
   </section>
 
-  <blockquote id="synopsis">
+  <blockquote id="synopsis" class="container">
     <style>
       #synopsis {
         text-align: center;
-        max-width: 1080px;
-        margin: 3.6rem auto 1rem;
         font-size: 1.726rem;
         font-style: italic;
       }
@@ -341,20 +356,18 @@
     Или у Аджамилы есть ещё один шанс?
   </blockquote>
 
-  <section id="philosophy">
+  <section id="philosophy" class="container">
     <style>
       #philosophy {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
-        padding: 2rem;
-        max-width: 1280px;
-        margin: 0 auto;
+        margin-top: 0;
 
         article {
           background: #1a1a1a;
           border-radius: 1rem;
-          padding: 1.5rem;
+          padding: 2rem;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           transition: transform 0.3s ease;
 
@@ -362,13 +375,12 @@
             transform: translateY(-10px);
           }
 
-          h3 {
-            margin-bottom: 1rem;
-            font-size: 2rem;
-          }
-
           p {
             font-size: 1.2rem;
+          }
+
+          h4 {
+            margin-bottom: 1rem;
           }
         }
       }
@@ -377,29 +389,27 @@
     <!-- <h2>Философия</h2> -->
 
     <article>
-      <h3>Когда рушится всё — остаётся только правда о себе</h3>
-      <p>Он верил, что добродетель — его природа. Но одна страсть превратила
-        праведника в монстра. Что останется, когда исчезнет даже тень прежнего
-        «я»?</p>
+      <h4>Когда рушится всё, остаётся только правда о себе</h4>
+      <p>Он верил, что добродетель — его суть. Но страсть превратила его в преступника. Что останется, когда исчезнет даже тень прежнего «я»?</p>
     </article>
 
     <article>
-      <h3>Дно не бывает окончательным — под ним всегда есть бездна</h3>
-      <p>Украденные жизни. Преданные клятвы. Последний крик совести. Как далеко
-        можно зайти, прежде чем обратной дороги не останется?</p>
+      <h4>Когда достиг дна, начинается бездна</h4>
+      <p>Украденные жизни. Преданные клятвы. Крик совести, заглушенный страхом. Как далеко
+        можно зайти, прежде чем дорога назад исчезнет?</p>
     </article>
 
     <article>
-      <h3>Смерть — не финал. Это последний свидетель</h3>
-      <p>Когда дыхание прерывается, а прошлое встаёт перед глазами — можно ли
-        переписать историю одной фразой? Или расплата неизбежна?</p>
+      <h4>Смерть не финал. Это последний свидетель</h4>
+      <p>Когда дыхание останавливается, прошлое встаёт перед глазами — остается только правда. Можно ли
+        переписать историю одной фразой, или расплата неизбежна?</p>
     </article>
   </section>
 
-  <section id="stills">
+  <section id="stills" class="container">
     <style>
       #stills {
-        margin: 3.6rem 0;
+        max-width: none;
       }
 
       #frames {
@@ -432,7 +442,7 @@
         }
       }
     </style>
-    <h2 style="margin-bottom: 1.6rem;">Кадры</h2>
+    <h2>Кадры</h2>
 
     <div id="frames">
       <figure><a href="img/frames/frame1.webp" data-fancybox="gallery"><img
@@ -634,12 +644,9 @@
     </script>
   </section>
 
-  <section id="cast">
+  <section id="cast" class="container">
     <style>
-      #cast {
-        max-width: 1080px;
-        margin: 0 auto;
-      }
+      #cast {}
 
       .actors {
         display: grid;
@@ -655,9 +662,11 @@
       .actor {
 
         /* background: radial-gradient(circle, rgba(139,0,0,1) 0%, rgba(0,0,0,1) 100%); */
-        video {
+        video,
+        img {
           overflow: hidden;
           border-radius: 160px;
+          margin-bottom: 1rem;
         }
       }
     </style>
@@ -666,24 +675,24 @@
 
     <div class="actors">
       <div class="actor">
-        <video width="200" height="200" muted loop src="img/cast/ajamil.webm"
+        <video width="216" height="216" muted loop src="img/cast/ajamil.webm"
                onmouseenter="this.play();" onmouseleave="this.pause();"></video>
         <h4>Андрей Коновалов</h4>
-        <p>Аджамила</p>
+        <p><em>Аджамила</em></p>
       </div>
 
       <div class="actor">
-        <video width="200" height="200" muted loop src="img/cast/kamali.webm"
+        <video width="216" height="216" muted loop src="img/cast/kamali.webm"
+               onmouseenter="this.play();" onmouseleave="this.pause();"></video>
+        <h4>Инна Щедрова</h4>
+        <p><em>Камали</em></p>
+      </div>
+
+      <div class="actor">
+        <video width="216" height="216" muted loop src="img/cast/varsha.webm"
                onmouseenter="this.play();" onmouseleave="this.pause();"></video>
         <h4>Лидия Бельская</h4>
-        <p>Жена Камали</p>
-      </div>
-
-      <div class="actor">
-        <video width="200" height="200" muted loop src="img/cast/varsha.webm"
-               onmouseenter="this.play();" onmouseleave="this.pause();"></video>
-        <h4>Инна Ершова</h4>
-        <p>Варша, куртизанка</p>
+        <p><em>Варша</em></p>
       </div>
 
       <!-- <div class="actor">
@@ -700,67 +709,104 @@
     </div>
   </section>
 
-  <section id="team">
+  <section id="team" class="container">
     <style>
       #team {
-        margin: 3.6rem 0;
+        dl {
+          margin-top: 4rem;
+          font-variation-settings: "wdth" 75;
+          font-family: 'Open Sans', sans-serif;
+          column-count: 2;
 
-        ul {
-          font-family: 'Cormorant Infant', sans-serif;
+          @media (max-width: 640px) {
+            column-count: 1;
+          }
+
+          dt {
+            opacity: .5;
+          }
+
+          dd {
+            letter-spacing: .27ch;
+            text-transform: uppercase;
+          }
+
+          div {
+            break-inside: avoid;
+            margin: 0 0 2rem;
+          }
         }
       }
     </style>
-    <h2 style="margin-bottom: 2.4rem;">Творческая команда</h2>
+    <h2>Творческая команда</h2>
 
-    <ul style="list-style: none;">
-      <li>Режиссёр: Юлия Брославская</li>
-      <li>Сценарий: Олег Ерёменко</li>
-      <li>Композиторы: Константин Дюжарден, Владислав Якутко, Антон Кайгородов
-      </li>
-      <li>Оператор: Наталья Голомай</li>
-      <li>Продюсер: Юлия Брославская</li>
-    </ul>
+    <dl>
+      <div>
+        <dt>Режиссёр</dt>
+        <dd>Юлия Брославская</dd>
+      </div>
+      <div>
+        <dt>Автор сценария</dt>
+        <dd>Олег Ерёменко</dd>
+      </div>
+      <div>
+        <dt>Оператор</dt>
+        <dd>Наталья Голомай</dd>
+      </div>
+      <div>
+        <dt>Художник</dt>
+        <dd>Юлия Брославская</dd>
+      </div>
+      <div>
+        <dt>Продюсер</dt>
+        <dd>Юлия Брославская</dd>
+      </div>
+      <div>
+        <dt>Композиторы</dt>
+        <dd>Константин Дюжарден,<br> Владислав Якутко,<br> Антон Кайгородов</dd>
+      </div>
+    </dl>
   </section>
 
-  <section id="soundtrack">
+  <section id="soundtrack" class="container">
     <style>
       #soundtrack {
-        margin: 3.6rem 0;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 4rem;
       }
     </style>
-    <h2 style="margin-bottom: 2.4rem;">Музыка в фильме</h2>
-    <div class="soundtrack">
-      <div class="track">
+    <h2>Музыка в фильме</h2>
+    <ul>
+      <li class="track">
         <audio controls>
           <source src="audio/track1.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
-        <p>Щипковая, Волшебные звуки, Шум ветра – Константин Дюжарден</p>
-      </div>
-      <div class="track">
+        <p>Гитарный вальс – Константин Дюжарден</p>
+      </li>
+      <li class="track">
         <audio controls>
           <source src="audio/track2.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
-        <p>Вальс пианино, Сон – Антон Кайгородов</p>
-      </div>
-      <div class="track">
-        <audio controls>
-          <source src="audio/track3.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-        <p>Жена плачет – Владислав Якутко</p>
-      </div>
-    </div>
+        <p>Вальс пианино – Антон Кайгородов</p>
+      </li>
+    </ul>
   </section>
 
-  <section id="reflections">
+  <section id="reflections" class="container">
     <style>
       #reflections {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
       }
 
       textarea {
@@ -777,12 +823,15 @@
       }
     </style>
     <h2>Осмысление</h2>
-    <label for="feedback">Что вам откликнулось в фильме? Какие мысли или
-      фидбек?</label>
-    <textarea placeholder="Напишите здесь..." id="feedback" name="feedback"
-              rows="3" style="resize: none; overflow: hidden;"
-              oninput="this.style.height='auto'; this.style.height = this.scrollHeight + 'px'"></textarea>
-    <button onclick="openEmailDialog()">Отправить</button>
+    <h4 style="max-width: 540px;"><label for="feedback">Что вам откликнулось в
+        фильме? Какие мысли или фидбек?</label></h4>
+    <div style="max-width: 640px;">
+      <textarea placeholder="Напишите нам..." id="feedback" name="feedback"
+                rows="3" style="resize: none; overflow: hidden; max-width: 100%; display: block;"
+                oninput="this.style.height='auto'; this.style.height = this.scrollHeight + 'px'"></textarea>
+      <button onclick="openEmailDialog()"
+              style="margin-top: 1rem;">Отправить</button>
+    </div>
     <script>
       function openEmailDialog() {
         const feedback = document.getElementById('feedback').value;
@@ -842,13 +891,9 @@
     </script>
   </section>
 
-
-  <section id="quiz">
+  <section id="quiz" class="container">
     <style>
       #quiz {
-        max-width: 640px;
-        margin: 10rem auto 0;
-
         h4 {
           font-variant-numeric: lining-nums;
         }
@@ -856,7 +901,6 @@
 
       .quiz-item {
         margin: 2rem 0;
-        padding: 1rem;
         border-radius: 8px;
         display: none;
         font-variant-numeric: lining-nums;
@@ -870,7 +914,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 1rem;
         gap: .5rem;
       }
 
@@ -887,9 +930,7 @@
         flex-direction: column;
         gap: 1rem;
         margin: 3rem;
-        padding: 1rem;
         font-size: 1.2em;
-        text-align: center;
       }
     </style>
 
@@ -1031,22 +1072,16 @@
     </script>
   </section>
 
-
-  <section id="education" style="margin: 3.6rem 0">
-    <h2 style="margin-bottom: 1rem;">Ресурсы</h2>
-    <p><a href="https://vedabase.io/ru/library/sb/6/" target="_blank">Шримад Бхагаватам, 6-я песнь</a>.</p>
+  <section id="education" class="container">
+    <h2>Ресурсы</h2>
+    <p><a href="https://vedabase.io/ru/library/sb/6/" target="_blank">Шримад
+        Бхагаватам, 6-я песнь</a>.</p>
   </section>
 
-  <footer>
+  <hr>
+
+  <footer class="container">
     <style>
-      footer {
-        width: 100%;
-        max-width: 1080px;
-        margin: 1.6rem auto;
-        text-align: center;
-        padding: 1.6rem 0;
-        border-top: 1px solid rgb(48, 48, 48);
-      }
     </style>
     <nav
          style="margin-bottom: 1rem; display: flex; gap: 1rem; justify-content: center;">
@@ -1064,7 +1099,9 @@
       <a href="https://youtube.com" target="_blank">YT</a>
       <a href="https://twitter.com" target="_blank">X</a><br> -->
     </nav>
-    <p>© 2024 Еще один шанс - История Аджамилы.</p>
+    <p>© <span id="currentYear">2024
+        <script>document.currentScript.parentElement.textContent = new Date().getFullYear()</script>
+      </span> Еще один шанс - История Аджамилы.</p>
     <p>Сделано в <a href="https://web-being.org">web-being</a>.</p>
   </footer>
 

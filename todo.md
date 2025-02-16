@@ -1,8 +1,10 @@
-## [ ] Hero
-
-* Animate on hover
-* Animate by scroll timeline
-* Parallax
-* Responsive
-* Texts animations
-*
+* [x] Cleanup, arrange
+* [ ] Responsive (mobile)
+* [ ] English version
+* [x] Setup domain
+* [ ] Header effects like glowing particles or fire (lighting faces)
+* [ ] Meta informations / SEO
+* [ ] Improve frames quality
+* [ ] Feedback
+* [ ] Soundtracks
+* [ ] headers as anchors
