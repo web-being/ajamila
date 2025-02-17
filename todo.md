@@ -4,7 +4,7 @@
 * [x] Setup domain
 * [ ] Header effects like glowing particles or fire (lighting faces)
 * [ ] Meta informations / SEO
-* [ ] Improve stills quality
+* [x] Improve stills quality
 * [ ] Feedback
 * [ ] Soundtracks
 * [ ] headers as anchors
