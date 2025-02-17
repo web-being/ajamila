@@ -42,7 +42,6 @@ a:not([class]) {
 
 img,
 picture {
-  max-width: 100%;
   display: block;
 }
 
@@ -86,6 +85,9 @@ h1 {
 h2 {
   font-size: 4.32rem;
   margin-bottom: 2rem;
+  @media (max-width: 640px) {
+    font-size: 3.2rem;
+  }
 }
 
 h3 {
@@ -146,10 +148,14 @@ a {
 
 .container {
   margin: 4rem auto;
+  padding: 0 1rem;
   max-width: 1080px;
   width: 100%;
   position: relative;
   text-align: center;
+  @media (max-width: 640px) {
+    margin: 2rem auto;
+  }
 }
 
 hr {

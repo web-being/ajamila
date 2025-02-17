@@ -4,7 +4,8 @@
 * [x] Setup domain
 * [ ] Header effects like glowing particles or fire (lighting faces)
 * [ ] Meta informations / SEO
-* [ ] Improve frames quality
+* [ ] Improve stills quality
 * [ ] Feedback
 * [ ] Soundtracks
 * [ ] headers as anchors
+* [ ] Better hero composition

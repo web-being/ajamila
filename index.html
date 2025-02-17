@@ -169,7 +169,7 @@
   <section id="details" class="container">
     <style>
       #details {
-
+        padding: 0 2rem;
         dl {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -189,6 +189,32 @@
             font-size: 1.728rem;
             line-height: 1;
             font-variant-numeric: lining-nums;
+          }
+        }
+        @media (max-width: 640px) {
+          dl {
+            text-align: left;
+            gap: 0;
+            display: block;
+            line-height: 1.66;
+
+            div {
+              margin-bottom: 0rem;
+              display: flex;
+              align-items: baseline;
+              gap: 2rem;
+            }
+            dt {
+              display: inline;
+              text-transform: none;
+              letter-spacing: normal;
+            }
+            dd {
+              display: inline;
+              font-size: 1.44rem;
+              text-align: right;
+              margin-left: auto;
+            }
           }
         }
       }
@@ -216,7 +242,7 @@
       </div>
       <div>
         <dt>Язык</dt>
-        <dd>Русский, Английский</dd>
+        <dd>Русский, <a href="/en">Английский</a></dd>
       </div>
       <div>
         <dt>Отзывы</dt>
@@ -235,6 +261,7 @@
         letter-spacing: 10ch;
         font-family: 'Open Sans', sans-serif;
         opacity: .25;
+        overflow: hidden;
       }
     </style>
     фестивали награды
@@ -246,6 +273,11 @@
         text-align: center;
         font-size: 1.726rem;
         font-style: italic;
+
+        @media (max-width: 640px) {
+          font-size: 1.44rem;
+          line-height: 1.32;
+        }
       }
     </style>
     Чистота, правдивость и аскетизм были жизнью юного Аджамилы. Но неожиданная
@@ -269,17 +301,25 @@
           padding: 2rem;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           transition: transform 0.3s ease;
-
           &:hover {
             transform: translateY(-10px);
           }
-
           p {
             font-size: 1.2rem;
+            line-height: 1.33;
           }
-
           h4 {
             margin-bottom: 1rem;
+          }
+          @media (max-width: 640px) {
+            padding: 1rem;
+            p {
+              font-size: 1.08rem;
+            }
+            h4 {
+              font-size: 1.4rem;
+              margin-bottom: 0.3rem;
+            }
           }
         }
       }
@@ -294,7 +334,7 @@
     </article>
 
     <article>
-      <h4>Когда достиг дна, начинается бездна</h4>
+      <h4>Когда достигаешь дна, открывается бездна</h4>
       <p>Украденные жизни. Преданные клятвы. Крик совести, заглушенный страхом.
         Как далеко
         можно зайти, прежде чем дорога назад исчезнет?</p>
@@ -979,28 +1019,31 @@
 
   <hr>
 
-  <footer class="container">
+  <footer id="footer" class="container">
     <style>
+      #footer {
+        margin-top: 2rem;
+        font-variant-numeric: lining-nums;
+      }
     </style>
-    <nav
-         style="margin-bottom: 1rem; display: flex; gap: 1rem; justify-content: center;">
-      <a href="#home">Home</a>
+    <!-- <nav style="margin-bottom: 1rem; display: flex; gap: 1rem; justify-content: center;"> -->
+      <!-- <a href="#home">Home</a>
       <a href="#watch">Watch Now</a>
       <a href="#trailer">Trailer</a>
       <a href="#merch">Merch</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
       <a href="#terms">Terms</a>
-      <a href="#privacy">Privacy</a>
-      <br>
+      <a href="#privacy">Privacy</a> -->
+      <!-- <br> -->
       <!-- <a href="https://instagram.com" target="_blank">IG</a>
       <a href="https://facebook.com" target="_blank">FB</a>
       <a href="https://youtube.com" target="_blank">YT</a>
       <a href="https://twitter.com" target="_blank">X</a><br> -->
-    </nav>
+    <!-- </nav> -->
     <p>© <span id="currentYear">2024
         <script>document.currentScript.parentElement.textContent = new Date().getFullYear()</script>
-      </span> Еще один шанс - История Аджамилы.</p>
+      </span> Еще один шанс – История Аджамилы.</p>
     <p>Сделано в <a href="https://web-being.org">web-being</a>.</p>
   </footer>
 
