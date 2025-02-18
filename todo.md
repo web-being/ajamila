@@ -1,5 +1,6 @@
 * [x] Cleanup, arrange
-* [ ] Responsive (mobile)
+* [x] Responsive (mobile)
+* [ ] Content updates from tg
 * [ ] English version
 * [x] Setup domain
 * [ ] Header effects like glowing particles or fire (lighting faces)

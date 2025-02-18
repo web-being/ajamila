@@ -13,107 +13,26 @@
   </head>
 
   <section id="hero">
-    <style>
-      #hero {
-        display: flex;
-        height: 90vh;
-        flex-direction: column;
-        position: relative;
-        background: linear-gradient(to top, black 0%, #00000000 50%), url(./img/arch.svg), radial-gradient(66.26% 75.26% at 50% 82.56%, #050404 6.29%, #160A08 50.05%, #26100C 100%);
-        background-size: contain;
-        background-position: center top;
-        background-repeat: no-repeat;
-        margin: 0 auto 0;
-      }
-    </style>
-
-    <h4
-        style="padding: 3.2rem 0; font-variant: small-caps; letter-spacing: .108ch; background: radial-gradient(40% 100% at 50% 0%, #322326 0%, #00000000 100%) center top no-repeat">
-      Фильм по мотивам 6-й песни Шримад Бхагаватам</h4>
+    <h4>Фильм по мотивам 6-й песни Шримад Бхагаватам</h4>
 
     <div id="characters">
       <style>
         #characters {
           position: relative;
-          height: 40rem;
-          min-width: 43.2rem;
-          width: 60vw;
-          margin-top: 5.4rem;
-          max-width: 1080px;
+          margin: 12vmin 0 0;
           align-self: center;
-
-          img {
-            position: absolute;
-            inset: auto 0 0;
-            margin: 0 auto;
-          }
         }
       </style>
       <img src="./img/kamali.png"
-           style="right: -30rem; width: 27rem; bottom: 3rem;" />
+           style="position: absolute; bottom: 1rem; min-width: 20rem; width: 40vmin; max-width: 40rem; right: -17vmin;" />
       <img src="./img/varsha.png"
-           style="left: -29rem; width: 27rem; bottom: 5.4rem;" />
-      <img src="./img/ajamil.png" style="left: -3rem; width: 40rem;" />
-      <!--
-        <div id="varsha" class="character">
-          <video muted loop width="100%" onmouseenter="this.play();"
-                  onmouseleave="this.pause()">
-            <source src="./img/Varsha.webm" type="video/webm">
-          </video>
-          <style>
-            #varsha {
-              position: absolute;
-              width: 30%;
-              z-index: 1;
-              top: 0;
-              left: 0;
-            }
-
-            #varsha:after {
-              content: '';
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              height: 50%;
-              background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%)
-            }
-          </style>
-        </div>
-        <div id="ajamil" class="character">
-          <style>
-            #ajamil {
-              position: absolute;
-              top: 0;
-              width: 66%;
-              z-index: 2;
-              left: 0;
-              right: 0;
-              margin: auto
-            }
-          </style>
-          <video muted loop width="100%" onmouseenter="this.play();"
-                  onmouseleave="this.pause()">
-            <source src="./img/ajamil.webm" type="video/webm">
-          </video>
-        </div>
-        <div id="kamali" class="character">
-          <style>
-            #kamali {
-              position: absolute;
-              width: 33%;
-              right: 0;
-              top: 0;
-              z-index: 0;
-            }
-          </style>
-          <img src="./img/kamali.png" alt="Kamali">
-        </div>
-        -->
+           style="position: absolute; bottom: 3rem; min-width: 19rem; width: 38vmin; max-width: 38rem; left: -14vmin;" />
+      <img src="./img/ajamil.png"
+           style="position: relative; left: -1rem; min-width: 27rem; width: 54vmin; max-width: 54rem;" />
     </div>
 
     <header id="header"
-            style="z-index: 1; margin-top: -17.28rem; text-shadow: 0 2px black;">
+            style="z-index: 1; text-shadow: 0 2px black; margin-top: -16vh;">
       <h1 style="line-height: 0.85; text-transform: uppercase;">
         <small style="text-transform: none;">Еще Один</small><br />
         Шанс
@@ -125,100 +44,12 @@
   </section>
 
   <section id="cta" class="container">
-    <style>
-      #cta {
-        margin-top: 2rem;
-      }
-
-      #play {
-        position: relative;
-
-        &::after {
-          position: absolute;
-          content: "";
-          top: 0;
-          left: 0;
-          right: 0;
-          z-index: -1;
-          height: 100%;
-          width: 100%;
-          transform: scale(0.9) translateZ(0);
-          filter: blur(1rem);
-          background: conic-gradient(from 180deg at 50% 50%, black, white);
-          background-size: 200% 200%;
-          animation: animateGlow 5s linear infinite;
-          border-radius: 2rem;
-        }
-      }
-
-      @keyframes animateGlow {
-        0% {
-          background-position: 0% 50%;
-        }
-
-        100% {
-          background-position: -200% 50%;
-        }
-      }
-    </style>
     <button id="play" style="align-self: center;">▶ Смотреть трейлер</button>
   </section>
 
   <hr />
 
   <section id="details" class="container">
-    <style>
-      #details {
-        padding: .5rem 2rem 0;
-        dl {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 3rem;
-
-          dt {
-            font-family: 'Open Sans', sans-serif;
-            opacity: .5;
-            font-variation-settings: "wdth" 75;
-            text-transform: uppercase;
-            letter-spacing: .27ch;
-            font-size: .8em;
-            margin-bottom: .5rem;
-          }
-
-          dd {
-            font-size: 1.728rem;
-            line-height: 1;
-            font-variant-numeric: lining-nums;
-          }
-        }
-        @media (max-width: 640px) {
-          dl {
-            text-align: left;
-            gap: 0;
-            display: block;
-            line-height: 1.66;
-
-            div {
-              margin-bottom: 0rem;
-              display: flex;
-              align-items: baseline;
-              gap: 2rem;
-            }
-            dt {
-              display: inline;
-              text-transform: none;
-              letter-spacing: normal;
-            }
-            dd {
-              display: inline;
-              font-size: 1.44rem;
-              text-align: right;
-              margin-left: auto;
-            }
-          }
-        }
-      }
-    </style>
     <dl>
       <div>
         <dt>Жанр</dt>
@@ -256,30 +87,10 @@
   </section>
 
   <section id="festivals" class="container">
-    <style>
-      #festivals {
-        letter-spacing: 10ch;
-        font-family: 'Open Sans', sans-serif;
-        opacity: .25;
-        overflow: hidden;
-      }
-    </style>
     фестивали награды
   </section>
 
   <blockquote id="synopsis" class="container">
-    <style>
-      #synopsis {
-        text-align: center;
-        font-size: 1.726rem;
-        font-style: italic;
-
-        @media (max-width: 640px) {
-          font-size: 1.44rem;
-          line-height: 1.32;
-        }
-      }
-    </style>
     Чистота, правдивость и аскетизм были жизнью юного Аджамилы. Но неожиданная
     страсть к куртизанке захлестнула его, заставив мошенничать, грабить и
     убивать. Он пал так низко, что, казалось, врата преисподней открыты… Что
@@ -288,45 +99,6 @@
   </blockquote>
 
   <section id="philosophy" class="container">
-    <style>
-      #philosophy {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 0;
-
-        article {
-          background: #1a1a1a;
-          border-radius: 1rem;
-          padding: 2rem;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          transition: transform 0.3s ease;
-          &:hover {
-            transform: translateY(-10px);
-          }
-          p {
-            font-size: 1.2rem;
-            line-height: 1.33;
-          }
-          h4 {
-            margin-bottom: 1rem;
-          }
-          @media (max-width: 640px) {
-            padding: 1rem;
-            p {
-              font-size: 1.08rem;
-            }
-            h4 {
-              font-size: 1.4rem;
-              margin-bottom: 0.3rem;
-            }
-          }
-        }
-      }
-    </style>
-
-    <!-- <h2>Философия</h2> -->
-
     <article>
       <h4>Когда рушится всё, остаётся только правда о себе</h4>
       <p>Он верил, что добродетель — его суть. Но страсть превратила его в
@@ -349,41 +121,6 @@
   </section>
 
   <section id="stills" class="container">
-    <style>
-      #stills {
-        max-width: none;
-      }
-
-      #frames {
-        white-space: nowrap;
-        max-width: 100%;
-        overflow: scroll;
-
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        scrollbar-width: none;
-
-        /* Firefox */
-        &::-webkit-scrollbar {
-          display: none;
-          /* Chrome, Safari, and Opera */
-        }
-
-        figure {
-          display: inline-block;
-        }
-
-        img {
-          height: 16rem;
-        }
-      }
-
-      .fancybox__nav {
-        button:hover {
-          background: transparent;
-        }
-      }
-    </style>
     <h2>Кадры</h2>
 
     <div id="frames">
@@ -587,32 +324,6 @@
   </section>
 
   <section id="cast" class="container">
-    <style>
-      #cast {}
-
-      .actors {
-        display: grid;
-        margin: 3.6rem 0;
-        gap: 3.6rem;
-        grid-template-columns: repeat(2, 1fr);
-
-        @media (min-width: 900px) {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-
-      .actor {
-
-        /* background: radial-gradient(circle, rgba(139,0,0,1) 0%, rgba(0,0,0,1) 100%); */
-        video,
-        img {
-          overflow: hidden;
-          border-radius: 160px;
-          margin-bottom: 1rem;
-        }
-      }
-    </style>
-
     <h2>Актерский состав</h2>
 
     <div class="actors">
@@ -652,34 +363,6 @@
   </section>
 
   <section id="team" class="container">
-    <style>
-      #team {
-        dl {
-          margin-top: 4rem;
-          font-variation-settings: "wdth" 75;
-          font-family: 'Open Sans', sans-serif;
-          column-count: 2;
-
-          @media (max-width: 640px) {
-            column-count: 1;
-          }
-
-          dt {
-            opacity: .5;
-          }
-
-          dd {
-            letter-spacing: .27ch;
-            text-transform: uppercase;
-          }
-
-          div {
-            break-inside: avoid;
-            margin: 0 0 2rem;
-          }
-        }
-      }
-    </style>
     <h2>Творческая команда</h2>
 
     <dl>
@@ -711,18 +394,6 @@
   </section>
 
   <section id="soundtrack" class="container">
-    <style>
-      #soundtrack {}
-
-      ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        margin-top: 4rem;
-      }
-    </style>
     <h2>Музыка в фильме</h2>
     <ul>
       <li class="track">
@@ -743,36 +414,16 @@
   </section>
 
   <section id="reflections" class="container">
-    <style>
-      #reflections {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      textarea {
-        background: transparent;
-        width: 81ch;
-        border-radius: 1.6rem;
-        color: white;
-        padding: 1.2rem;
-
-        &:focus {
-          outline: none;
-          border-color: white;
-        }
-      }
-    </style>
     <h2>Осмысление</h2>
     <h4 style="max-width: 540px;"><label for="feedback">Что вам откликнулось в
         фильме? Какие мысли или фидбек?</label></h4>
-    <div style="max-width: 640px;">
+    <div style="max-width: 540px; width: 90vw;">
       <textarea placeholder="Напишите нам..." id="feedback" name="feedback"
                 rows="3"
                 style="resize: none; overflow: hidden; max-width: 100%; display: block;"
                 oninput="this.style.height='auto'; this.style.height = this.scrollHeight + 'px'"></textarea>
       <button onclick="openEmailDialog()"
-                style="margin-top: 1rem;">✉️  Отправить</button>
+              style="margin-top: 1rem;">✉️  Отправить</button>
     </div>
     <script>
       function openEmailDialog() {
@@ -834,50 +485,6 @@
   </section>
 
   <section id="quiz" class="container">
-    <style>
-      #quiz {
-        max-width: 640px;
-
-        h4 {
-          font-variant-numeric: lining-nums;
-        }
-      }
-
-      .quiz-item {
-        margin: 2rem 0;
-        border-radius: 8px;
-        display: none;
-        font-variant-numeric: lining-nums;
-
-        &.active {
-          display: block;
-        }
-      }
-
-      .poll {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: .5rem;
-      }
-
-      .poll button {
-        min-width: 50%;
-      }
-
-      .poll button.correct {
-        border-color: #4CAF50;
-      }
-
-      #results {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin: 3rem;
-        font-size: 1.2em;
-      }
-    </style>
-
     <h2>Проверь себя</h2>
 
     <div class="quiz-item active">
@@ -931,22 +538,33 @@
         <div class="result-5" hidden>
           <h3>🌟</h3>
           <h4>Отлично!</h4>
-          <p>Вы настоящий пандит! <br>Ваш ум сияет ярче тысячи Солнц! Вы знаете фильм наизусть, включая те сцены, которые вырезали на монтаже. <br>Совет: попробуйте прочитать оригинал истории в <a href="https://vedabase.io/ru/library/sb/6/">6-й песне Шримад Бхагаватам</a>.</p>
+          <p>Вы настоящий пандит! <br>Ваш ум сияет ярче тысячи Солнц! Вы знаете
+            фильм наизусть, включая те сцены, которые вырезали на монтаже.
+            <br>Совет: попробуйте прочитать оригинал истории в <a
+               href="https://vedabase.io/ru/library/sb/6/">6-й песне Шримад
+              Бхагаватам</a>.</p>
         </div>
         <div class="result-4" hidden>
           <h3>📚</h3>
           <h4>Хорошо!</h4>
-          <p>Вы на пороге просветления! <br>Ваши знания как у сценариста, который только что закончил писать сюжет. <br>Совет: Попробуйте пересмотреть фильм, не отвлекаясь на телефон, но помните – слишком много просмотров может вызвать желание цитировать диалоги!</p>
+          <p>Вы на пороге просветления! <br>Ваши знания как у сценариста,
+            который только что закончил писать сюжет. <br>Совет: Попробуйте
+            пересмотреть фильм, не отвлекаясь на телефон, но помните – слишком
+            много просмотров может вызвать желание цитировать диалоги!</p>
         </div>
         <div class="result-3" hidden>
           <h3>📖</h3>
           <h4>Нормально!</h4>
-          <p>Вы на верном пути! <br>Ваши знания как у зрителя, который смотрел фильм, но пропустил пару сцен. <br>Совет: Может, стоит пересмотреть фильм?</p>
+          <p>Вы на верном пути! <br>Ваши знания как у зрителя, который смотрел
+            фильм, но пропустил пару сцен. <br>Совет: Может, стоит пересмотреть
+            фильм?</p>
         </div>
         <div class="result-2 result-1 result-0" hidden>
           <h3>😅</h3>
           <h4>Ом Намах Шивая!</h4>
-          <p>Вы точно смотрели наш фильм, или может быть проспали? <br>Совет: возьмите попкорн, начните с начала фильма и смотрите внимательно.</p>
+          <p>Вы точно смотрели наш фильм, или может быть проспали? <br>Совет:
+            возьмите попкорн, начните с начала фильма и смотрите внимательно.
+          </p>
         </div>
       </div>
       <!-- <button style="margin: 2rem auto;">Пройти снова</button> -->
@@ -1020,14 +638,8 @@
   <hr>
 
   <footer id="footer" class="container">
-    <style>
-      #footer {
-        margin-top: 2rem;
-        font-variant-numeric: lining-nums;
-      }
-    </style>
     <!-- <nav style="margin-bottom: 1rem; display: flex; gap: 1rem; justify-content: center;"> -->
-      <!-- <a href="#home">Home</a>
+    <!-- <a href="#home">Home</a>
       <a href="#watch">Watch Now</a>
       <a href="#trailer">Trailer</a>
       <a href="#merch">Merch</a>
@@ -1035,8 +647,8 @@
       <a href="#contact">Contact</a>
       <a href="#terms">Terms</a>
       <a href="#privacy">Privacy</a> -->
-      <!-- <br> -->
-      <!-- <a href="https://instagram.com" target="_blank">IG</a>
+    <!-- <br> -->
+    <!-- <a href="https://instagram.com" target="_blank">IG</a>
       <a href="https://facebook.com" target="_blank">FB</a>
       <a href="https://youtube.com" target="_blank">YT</a>
       <a href="https://twitter.com" target="_blank">X</a><br> -->
