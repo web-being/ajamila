@@ -124,6 +124,7 @@ section {
 
 button {
   background: floralwhite;
+  color: black;
   border-radius: 2rem;
   border: none;
   /* font-style: italic; */
@@ -405,21 +406,36 @@ hr {
 #cast {
   .actors {
     display: grid;
-    padding: 3.6rem;
-    gap: 3.6rem;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 3rem;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    .actor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      h4 {
+        margin-bottom: -1rem;
+      }
+      /* background: radial-gradient(circle, rgba(139,0,0,1) 0%, rgba(0,0,0,1) 100%); */
+      video,
+      img {
+        overflow: hidden;
+        display: block;
+        border-radius: 160px;
+        margin-bottom: 1rem;
+        aspect-ratio: 1;
+      }
+    }
   }
 
-  .actor {
-    h4 {
-      margin-bottom: 0.6rem;
+  @media (max-width: 640px) {
+    .actors {
+      padding: 1rem;
     }
-    /* background: radial-gradient(circle, rgba(139,0,0,1) 0%, rgba(0,0,0,1) 100%); */
-    video,
-    img {
-      overflow: hidden;
-      border-radius: 160px;
-      margin-bottom: 1rem;
+    .actor {
+      video, img { width: 140px; height: 140px; }
     }
   }
 }
@@ -459,7 +475,12 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
+  }
+  @media (max-width: 640px) {
+    ul {
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -478,6 +499,12 @@ hr {
     &:focus {
       outline: none;
       border-color: white;
+    }
+  }
+
+  @media (max-width: 640px) {
+    h2 {
+      margin-bottom: 1rem;
     }
   }
 }
