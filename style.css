@@ -84,16 +84,16 @@ h1 {
   font-size: 10.8rem;
 
   @media (max-width: 640px) {
-    font-size: 8.1rem;
+    font-size: 6.66rem;
   }
 }
 
 h2 {
   font-size: 4.32rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4vmin;
 
   @media (max-width: 640px) {
-    font-size: 3.2rem;
+    font-size: 2.7rem;
   }
 }
 
@@ -104,9 +104,9 @@ h3 {
 
 h4 {
   font-size: 1.928rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.6vmin;
   @media (max-width: 640px) {
-    font-size: 1.6rem;
+    font-size: 1.44rem;
   }
 }
 
@@ -158,16 +158,12 @@ a {
 }
 
 .container {
-  margin: 4rem auto;
-  padding: 0 1rem;
+  margin: 4vmin auto;
+  padding: 0 1vmin;
   max-width: 1080px;
   width: 100%;
   position: relative;
   text-align: center;
-
-  @media (max-width: 640px) {
-    margin: 2rem auto;
-  }
 }
 
 hr {
@@ -189,13 +185,25 @@ hr {
   background-position: center top;
   background-repeat: no-repeat;
   margin: 0 auto 0;
-  min-height: 77vh;
+  min-height: 77vmin;
+  max-width: 100%;
 
   h4 {
-    padding: 3.2vmin 0;
+    padding: 3.2vmin 2rem;
     font-variant: small-caps;
     letter-spacing: .108ch;
     background: radial-gradient(40% 100% at 50% 0%, #322326 0%, #00000000 100%) center top no-repeat
+  }
+
+  #characters {
+    position: relative;
+    margin: 12vmin 0 0;
+    align-self: center;
+    max-width: 100%;
+  }
+
+  @media (max-width: 640px) {
+    overflow: hidden;
   }
 }
 
@@ -267,7 +275,7 @@ hr {
       line-height: 1.66;
 
       div {
-        margin-bottom: 0rem;
+        margin-bottom: 0vmin;
         display: flex;
         align-items: baseline;
         gap: 2rem;
@@ -284,6 +292,7 @@ hr {
         font-size: 1.44rem;
         text-align: right;
         margin-left: auto;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -385,17 +394,15 @@ hr {
 #cast {
   .actors {
     display: grid;
-    margin: 3.6rem 0;
+    padding: 3.6rem;
     gap: 3.6rem;
-    grid-template-columns: repeat(2, 1fr);
-
-    @media (min-width: 900px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 
   .actor {
-
+    h4 {
+      margin-bottom: 0.6vmin;
+    }
     /* background: radial-gradient(circle, rgba(139,0,0,1) 0%, rgba(0,0,0,1) 100%); */
     video,
     img {
@@ -408,7 +415,7 @@ hr {
 
 #team {
   dl {
-    margin-top: 4rem;
+    margin-top: 4vmin;
     font-variation-settings: "wdth" 75;
     font-family: 'Open Sans', sans-serif;
     column-count: 2;
@@ -440,7 +447,7 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 4rem;
+    margin-top: 4vmin;
   }
 }
 
