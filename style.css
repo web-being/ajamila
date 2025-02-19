@@ -72,7 +72,7 @@ h4,
 h5,
 h6 {
   font-weight: normal;
-  line-height: 1;
+  line-height: 1.2;
 
   small {
     font-family: "Cormorant Infant", serif;
@@ -90,7 +90,7 @@ h1 {
 
 h2 {
   font-size: 4.32rem;
-  margin-bottom: 4vmin;
+  margin-bottom: 2rem;
 
   @media (max-width: 640px) {
     font-size: 2.7rem;
@@ -104,7 +104,7 @@ h3 {
 
 h4 {
   font-size: 1.928rem;
-  margin-bottom: 1.6vmin;
+  margin-bottom: 1.6rem;
   @media (max-width: 640px) {
     font-size: 1.44rem;
   }
@@ -158,12 +158,15 @@ a {
 }
 
 .container {
-  margin: 4vmin auto;
-  padding: 0 1vmin;
+  margin: 4rem auto;
+  padding: 0 1rem;
   max-width: 1080px;
   width: 100%;
   position: relative;
   text-align: center;
+  @media (max-width: 640px) {
+    margin: 2rem auto;
+  }
 }
 
 hr {
@@ -189,21 +192,29 @@ hr {
   max-width: 100%;
 
   h4 {
-    padding: 3.2vmin 2rem;
+    padding: 2rem 2rem;
     font-variant: small-caps;
     letter-spacing: .108ch;
-    background: radial-gradient(40% 100% at 50% 0%, #322326 0%, #00000000 100%) center top no-repeat
+    background: radial-gradient(40% 100% at 50% 0%, #261411 0%, #00000000 100%) center top no-repeat
   }
 
   #characters {
     position: relative;
-    margin: 12vmin 0 0;
     align-self: center;
     max-width: 100%;
+    margin-top: 2rem;
   }
 
   @media (max-width: 640px) {
     overflow: hidden;
+
+    h4 {
+      padding: 1rem 2rem;
+    }
+
+    #characters {
+      margin-top: 0rem;
+    }
   }
 }
 
@@ -243,7 +254,7 @@ hr {
 }
 
 #details {
-  padding: .5rem 2rem 0;
+  padding: 0 2rem 0;
 
   dl {
     display: grid;
@@ -275,7 +286,7 @@ hr {
       line-height: 1.66;
 
       div {
-        margin-bottom: 0vmin;
+        margin-bottom: 0;
         display: flex;
         align-items: baseline;
         gap: 2rem;
@@ -401,7 +412,7 @@ hr {
 
   .actor {
     h4 {
-      margin-bottom: 0.6vmin;
+      margin-bottom: 0.6rem;
     }
     /* background: radial-gradient(circle, rgba(139,0,0,1) 0%, rgba(0,0,0,1) 100%); */
     video,
@@ -415,13 +426,14 @@ hr {
 
 #team {
   dl {
-    margin-top: 4vmin;
+    margin-top: 4rem;
     font-variation-settings: "wdth" 75;
     font-family: 'Open Sans', sans-serif;
     column-count: 2;
 
     @media (max-width: 640px) {
       column-count: 1;
+      margin-top: 2rem;
     }
 
     dt {
@@ -447,7 +459,7 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 4vmin;
+    margin-top: 4rem;
   }
 }
 
