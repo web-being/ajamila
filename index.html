@@ -341,17 +341,49 @@
         <p><em>Варша</em></p>
       </div>
 
-      <!-- <div class="actor">
-        <img src="actor3.jpg" alt="">
-        <h4>Инна Ершова</h4>
-        <p>Отец</p>
+      <div class="actor">
+        <video width="216" height="216" muted loop src="img/cast/ajamil.webm"
+               onmouseenter="this.play();" onmouseleave="this.pause();"></video>
+        <h4>Дмитрий Самохвалов</h4>
+        <p><em>Отец Аджамилы</em></p>
       </div>
 
       <div class="actor">
-        <img src="actor3.jpg" alt="">
-        <h4>Инна Ершова</h4>
-        <p>Гуру</p>
-      </div> -->
+        <video width="216" height="216" muted loop src="img/cast/kamali.webm"
+               onmouseenter="this.play();" onmouseleave="this.pause();"></video>
+        <h4>Алексей Шабалин</h4>
+        <p><em>Маленький Аджамила</em></p>
+      </div>
+
+      <div class="actor">
+        <video width="216" height="216" muted loop src="img/cast/varsha.webm"
+               onmouseenter="this.play();" onmouseleave="this.pause();"></video>
+        <h4>Игорь Левкин</h4>
+        <p><em>Гурудев</em></p>
+      </div>
+
+      <div class="actor">
+        <video width="216" height="216" muted loop src="img/cast/varsha.webm"
+               onmouseenter="this.play();" onmouseleave="this.pause();"></video>
+        <h4>Александр Харченко</h4>
+        <p><em>Друг Аджамилы</em></p>
+      </div>
+
+      <div class="actor">
+        <video width="216" height="216" muted loop src="img/cast/varsha.webm"
+               onmouseenter="this.play();" onmouseleave="this.pause();"></video>
+        <h4>Дмитрий Серебряков</h4>
+        <p><em>Друг Аджамилы</em></p>
+      </div>
+
+      <div class="actor">
+        <video width="216" height="216" muted loop src="img/cast/varsha.webm"
+               onmouseenter="this.play();" onmouseleave="this.pause();"></video>
+        <h4>Владимир Гусак</h4>
+        <p><em>Мохан</em></p>
+      </div>
+
+      И другие.
     </div>
   </section>
 
@@ -360,16 +392,20 @@
 
     <dl>
       <div>
-        <dt>Режиссёр</dt>
-        <dd>Юлия Брославская</dd>
-      </div>
-      <div>
         <dt>Автор сценария</dt>
         <dd>Олег Ерёменко</dd>
       </div>
       <div>
+        <dt>Режиссёр</dt>
+        <dd>Юлия Брославская</dd>
+      </div>
+      <div>
         <dt>Оператор</dt>
         <dd>Наталья Голомай</dd>
+      </div>
+      <div>
+        <dt>Монтаж</dt>
+        <dd>Наталья Голомай,<br/> Андрей Коновалов</dd>
       </div>
       <div>
         <dt>Художник</dt>
@@ -382,6 +418,46 @@
       <div>
         <dt>Композиторы</dt>
         <dd>Константин Дюжарден,<br> Владислав Якутко,<br> Антон Кайгородов</dd>
+      </div>
+      <div>
+        <dt>Постпродакшн</dt>
+        <dd>Наталья Голомай,<br> Руслан Толстобров,<br> Антон Кайгородов,<br> Дмитрий Иванов</dd>
+      </div>
+      <div>
+        <dt>Озвучка</dt>
+        <dd>Александр Пакеев</dd>
+      </div>
+      <div>
+        <dt>Английская Озвучка</dt>
+        <dd>Серси Балингел</dd>
+      </div>
+      <div>
+        <dt>Обработка звука</dt>
+        <dd>Дмитрий Иванов</dd>
+      </div>
+      <div>
+        <dt>Звукорежиссер</dt>
+        <dd>Денис Коноплев</dd>
+      </div>
+      <div>
+        <dt>Звукооператор</dt>
+        <dd>Сергей Таранов, <br>Максим Перебейнос</dd>
+      </div>
+      <div>
+        <dt>Монтаж диалогов</dt>
+        <dd>Елена Кударова</dd>
+      </div>
+      <div>
+        <dt>Саунд-дизайн</dt>
+        <dd>Александр Химич, <br>Артем Невгород</dd>
+      </div>
+      <div>
+        <dt>Цветокоррекция</dt>
+        <dd>Наталья Голомай, <br>Артем Деменков, <br>Дмитрий Иванов</dd>
+      </div>
+      <div>
+        <dt>Администратор</dt>
+        <dd>Юлия Макаренко</dd>
       </div>
     </dl>
   </section>
@@ -424,7 +500,7 @@
         const subject = encodeURIComponent('Фидбек по фильму');
         const body = encodeURIComponent(`Вот мои мысли о фильме:\n\n${feedback}`);
 
-        const email = "example@gmail.com";
+        const email = "pvs9@yandex.ru";
         const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
         const mailtoURL = `mailto:${email}?subject=${subject}&body=${body}`;
         const link = document.createElement('a')
