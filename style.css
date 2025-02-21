@@ -90,7 +90,6 @@ h1 {
 
 h2 {
   font-size: 4.32rem;
-  margin-bottom: 2rem;
 
   @media (max-width: 640px) {
     font-size: 2.7rem;
@@ -104,7 +103,7 @@ h3 {
 
 h4 {
   font-size: 1.928rem;
-  margin-bottom: 1.6rem;
+
   @media (max-width: 640px) {
     font-size: 1.44rem;
   }
@@ -165,6 +164,7 @@ a {
   width: 100%;
   position: relative;
   text-align: center;
+
   @media (max-width: 640px) {
     margin: 2rem auto;
   }
@@ -203,7 +203,7 @@ hr {
     position: relative;
     align-self: center;
     max-width: 100%;
-    margin-top: 2rem;
+    margin-top: 8rem;
   }
 
   @media (max-width: 640px) {
@@ -404,51 +404,118 @@ hr {
 }
 
 #cast {
+  /* Base styles for the actors container */
   .actors {
-    display: grid;
-    padding: 3rem;
-    gap: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 15px;
+  }
 
+  /* Ajamila: full width on desktop */
+  .actor.ajamila {
+    flex: 0 0 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Video wrapper for gradient overlay */
+  .video-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .video-wrapper video {
+    width: 100%;
+    max-width: 600px;
+    /* Adjust as needed for desktop */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Gradient overlay fading to black at the bottom */
+  .video-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    /* Adjust height of fade */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    pointer-events: none;
+    /* Ensures hover events pass through */
+  }
+
+  /* Two-per-row grid for second row on desktop */
+  .actor-grid-2 {
+    flex: 0 0 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     .actor {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      h4 {
-        margin-bottom: -1rem;
-      }
-      /* background: radial-gradient(circle, rgba(139,0,0,1) 0%, rgba(0,0,0,1) 100%); */
-      video,
-      img {
-        overflow: hidden;
-        display: block;
-        border-radius: 160px;
-        margin-bottom: 1rem;
-        aspect-ratio: 1;
-      }
+      margin-top: -8vmin;
     }
   }
 
-  @media (max-width: 640px) {
+  /* Three-per-row grid for remaining actors on desktop */
+  .actor-grid-3 {
+    flex: 0 0 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* Ensure images are responsive */
+  .actor img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Mobile layout: Ajamila full, others in pairs */
+  @media (max-width: 767px) {
     .actors {
-      padding: 1rem;
+      flex-direction: column;
     }
-    .actor {
-      video, img { width: 140px; height: 140px; }
+
+    .actor.ajamila {
+      flex: 0 0 100%;
     }
+
+    .actor-grid.two-per-row,
+    .actor-grid.three-per-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      /* Pairs on mobile */
+      gap: 15px;
+    }
+
+    .video-wrapper video {
+      max-width: 100%;
+      /* Full width on mobile */
+    }
+  }
+
+  /* Center text under videos/images */
+  .actor h4,
+  .actor p {
+    text-align: center;
+    margin: 5px 0;
   }
 }
 
 #team {
   dl {
-    margin-top: 4rem;
+    margin-top: 2rem;
     font-variation-settings: "wdth" 75;
     font-family: 'Open Sans', sans-serif;
-    column-count: 2;
+    column-count: 3;
 
     @media (max-width: 640px) {
-      column-count: 1;
+      column-count: 2;
       margin-top: 2rem;
     }
 
@@ -475,8 +542,9 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
+
   @media (max-width: 640px) {
     ul {
       margin-top: 2rem;
@@ -501,12 +569,6 @@ hr {
       border-color: white;
     }
   }
-
-  @media (max-width: 640px) {
-    h2 {
-      margin-bottom: 1rem;
-    }
-  }
 }
 
 #quiz {
@@ -517,7 +579,7 @@ hr {
   }
 
   .quiz-item {
-    margin: 2rem 0;
+    margin: 0 0;
     border-radius: 8px;
     display: none;
     font-variant-numeric: lining-nums;
@@ -532,6 +594,7 @@ hr {
     flex-direction: column;
     align-items: center;
     gap: .5rem;
+    margin: 2rem 0
   }
 
   .poll button {

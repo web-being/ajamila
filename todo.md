@@ -1,12 +1,14 @@
 * [x] Cleanup, arrange
 * [x] Responsive (mobile)
-* [ ] Content updates from tg
+* [x] Content updates from tg
+* [ ] Trailer
+* [ ] Cast block: mobile layout, videos, mb better text
 * [ ] English version
 * [x] Setup domain
-* [ ] Header effects like glowing particles or fire (lighting faces)
+* [ ] Hero effect: fire (lighting faces)
 * [ ] Meta informations / SEO
 * [x] Improve stills quality
-* [ ] Feedback
-* [ ] Soundtracks
+* [x] Feedback
+* [x] Soundtracks
 * [ ] headers as anchors
-* [ ] Better hero composition
+* [x] Better hero composition
