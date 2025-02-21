@@ -5,7 +5,7 @@
 * [ ] Cast block: mobile layout, videos, mb better text
 * [ ] English version
 * [x] Setup domain
-* [ ] Hero effect: fire (lighting faces)
+* [x] Hero effect: fire (lighting faces)
 * [ ] Meta informations / SEO
 * [x] Improve stills quality
 * [x] Feedback
