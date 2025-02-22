@@ -10,6 +10,6 @@
 * [x] Improve stills quality
 * [x] Feedback
 * [x] Soundtracks
-* [ ] headers as anchors
+* [ ] Headers as anchors
 * [x] Better hero composition
-* [ ] Scroll effects
+* [ ] Scroll effects: sticky titles
