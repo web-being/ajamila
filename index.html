@@ -289,32 +289,49 @@
 
       let frames = document.getElementById('frames')
 
-      // cumulative scroll
-      let hover = false
+      setInterval(() => frames.scrollLeft += 0.5, 18)
 
-      setInterval(() => updateScroll(.5), 18)
-
-      let prevWScroll = window.scrollY
-      let isScrolling
+      let lastScrollTop = window.scrollY
+      let isScrolling // if page is scrolling (eg. to hover interaction)
       let scrollTimeout
-      window.addEventListener('scroll', () => {
-        let delta = window.scrollY - prevWScroll
-        prevWScroll = window.scrollY
-        updateScroll(delta * .5)
+      let isHanging // if block is hanging for a bit
 
+      window.addEventListener('wheel', (e) => {
+        // track if page is scrolling
         isScrolling = true
         if (scrollTimeout) clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => isScrolling = false, 200);
-      }, { passive: true });
 
-      function updateScroll(delta) {
-        if (isLightbox) return
-        frames.scrollLeft += delta
-      }
+        // handle hanging
+        const stillsRect = stills.getBoundingClientRect();
+        const framesScrollMax = frames.scrollWidth - frames.clientWidth; // Max scrollable distance
+        const threshold = framesScrollMax * 0.15; // Halfway point
+        const isAtTop = stillsRect.top <= 0 && stillsRect.bottom <= window.innerHeight;
 
-      frames.addEventListener('mouseenter', () => { if (!isScrolling) hover = true }, { passive: true });
-      frames.addEventListener('mousemove', () => { if (!isScrolling) hover = true }, { passive: true });
-      frames.addEventListener('mouseleave', () => { hover = false }, { passive: true });
+        e.preventDefault()
+
+        if (frames.contains(e.target)) frames.scrollLeft += e.deltaX
+
+        // Check if we're in the section and scrolling down
+        if (isAtTop && e.deltaY > 0) {
+          // If frames haven't reached halfway, "wait" by reverting page scroll
+          if (frames.scrollLeft < threshold) {
+            isHanging = true;
+            window.scrollTo(0, lastScrollTop); // Hold the page scroll position
+            frames.scrollLeft += e.deltaY
+            return;
+          }
+        }
+
+        frames.scrollLeft += e.deltaY * .5
+        window.scrollTo(0, lastScrollTop + e.deltaY);
+
+        // Update last known scroll position when not waiting
+        // if (!isHanging || delta < 0) {
+          lastScrollTop = window.scrollY;
+        // }
+        isHanging = false;
+      }, {passive:false});
     </script>
   </section>
 
