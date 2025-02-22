@@ -115,6 +115,14 @@ h5 {
 
 section {
   text-align: center;
+
+  h2 {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: radial-gradient(ellipse farthest-side at top, black 42%, transparent 100%);
+    padding-bottom: 2rem;
+  }
 }
 
 [hidden] {
@@ -213,14 +221,18 @@ hr {
       width: 144%;
       height: 144%;
       background: radial-gradient(circle, rgba(255, 200, 150, 0.54) 0%, rgba(255, 100, 0, 0.108) 70%, rgba(0, 0, 0, 0) 100%);
-      mix-blend-mode: overlay; /* Or soft-light for a subtler effect */
-      pointer-events: none; /* Ensures hover/click works on the image */
+      mix-blend-mode: overlay;
+      /* Or soft-light for a subtler effect */
+      pointer-events: none;
+      /* Ensures hover/click works on the image */
       animation: flicker 1.08s infinite ease-in-out;
     }
   }
 
   #header {
-    z-index: 1; text-shadow: 0 2px black; margin-top: -12vmin;
+    z-index: 1;
+    text-shadow: 0 2px black;
+    margin-top: -12vmin;
   }
 
   @media (max-width: 640px) {
@@ -237,15 +249,41 @@ hr {
 }
 
 @keyframes flicker {
-  0% { opacity: 0.7; }
-  10% { opacity: 0.9; }
-  25% { opacity: 0.6; }
-  40% { opacity: 0.85; }
-  50% { opacity: 1; }
-  60% { opacity: 0.75; }
-  75% { opacity: 0.65; }
-  90% { opacity: 0.95; }
-  100% { opacity: 0.7; }
+  0% {
+    opacity: 0.7;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  25% {
+    opacity: 0.6;
+  }
+
+  40% {
+    opacity: 0.85;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0.75;
+  }
+
+  75% {
+    opacity: 0.65;
+  }
+
+  90% {
+    opacity: 0.95;
+  }
+
+  100% {
+    opacity: 0.7;
+  }
 }
 
 #cta {
@@ -432,6 +470,7 @@ hr {
 }
 
 #cast {
+
   /* Base styles for the actors container */
   .actors {
     display: flex;
@@ -446,11 +485,13 @@ hr {
       display: block;
     }
 
-    h4, p {
+    h4,
+    p {
       position: relative;
       z-index: 1;
       text-align: center;
     }
+
     h4 {
       margin-top: -1rem;
     }
@@ -461,6 +502,7 @@ hr {
       position: relative;
       z-index: 1;
       margin-top: 2rem;
+
       video {
         max-width: 32rem;
       }
@@ -477,6 +519,7 @@ hr {
     .vignette {
       position: relative;
       display: inline-block;
+
       &::after {
         content: '';
         position: absolute;
@@ -505,6 +548,7 @@ hr {
     align-items: flex-end;
     gap: 2rem;
     padding: 0 3rem;
+
     .actor {
       padding: 1rem;
     }
@@ -513,6 +557,7 @@ hr {
   @media (max-width: 640px) {
     .actors {
       flex-direction: column;
+
       .actor {
         &.ajamila {
           flex: 0 0 100%;
