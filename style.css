@@ -121,7 +121,6 @@ section {
     top: 0rem;
     z-index: 2;
     background: radial-gradient(ellipse at center top, black 15%, transparent 70%);
-    transition: .1s ease-out;
     margin: 0;
     white-space: nowrap;
     padding: 0 0 2rem;

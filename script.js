@@ -60,7 +60,7 @@ window.addEventListener('wheel', (e) => {
 // Handle h2 sticky class
 const h2s = document.querySelectorAll('section > h2');
 
-const threshold = 40
+const threshold = 108
 h2s.forEach(h2 => {
   let section = h2.parentNode
 
@@ -69,7 +69,7 @@ h2s.forEach(h2 => {
     if (top >= threshold) return
 
     let amt = Math.min(Math.max(-top + threshold, 0) / threshold, 1)
-    h2.style.transform = `scale(${0.75 + 0.25*(1-amt)})`
+    h2.style.transform = `scale(${0.8 + 0.2*(1-amt)})`
   })
 });
 
