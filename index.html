@@ -16,21 +16,20 @@
     <h4>Фильм по мотивам 6-й песни Шримад Бхагаватам</h4>
 
     <div id="characters">
-      <img src="./img/kamali.png"
+      <img src="./img/kamali.avif"
            style="position: absolute; bottom: 1rem; min-width: min(20rem,60vw); width: 40vmin; max-width: min(40rem,60vw); right: -17vmin;" />
-      <img src="./img/varsha.png"
+      <img src="./img/varsha.avif"
            style="position: absolute; bottom: 3rem; min-width: min(19rem,54vw); width: 38vmin; max-width: min(38rem,54vw); left: -14vmin;" />
-      <img src="./img/ajamil.png"
+      <img src="./img/ajamil.avif"
            style="position: relative; left: -1rem; min-width: min(27rem,80vw); width: 54vmin; max-width: min(54rem,80vw);" />
     </div>
 
-    <header id="header"
-            style="z-index: 1; text-shadow: 0 2px black; margin-top: -22vmin;">
+    <header id="header">
       <h1 style="line-height: 0.85; text-transform: uppercase;">
         <small style="text-transform: none;">Еще Один</small><br />
         Шанс
       </h1>
-      <h2 style="margin: 0.5rem 0 0rem; font-family: 'Cormorant Garamond';">
+      <h2>
         <em>История Аджамилы</em>
       </h2>
     </header>
@@ -66,7 +65,7 @@
       </div>
       <div>
         <dt>Язык</dt>
-        <dd>Русский, <a href="/en">Английский</a></dd>
+        <dd>Русский, Английский</dd>
       </div>
       <div>
         <dt>Отзывы</dt>
@@ -317,12 +316,14 @@
   </section>
 
   <section id="cast" class="container">
-    <h2>Актерский состав</h2>
+    <h2 style="position: relative; z-index: 2;">Актерский состав</h2>
     <div class="actors">
       <!-- First actor: full row, named "ajamila" -->
       <div class="actor ajamila">
-        <div class="video-wrapper">
-          <video muted loop src="img/cast/ajamil.webm" onmouseenter="this.play();" onmouseleave="this.pause();"></video>
+        <div class="vignette">
+          <video muted loop src="img/cast/ajamil.webm"
+                 onmouseenter="this.play();"
+                 onmouseleave="this.pause();"></video>
         </div>
         <h4>Андрей Коновалов</h4>
         <p><em>Аджамила</em></p>
@@ -331,56 +332,65 @@
       <!-- Second row: two actors -->
       <div class="actor-grid-2">
         <div class="actor">
-          <div class="video-wrapper">
-            <video muted loop src="img/cast/varsha.webm" onmouseenter="this.play();" onmouseleave="this.pause();"></video>
+          <div class="vignette">
+            <video muted loop src="img/cast/varsha.webm"
+                   onmouseenter="this.play();"
+                   onmouseleave="this.pause();"></video>
           </div>
           <h4>Лидия Бельская</h4>
           <p><em>Варша</em></p>
         </div>
         <div class="actor">
-          <div class="video-wrapper">
-            <video muted loop src="img/cast/kamali.webm" onmouseenter="this.play();" onmouseleave="this.pause();"></video>
+          <div class="vignette">
+            <video muted loop src="img/cast/kamali.webm"
+                   onmouseenter="this.play();"
+                   onmouseleave="this.pause();"></video>
           </div>
           <h4>Инна Щедрова</h4>
           <p><em>Камали</em></p>
         </div>
       </div>
 
-      <!-- Remaining actors: three per row on desktop -->
-      <!-- <div class="actor-grid-3">
+      <div class="actor-grid-3">
         <div class="actor">
-          <img src="img/cast/actor4.jpg" alt="Дмитрий Самохвалов">
+          <div class="vignette"><img src="img/cast/father.webp"
+                 alt="Дмитрий Самохвалов"></div>
           <h4>Дмитрий Самохвалов</h4>
           <p><em>Отец Аджамилы</em></p>
         </div>
         <div class="actor">
-          <img src="img/cast/actor5.jpg" alt="Алексей Шабалин">
+          <div class="vignette"><img src="img/cast/child.webp"
+                 alt="Алексей Шабалин"></div>
           <h4>Алексей Шабалин</h4>
           <p><em>Маленький Аджамила</em></p>
         </div>
         <div class="actor">
-          <img src="img/cast/actor6.jpg" alt="Игорь Левкин">
+          <div class="vignette"><img src="img/cast/guru.webp"
+                 alt="Игорь Левкин"></div>
           <h4>Игорь Левкин</h4>
           <p><em>Гурудев</em></p>
         </div>
         <div class="actor">
-          <img src="img/cast/actor7.jpg" alt="Александр Харченко">
+          <div class="vignette"><img src="img/cast/friend1.webp"
+                 alt="Александр Харченко"></div>
           <h4>Александр Харченко</h4>
           <p><em>Друг Аджамилы</em></p>
         </div>
         <div class="actor">
-          <img src="img/cast/actor8.jpg" alt="Дмитрий Серебряков">
+          <div class="vignette"><img src="img/cast/friend2.webp"
+                 alt="Дмитрий Серебряков"></div>
           <h4>Дмитрий Серебряков</h4>
           <p><em>Друг Аджамилы</em></p>
         </div>
         <div class="actor">
-          <img src="img/cast/actor9.jpg" alt="Владимир Гусак">
+          <div class="vignette"><img src="img/cast/mohan.webp"
+                 alt="Владимир Гусак"></div>
           <h4>Владимир Гусак</h4>
           <p><em>Мохан</em></p>
         </div>
-      </div> -->
+      </div>
 
-      <!-- <p style="margin: 0 auto">И другие.</p> -->
+      <h5 style="margin: 0rem auto">И другие...</h5>
     </div>
   </section>
 
@@ -402,7 +412,7 @@
       </div>
       <div>
         <dt>Монтаж</dt>
-        <dd>Наталья Голомай,<br/> Андрей Коновалов</dd>
+        <dd>Наталья Голомай,<br /> Андрей Коновалов</dd>
       </div>
       <div>
         <dt>Художник</dt>
@@ -422,7 +432,8 @@
       </div>
       <div>
         <dt>Постпродакшн</dt>
-        <dd>Наталья Голомай,<br> Руслан Толстобров,<br> Антон Кайгородов,<br> Дмитрий Иванов</dd>
+        <dd>Наталья Голомай,<br> Руслан Толстобров,<br> Антон Кайгородов,<br>
+          Дмитрий Иванов</dd>
       </div>
       <div>
         <dt>Озвучка</dt>
@@ -481,7 +492,8 @@
 
   <section id="reflections" class="container">
     <h2>Осмысление</h2>
-    <h4 style="max-width: 540px; margin-bottom: 1rem"><label for="feedback">Что вам откликнулось в
+    <h4 style="max-width: 540px; margin-bottom: 1rem"><label for="feedback">Что
+        вам откликнулось в
         фильме? Какие мысли или фидбек?</label></h4>
     <div style="max-width: 540px; width: 90vw;">
       <textarea placeholder="Напишите нам..." id="feedback" name="feedback"
@@ -608,7 +620,8 @@
             фильм наизусть, включая те сцены, которые вырезали на монтаже.
             <br>Совет: попробуйте прочитать оригинал истории в <a
                href="https://vedabase.io/ru/library/sb/6/">6-й песне Шримад
-              Бхагаватам</a>.</p>
+              Бхагаватам</a>.
+          </p>
         </div>
         <div class="result-4" hidden>
           <h3>📚</h3>

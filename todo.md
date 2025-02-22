@@ -2,7 +2,7 @@
 * [x] Responsive (mobile)
 * [x] Content updates from tg
 * [ ] Trailer
-* [ ] Cast block: mobile layout, videos, mb better text
+* [x] Cast block: mobile layout, videos, mb better text
 * [ ] English version
 * [x] Setup domain
 * [x] Hero effect: fire (lighting faces)
@@ -12,3 +12,4 @@
 * [x] Soundtracks
 * [ ] headers as anchors
 * [x] Better hero composition
+* [ ] Scroll effects
