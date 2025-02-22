@@ -107,7 +107,7 @@
   </section>
 
   <section id="stills">
-    <h2>Frames</h2>
+    <h2>Stills</h2>
 
     <div id="frames">
       <figure><a href="img/frames/frame1.webp" data-fancybox="gallery"><img
@@ -263,50 +263,6 @@
           href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <script
             src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-    <script>
-      let isLightbox = false
-
-      Object.assign(Fancybox.defaults, {
-        caption: false,
-        Toolbar: false,
-        Thumbs: false,
-        wheel: 'slide',
-        closeButton: false,
-        on: {
-          activate: (e) => (console.log('ACTIVATE', e), isLightbox = true),
-          deactivate: () => (isLightbox = false)
-        }
-      });
-
-      let frames = document.getElementById('frames')
-
-      // cumulative scroll
-      let hover = false
-
-      setInterval(() => updateScroll(.5), 18)
-
-      let prevWScroll = window.scrollY
-      let isScrolling
-      let scrollTimeout
-      window.addEventListener('scroll', () => {
-        let delta = window.scrollY - prevWScroll
-        prevWScroll = window.scrollY
-        updateScroll(delta * .5)
-
-        isScrolling = true
-        if (scrollTimeout) clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => isScrolling = false, 200);
-      }, { passive: true });
-
-      function updateScroll(delta) {
-        if (isLightbox) return
-        frames.scrollLeft += delta
-      }
-
-      frames.addEventListener('mouseenter', () => { if (!isScrolling) hover = true }, { passive: true });
-      frames.addEventListener('mousemove', () => { if (!isScrolling) hover = true }, { passive: true });
-      frames.addEventListener('mouseleave', () => { hover = false }, { passive: true });
-    </script>
   </section>
 
   <section id="cast" class="container">
@@ -389,7 +345,7 @@
   </section>
 
   <section id="team" class="container">
-    <h2>Creative Team</h2>
+    <h2>Team</h2>
 
     <dl>
       <div>
@@ -486,71 +442,14 @@
   <section id="reflections" class="container">
     <h2>Reflections</h2>
     <h4 style="max-width: 540px; margin-bottom: 1rem"><label for="feedback">What resonated with you in the film? Any thoughts or feedback?</label></h4>
-    <div style="max-width: 540px; width: 90vw;">
-      <textarea placeholder="Write to us..." id="feedback" name="feedback"
+    <form id="feedbackForm" action="mailto:pvs9@yandex.ru?subject=Story%20of%20Ajamila%20movie%20feedback" method="post" style="max-width: 540px; width: 90vw;">
+      <textarea placeholder="Write to us..." id="feedback"
                 rows="3"
                 style="resize: none; overflow: hidden; max-width: 100%; display: block;"
                 oninput="this.style.height='auto'; this.style.height = this.scrollHeight + 'px'"></textarea>
-      <button onclick="openEmailDialog()"
+      <button onclick="openEmailDialog(event)"
               style="margin-top: 1rem;">✉️ Send</button>
-    </div>
-    <script>
-      function openEmailDialog() {
-        const feedback = document.getElementById('feedback').value;
-        const subject = encodeURIComponent('Feedback on the film');
-        const body = encodeURIComponent(`Here are my thoughts on the film:\n\n${feedback}`);
-
-        const email = "pvs9@yandex.ru";
-        const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
-        const mailtoURL = `mailto:${email}?subject=${subject}&body=${body}`;
-        const link = document.createElement('a')
-        link.target = "_blank";
-
-        function checkGmailLogin() {
-          fetch("https://mail.google.com/mail/u/0/", { mode: "no-cors" })
-            .then(() => {
-              link.href = gmailURL;
-              link.click();
-            })
-            .catch(() => {
-              link.href = mailtoURL;
-              link.click()
-            });
-        }
-
-        function checkGmailHandler() {
-          if (navigator.userAgent.includes("Chrome")) {
-            try {
-              navigator.registerProtocolHandler(
-                "mailto",
-                "https://mail.google.com/mail/?extsrc=mailto&url=%s",
-                "Gmail"
-              );
-              if (navigator.isProtocolHandlerRegistered) {
-                navigator.isProtocolHandlerRegistered("mailto", "https://mail.google.com/")
-                  .then(isRegistered => {
-                    if (isRegistered) {
-                      document.getElementById("emailLink").href = gmailURL;
-                    } else {
-                      checkGmailLogin();
-                    }
-                  })
-                  .catch(checkGmailLogin);
-              } else {
-                checkGmailLogin();
-              }
-            }
-            catch (e) {
-              console.warn(e)
-              checkGmailLogin();
-            }
-          } else {
-            checkGmailLogin();
-          }
-        }
-        checkGmailHandler();
-      }
-    </script>
+    </form>
   </section>
 
   <section id="quiz" class="container">
@@ -719,4 +618,5 @@
     <p>Made in <a href="https://web-being.org">web-being</a>.</p>
   </footer>
 
+  <script src="./script.js"></script>
 </html>

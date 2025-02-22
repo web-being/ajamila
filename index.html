@@ -16,7 +16,7 @@
     <!-- <div style="position: absolute; top: 1rem; right: 1rem;">
       <a href="/en.html" style="text-decoration: none; color: inherit;">EN</a>
     </div> -->
-    <h4>Фильм по мотивам 6-й песни<br/> Шримад Бхагаватам</h4>
+    <h4>Фильм по мотивам 6-й песни<br /> Шримад Бхагаватам</h4>
 
     <div id="characters">
       <img src="./img/kamali.avif"
@@ -272,67 +272,6 @@
           href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <script
             src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-    <script>
-      let isLightbox = false
-
-      Object.assign(Fancybox.defaults, {
-        caption: false,
-        Toolbar: false,
-        Thumbs: false,
-        wheel: 'slide',
-        closeButton: false,
-        on: {
-          activate: (e) => (console.log('ACTIVATE', e), isLightbox = true),
-          deactivate: () => (isLightbox = false)
-        }
-      });
-
-      let frames = document.getElementById('frames')
-
-      setInterval(() => frames.scrollLeft += 0.5, 18)
-
-      let lastScrollTop = window.scrollY
-      let isScrolling // if page is scrolling (eg. to hover interaction)
-      let scrollTimeout
-      let isHanging // if block is hanging for a bit
-
-      window.addEventListener('wheel', (e) => {
-        // track if page is scrolling
-        isScrolling = true
-        if (scrollTimeout) clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => isScrolling = false, 200);
-
-        // handle hanging
-        const stillsRect = stills.getBoundingClientRect();
-        const framesScrollMax = frames.scrollWidth - frames.clientWidth; // Max scrollable distance
-        const threshold = framesScrollMax * 0.15; // Halfway point
-        const isAtTop = stillsRect.top <= 0 && stillsRect.bottom <= window.innerHeight;
-
-        e.preventDefault()
-
-        if (frames.contains(e.target)) frames.scrollLeft += e.deltaX
-
-        // Check if we're in the section and scrolling down
-        if (isAtTop && e.deltaY > 0) {
-          // If frames haven't reached halfway, "wait" by reverting page scroll
-          if (frames.scrollLeft < threshold) {
-            isHanging = true;
-            window.scrollTo(0, lastScrollTop); // Hold the page scroll position
-            frames.scrollLeft += e.deltaY
-            return;
-          }
-        }
-
-        frames.scrollLeft += e.deltaY * .5
-        window.scrollTo(0, lastScrollTop + e.deltaY);
-
-        // Update last known scroll position when not waiting
-        // if (!isHanging || delta < 0) {
-          lastScrollTop = window.scrollY;
-        // }
-        isHanging = false;
-      }, {passive:false});
-    </script>
   </section>
 
   <section id="cast" class="container">
@@ -515,71 +454,17 @@
     <h4 style="max-width: 540px; margin-bottom: 1rem"><label for="feedback">Что
         вам откликнулось в
         фильме? Какие мысли или фидбек?</label></h4>
-    <div style="max-width: 540px; width: 90vw;">
-      <textarea placeholder="Напишите нам..." id="feedback" name="feedback"
+    <form id="feedbackForm"
+          action="mailto:pvs9@yandex.ru?subject=%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F%20%D0%90%D0%B4%D0%B6%D0%B0%D0%BC%D0%B8%D0%BB%D1%8B%3A%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B2%D1%8F%D0%B7%D1%8C"
+          method="post"
+          style="max-width: 540px; width: 90vw;">
+      <textarea placeholder="Напишите нам..." id="feedback"
                 rows="3"
                 style="resize: none; overflow: hidden; max-width: 100%; display: block;"
                 oninput="this.style.height='auto'; this.style.height = this.scrollHeight + 'px'"></textarea>
-      <button onclick="openEmailDialog()"
+      <button onclick="openEmailDialog(event)"
               style="margin-top: 1rem;">✉️  Отправить</button>
-    </div>
-    <script>
-      function openEmailDialog() {
-        const feedback = document.getElementById('feedback').value;
-        const subject = encodeURIComponent('Фидбек по фильму');
-        const body = encodeURIComponent(`Вот мои мысли о фильме:\n\n${feedback}`);
-
-        const email = "pvs9@yandex.ru";
-        const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
-        const mailtoURL = `mailto:${email}?subject=${subject}&body=${body}`;
-        const link = document.createElement('a')
-        link.target = "_blank";
-
-        function checkGmailLogin() {
-          fetch("https://mail.google.com/mail/u/0/", { mode: "no-cors" })
-            .then(() => {
-              link.href = gmailURL;
-              link.click();
-            })
-            .catch(() => {
-              link.href = mailtoURL;
-              link.click()
-            });
-        }
-
-        function checkGmailHandler() {
-          if (navigator.userAgent.includes("Chrome")) {
-            try {
-              navigator.registerProtocolHandler(
-                "mailto",
-                "https://mail.google.com/mail/?extsrc=mailto&url=%s",
-                "Gmail"
-              );
-              if (navigator.isProtocolHandlerRegistered) {
-                navigator.isProtocolHandlerRegistered("mailto", "https://mail.google.com/")
-                  .then(isRegistered => {
-                    if (isRegistered) {
-                      document.getElementById("emailLink").href = gmailURL;
-                    } else {
-                      checkGmailLogin();
-                    }
-                  })
-                  .catch(checkGmailLogin);
-              } else {
-                checkGmailLogin();
-              }
-            }
-            catch (e) {
-              console.warn(e)
-              checkGmailLogin();
-            }
-          } else {
-            checkGmailLogin();
-          }
-        }
-        checkGmailHandler();
-      }
-    </script>
+    </form>
   </section>
 
   <section id="quiz" class="container">
@@ -759,4 +644,5 @@
   </footer>
 
   <script src="./script.js"></script>
+
 </html>
