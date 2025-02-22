@@ -121,16 +121,12 @@ section {
     top: 0rem;
     z-index: 2;
     background: radial-gradient(ellipse at center top, black 15%, transparent 70%);
-    transition: .3s ease-out;
+    transition: .1s ease-out;
     margin: 0;
     white-space: nowrap;
     padding: 0 0 2rem;
-    &.sticky {
-      transform: scale(.75);
-      transform-origin: top;
-    }
+    transform-origin: top;
   }
-
 }
 
 [hidden] {
@@ -545,7 +541,7 @@ hr {
     flex: 0 0 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: baseline;
+    align-items: flex-end;
     /* margin-top: -6vmin; */
   }
 

@@ -58,25 +58,20 @@ window.addEventListener('wheel', (e) => {
 
 
 // Handle h2 sticky class
-// const h2s = document.querySelectorAll('section > h2');
+const h2s = document.querySelectorAll('section > h2');
 
-// document.addEventListener('scroll', () => {
-//   const threshold = 50; // How close h2 needs to be to top (in pixels)
+const threshold = 40
+h2s.forEach(h2 => {
+  let section = h2.parentNode
 
-//   h2s.forEach(h2 => {
-//     const h2Top = h2.getBoundingClientRect().top; // h2 position relative to viewport
+  document.addEventListener('scroll', () => {
+    const top = section.getBoundingClientRect().top;
+    if (top >= threshold) return
 
-//     // h2 is "stuck" if its top is near 0 (within threshold) and section is still in view
-//     const isNearTop = h2Top <= threshold;
-
-
-//     if (isNearTop) {
-//       h2.classList.add('sticky');
-//     } else {
-//       h2.classList.remove('sticky');
-//     }
-//   });
-// });
+    let amt = Math.min(Math.max(-top + threshold, 0) / threshold, 1)
+    h2.style.transform = `scale(${0.75 + 0.25*(1-amt)})`
+  })
+});
 
 
 // handle feedback form
