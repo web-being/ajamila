@@ -118,11 +118,23 @@ section {
 
   h2 {
     position: sticky;
-    top: 0;
+    top: -4px;
     z-index: 2;
     background: radial-gradient(ellipse farthest-side at top, black 42%, transparent 100%);
-    padding-bottom: 2rem;
+    transition: .3s ease-out;
+    margin: 0;
+    white-space: nowrap;
+    padding: 0 0 2rem;
+    &.sticky {
+      padding: 1rem 0 1rem;
+      font-size: 2.7rem;
+      @media (max-width: 640px) {
+        font-size: 1.8rem;
+      }
+      transform-origin: top;
+    }
   }
+
 }
 
 [hidden] {
