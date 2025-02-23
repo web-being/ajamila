@@ -31,7 +31,7 @@ window.addEventListener('wheel', (e) => {
   const stillsRect = stills.getBoundingClientRect();
   const framesScrollMax = frames.scrollWidth - frames.clientWidth; // Max scrollable distance
   const threshold = framesScrollMax * 0.15; // Halfway point
-  const isHanging = stillsRect.top <= (window.innerHeight/2-stillsRect.height/2) && stillsRect.bottom <= window.innerHeight;
+  const isHanging = stillsRect.top <= (window.innerHeight/2-stillsRect.height/2) && stillsRect.bottom <= window.innerHeight && stillsRect.bottom > 0;
 
   e.preventDefault()
 

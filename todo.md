@@ -2,7 +2,7 @@
 * [x] Responsive (mobile)
 * [x] Content updates from tg
 * [ ] Trailer
-* [ ] EN/RU switch
+* [x] EN/RU switch
 * [x] Cast block: mobile layout, videos, mb better text
 * [x] English version
 * [x] Setup domain
@@ -16,5 +16,5 @@
 * [x] Scroll effects: sticky titles
 * [ ] Cast scroll effect: stop by lines, animate Ajamil / etc
 * [ ] Footer logo "The story of ajamil"
-* [ ] Scroll stuck bug if reloaded lower than frames
+* [x] Scroll stuck bug if reloaded lower than frames
 * [ ] Correct information (kinopoisk etc)
