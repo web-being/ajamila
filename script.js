@@ -31,14 +31,14 @@ window.addEventListener('wheel', (e) => {
   const stillsRect = stills.getBoundingClientRect();
   const framesScrollMax = frames.scrollWidth - frames.clientWidth; // Max scrollable distance
   const threshold = framesScrollMax * 0.15; // Halfway point
-  const isAtTop = stillsRect.top <= 0 && stillsRect.bottom <= window.innerHeight;
+  const isHanging = stillsRect.top <= (window.innerHeight/2-stillsRect.height/2) && stillsRect.bottom <= window.innerHeight;
 
   e.preventDefault()
 
   if (frames.contains(e.target)) frames.scrollLeft += e.deltaX
 
   // Check if we're in the section and scrolling down
-  if (isAtTop && e.deltaY > 0) {
+  if (isHanging && e.deltaY > 0) {
     // If frames haven't reached halfway, "wait" by reverting page scroll
     if (frames.scrollLeft < threshold) {
       window.scrollTo(0, lastScrollTop); // Hold the page scroll position

@@ -295,10 +295,18 @@ hr {
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 4rem;
+  margin: 0 auto;
+  padding: 0 0 4rem;
+  background: radial-gradient(ellipse at center bottom, rgba(255, 240, 230, 0.108), transparent 75%);
+
+  @media (max-width: 640px) {
+    gap: 1rem;
+    font-size: 1rem;
+  }
 
   #play {
     position: relative;
+    margin-left: 9vw;
 
     &::after {
       position: absolute;
@@ -416,15 +424,32 @@ hr {
 #philosophy {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  row-gap: 3rem;
+  column-gap: 2rem;
   margin-top: 0;
 
   article {
     background: #1a1a1a;
     border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem 2rem;
     transition: transform 0.3s ease;
+    position: relative;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: -1.2rem;
+      left: 0rem;
+      right: 0rem;
+      height: 4rem;
+      border-radius: 50%;
+      background: #1a1a1a;
+      z-index: -1;
+    }
+    &::after {
+      top: auto;
+      bottom: -1.2rem;
+    }
 
     &:hover {
       transform: translateY(-10px);
@@ -456,6 +481,7 @@ hr {
 
 #stills {
   max-width: none;
+  margin: 2rem 0 8rem;
 
   #frames {
     white-space: nowrap;
