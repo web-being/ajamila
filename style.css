@@ -122,7 +122,6 @@ section {
     z-index: 2;
     background: radial-gradient(ellipse at center top, black 15%, transparent 70%);
     margin: 0;
-    white-space: nowrap;
     padding: 0 0 2rem;
     transform-origin: top;
 
@@ -192,6 +191,7 @@ a {
 
   @media (max-width: 640px) {
     margin: 2rem auto;
+    padding: 0 1rem;
   }
 }
 
