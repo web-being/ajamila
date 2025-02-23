@@ -62,7 +62,7 @@ body {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
-  font-size: 1.32rem;
+  font-size: 1.2rem;
 }
 
 h1,
@@ -138,9 +138,9 @@ button {
   border-radius: 2rem;
   border: none;
   /* font-style: italic; */
-  font-size: 1.08rem;
-  font-weight: bolder;
-  padding: 1rem 1.5rem;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 1.25rem 1.5rem;
   cursor: pointer;
   line-height: 1;
   max-width: 27rem;
@@ -188,6 +188,7 @@ hr {
   border: none;
   border-top: 1px solid rgb(48, 48, 48);
 }
+
 
 
 /* Sections */
@@ -290,7 +291,11 @@ hr {
 }
 
 #cta {
-  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 4rem;
 
   #play {
     position: relative;
@@ -311,6 +316,17 @@ hr {
       animation: animateGlow 5s linear infinite;
       border-radius: 2rem;
     }
+  }
+
+  #lang {
+    /* font-family: 'Open Sans', sans-serif; */
+    opacity: .5;
+    font-size: 1.728rem;
+    font-style: italic;
+    /* font-weight: bold;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    */
   }
 }
 

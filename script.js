@@ -74,7 +74,7 @@ h2s.forEach(h2 => {
 });
 
 
-// handle feedback form
+// handle feedback form to insert body from text
 function openEmailDialog(event) {
   event.preventDefault(); // Prevent default form submission
   const feedback = document.getElementById('feedback').value;
