@@ -129,6 +129,7 @@ section {
     .anchor {
       text-decoration: none;
       margin-left: 1ch;
+      margin-right: -2ch;
       font-size: .6em;
       opacity: 0;
     }
