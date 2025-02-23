@@ -17,13 +17,10 @@ let frames = document.getElementById('frames')
 
 setInterval(() => frames.scrollLeft += 1, 25)
 
-let lastScrollTop
 let isScrolling // if page is scrolling (eg. to hover interaction)
 let scrollTimeout
 
 window.addEventListener('wheel', (e) => {
-  if (!lastScrollTop) lastScrollTop = window.scrollY
-
   // track if page is scrolling
   isScrolling = true
   if (scrollTimeout) clearTimeout(scrollTimeout);
@@ -33,27 +30,17 @@ window.addEventListener('wheel', (e) => {
   const stillsRect = stills.getBoundingClientRect();
   const framesScrollMax = frames.scrollWidth - frames.clientWidth; // Max scrollable distance
   const threshold = framesScrollMax * 0.15; // Halfway point
-  const isHanging = stillsRect.top <= (window.innerHeight/2-stillsRect.height/2) && stillsRect.bottom <= window.innerHeight && stillsRect.bottom >= stillsRect.height;
-
-  e.preventDefault()
+  const shouldStop = stillsRect.top <= (window.innerHeight/2-stillsRect.height/2) && stillsRect.bottom <= window.innerHeight && stillsRect.bottom >= stillsRect.height;
 
   if (frames.contains(e.target)) frames.scrollLeft += e.deltaX
 
-  // Check if we're in the section and scrolling down
-  if (isHanging && e.deltaY > 0) {
-    // If frames haven't reached halfway, "wait" by reverting page scroll
+  if (shouldStop && e.deltaY > 0) {
     if (frames.scrollLeft < threshold) {
-      window.scrollTo(0, lastScrollTop); // Hold the page scroll position
+      e.preventDefault() // Hold the page scroll position
       frames.scrollLeft += e.deltaY
       return;
     }
   }
-
-  frames.scrollLeft += e.deltaY * .5
-  window.scrollTo(0, lastScrollTop + e.deltaY);
-
-  // Update last known scroll position when not waiting
-  lastScrollTop = window.scrollY;
 }, {passive:false});
 
 

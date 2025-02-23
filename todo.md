@@ -1,7 +1,7 @@
 * [x] Cleanup, arrange
 * [x] Responsive (mobile)
 * [x] Content updates from tg
-* [ ] Trailer
+* [ ] Trailer: watch opens fullscreen
 * [x] EN/RU switch
 * [x] Cast block: mobile layout, videos, mb better text
 * [x] English version
@@ -18,3 +18,4 @@
 * [ ] Footer logo "The story of ajamil"
 * [x] Scroll stuck bug if reloaded lower than frames
 * [ ] Correct information (kinopoisk etc)
+* [x] Playing/pausing scroll bug
