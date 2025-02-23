@@ -306,7 +306,7 @@ hr {
 
   #play {
     position: relative;
-    margin-left: 9vw;
+    margin-left: 5vw;
 
     &::after {
       position: absolute;
@@ -424,7 +424,7 @@ hr {
 #philosophy {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  row-gap: 3rem;
+  row-gap: 4rem;
   column-gap: 2rem;
   margin-top: 0;
 
@@ -434,11 +434,10 @@ hr {
     padding: 1.5rem 2rem;
     transition: transform 0.3s ease;
     position: relative;
-
     &::before, &::after {
       content: '';
       position: absolute;
-      top: -1.2rem;
+      top: -1.28rem;
       left: 0rem;
       right: 0rem;
       height: 4rem;
@@ -448,7 +447,7 @@ hr {
     }
     &::after {
       top: auto;
-      bottom: -1.2rem;
+      bottom: -1.28rem;
     }
 
     &:hover {
@@ -463,8 +462,11 @@ hr {
     h4 {
       margin-bottom: 1rem;
     }
+  }
 
-    @media (max-width: 640px) {
+  @media (max-width: 640px) {
+    margin-top: 1rem;
+    article {
       padding: 1rem;
 
       p {
@@ -473,7 +475,7 @@ hr {
 
       h4 {
         font-size: 1.4rem;
-        margin-bottom: 0.3rem;
+        margin:0 1rem 0.3rem;
       }
     }
   }
