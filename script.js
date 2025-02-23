@@ -1,4 +1,4 @@
-
+// handle stills scroll
 let isLightbox = false
 
 Object.assign(Fancybox.defaults, {
@@ -15,13 +15,15 @@ Object.assign(Fancybox.defaults, {
 
 let frames = document.getElementById('frames')
 
-setInterval(() => frames.scrollLeft += 0.5, 18)
+setInterval(() => frames.scrollLeft += 1, 25)
 
-let lastScrollTop = window.scrollY
+let lastScrollTop
 let isScrolling // if page is scrolling (eg. to hover interaction)
 let scrollTimeout
 
 window.addEventListener('wheel', (e) => {
+  if (!lastScrollTop) lastScrollTop = window.scrollY
+
   // track if page is scrolling
   isScrolling = true
   if (scrollTimeout) clearTimeout(scrollTimeout);
@@ -31,7 +33,7 @@ window.addEventListener('wheel', (e) => {
   const stillsRect = stills.getBoundingClientRect();
   const framesScrollMax = frames.scrollWidth - frames.clientWidth; // Max scrollable distance
   const threshold = framesScrollMax * 0.15; // Halfway point
-  const isHanging = stillsRect.top <= (window.innerHeight/2-stillsRect.height/2) && stillsRect.bottom <= window.innerHeight && stillsRect.bottom > 0;
+  const isHanging = stillsRect.top <= (window.innerHeight/2-stillsRect.height/2) && stillsRect.bottom <= window.innerHeight && stillsRect.bottom >= stillsRect.height;
 
   e.preventDefault()
 
@@ -83,3 +85,34 @@ function openEmailDialog(event) {
   const mailtoLink = `${form.action}&body=${body}`;
   window.location.href = mailtoLink; // Open email client with enhanced body
 }
+
+
+
+
+// add anchor links
+function addAnchorLinks() {
+  // Get all <h2> elements
+  const headings = document.querySelectorAll('section > h2');
+
+  headings.forEach(heading => {
+    // Get the existing ID
+    const id = heading.parentElement.getAttribute('id');
+
+    // Skip if there's no ID
+    if (!id) return;
+
+    // Get the current text content
+    const text = heading.textContent.trim();
+
+    // Create an anchor element
+    const anchor = document.createElement('a');
+    anchor.setAttribute('href', `#${id}`);
+    anchor.textContent = '🔗';
+    anchor.classList.add('anchor')
+
+    heading.appendChild(anchor);
+  });
+}
+
+// Run the function when the page loads
+addAnchorLinks()

@@ -11,7 +11,7 @@
 * [x] Improve stills quality
 * [x] Feedback
 * [x] Soundtracks
-* [ ] Headers as anchors
+* [x] Headers as anchors
 * [x] Better hero composition
 * [x] Scroll effects: sticky titles
 * [ ] Cast scroll effect: stop by lines, animate Ajamil / etc
