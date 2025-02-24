@@ -61,15 +61,15 @@ const lenis = new Lenis({
 // Cards stack
 document.querySelectorAll('#philosophy article').forEach((article, index) => {
   const cardRect = article.getBoundingClientRect();
-  const threshold = cardRect.height
+  const threshold = cardRect.height * 0.6
 
   lenis.on('scroll', l => {
     const cardRect = article.getBoundingClientRect();
 
     if (cardRect.top < threshold) {
       // How far past the trigger point are we?
-      const progress = (threshold - cardRect.top) / threshold;
-      article.style.transform = `scale(${1 - progress * (.2 - index*.05)})`
+      const progress = Math.log10((threshold - cardRect.top) / threshold + 1);
+      article.style.transform = `scale(${1 - progress * (.1 - index*.02)})`
     }
     else article.style.transform = null
   })
