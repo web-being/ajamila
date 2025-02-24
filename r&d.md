@@ -81,10 +81,12 @@
 
 	3. lenis.js
 		- sluggish
+			~ it's controllable, duration=0.1 works fine
 		- non-standard API
 
 	3.1 locomotive.js
 		- sluggish, a bit less than lenis
+		- forces css transforms for everything
 
 	4. animate-on-scroll
 		- less capabilities
