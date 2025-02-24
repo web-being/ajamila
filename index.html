@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
   </head>
 
   <section id="hero">
@@ -98,20 +99,20 @@
   </blockquote>
 
   <section id="philosophy" class="container">
-    <article>
+    <article style="--index: 1">
       <h4>Когда рушится всё, остаётся только правда о себе</h4>
       <p>Он верил, что добродетель — его суть. Но страсть превратила его в
         преступника. Что останется, когда исчезнет даже тень прежнего «я»?</p>
     </article>
 
-    <article>
+    <article style="--index: 2">
       <h4>Когда достигаешь дна, открывается бездна</h4>
       <p>Украденные жизни. Преданные клятвы. Крик совести, заглушенный страхом.
         Как далеко
         можно зайти, прежде чем дорога назад исчезнет?</p>
     </article>
 
-    <article>
+    <article style="--index: 3">
       <h4>Смерть не финал, но последний свидетель</h4>
       <p>Когда дыхание останавливается, прошлое встаёт перед глазами — остается
         только правда. Можно ли
@@ -535,18 +536,4 @@
   </footer>
 
   <script src="/script.js"></script>
-
-  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
-  <script>
-    // Initialize Lenis
-    const lenis = new Lenis({
-      smooth: true,
-      lerp: 0.01,
-      easing: t => t,
-      // infinite: true,
-      duration: 0.01, // Smoothness duration
-      autoRaf: true,
-    });
-  </script>
-
 </html>

@@ -17,32 +17,63 @@ let frames = document.getElementById('frames')
 
 setInterval(() => frames.scrollLeft += 1, 25)
 
-let isScrolling // if page is scrolling (eg. to hover interaction)
-let scrollTimeout
 
-window.addEventListener('wheel', (e) => {
-  // track if page is scrolling
-  isScrolling = true
-  if (scrollTimeout) clearTimeout(scrollTimeout);
-  scrollTimeout = setTimeout(() => isScrolling = false, 200);
 
-  // handle hanging
-  const stillsRect = stills.getBoundingClientRect();
-  const framesScrollMax = frames.scrollWidth - frames.clientWidth; // Max scrollable distance
-  const threshold = framesScrollMax * 0.15; // Halfway point
-  const shouldStop = stillsRect.top <= (window.innerHeight/2-stillsRect.height/2) && stillsRect.bottom <= window.innerHeight && stillsRect.bottom >= stillsRect.height;
 
-  if (frames.contains(e.target)) frames.scrollLeft += e.deltaX
 
-  if (shouldStop && e.deltaY > 0) {
-    if (frames.scrollLeft < threshold) {
-      e.preventDefault() // Hold the page scroll position
-      frames.scrollLeft += e.deltaY
-      return;
+// Initialize Lenis
+const lenis = new Lenis({
+  smooth: true,
+  lerp: 0.01,
+  easing: t => t,
+  // infinite: true,
+  duration: 0.01, // Smoothness duration
+  autoRaf: true,
+});
+// let isScrolling // if page is scrolling (eg. to hover interaction)
+// let scrollTimeout
+
+// window.addEventListener('wheel', (e) => {
+//   // track if page is scrolling
+//   isScrolling = true
+//   if (scrollTimeout) clearTimeout(scrollTimeout);
+//   scrollTimeout = setTimeout(() => isScrolling = false, 200);
+
+//   // handle hanging
+//   const stillsRect = stills.getBoundingClientRect();
+//   const framesScrollMax = frames.scrollWidth - frames.clientWidth; // Max scrollable distance
+//   const threshold = framesScrollMax * 0.15; // Halfway point
+//   const shouldStop = stillsRect.top <= (window.innerHeight/2-stillsRect.height/2) && stillsRect.bottom <= window.innerHeight && stillsRect.bottom >= stillsRect.height;
+
+//   if (frames.contains(e.target)) frames.scrollLeft += e.deltaX
+
+//   if (shouldStop && e.deltaY > 0) {
+//     if (frames.scrollLeft < threshold) {
+//       e.preventDefault() // Hold the page scroll position
+//       frames.scrollLeft += e.deltaY
+//       return;
+//     }
+//   }
+// }, {passive:false});
+
+
+
+// Cards stack
+document.querySelectorAll('#philosophy article').forEach((article, index) => {
+  const cardRect = article.getBoundingClientRect();
+  const threshold = cardRect.height
+
+  lenis.on('scroll', l => {
+    const cardRect = article.getBoundingClientRect();
+
+    if (cardRect.top < threshold) {
+      // How far past the trigger point are we?
+      const progress = (threshold - cardRect.top) / threshold;
+      article.style.transform = `scale(${1 - progress * (.2 - index*.05)})`
     }
-  }
-}, {passive:false});
-
+    else article.style.transform = null
+  })
+})
 
 
 
@@ -53,7 +84,7 @@ const threshold = 108
 h2s.forEach(h2 => {
   let section = h2.parentNode
 
-  document.addEventListener('scroll', () => {
+  lenis.on('scroll', () => {
     const top = section.getBoundingClientRect().top;
     if (top >= threshold) return
 

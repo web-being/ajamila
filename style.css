@@ -445,7 +445,7 @@ hr {
 #philosophy {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  row-gap: 4rem;
+  row-gap: 3rem;
   column-gap: 2rem;
   margin-top: 0;
 
@@ -453,26 +453,25 @@ hr {
     background: #1a1a1a;
     border-radius: 1rem;
     padding: 1.5rem 2rem;
-    transition: transform 0.3s ease;
-    position: relative;
+    position: sticky;
+    top: calc(var(--index) * 1.5rem);
+    transform-origin: center top;
+    box-shadow: 0 -30px 60px -20px rgba(0, 0, 0, 1);
+
     &::before, &::after {
       content: '';
       position: absolute;
-      top: -1.28rem;
-      left: 0rem;
-      right: 0rem;
-      height: 4rem;
+      top: -1.08rem;
+      left: .2rem;
+      right: .2rem;
+      height: 3rem;
       border-radius: 50%;
       background: #1a1a1a;
       z-index: -1;
     }
     &::after {
       top: auto;
-      bottom: -1.28rem;
-    }
-
-    &:hover {
-      transform: translateY(-10px);
+      bottom: -1.08rem;
     }
 
     p {

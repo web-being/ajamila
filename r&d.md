@@ -74,7 +74,7 @@
 		- doesn't allow smooth transitions
 		- can be limited with Safari
 
-	2. prevent JS scroll
+	2. prevent JS scroll manually
 		+ more natural feel / logic: scrollbar is where you are on the page
 		- difficulty with playing video
 		- non-conducive: dragging scroll doesn't change anomation
@@ -83,11 +83,17 @@
 		- sluggish
 			~ it's controllable, duration=0.1 works fine
 		- non-standard API
+		+ most reliable among others
+		+ very simple
+		+ minimal
+		+ recommended by grok
 
 	3.1 locomotive.js
 		- sluggish, a bit less than lenis
 		- forces css transforms for everything
 
-	4. animate-on-scroll
+	3.2 animate-on-scroll
 		- less capabilities
 		+ more reliable for iOS
+
+	3.3 lax
