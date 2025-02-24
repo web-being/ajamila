@@ -88,8 +88,8 @@ h2s.forEach(h2 => {
     const top = section.getBoundingClientRect().top;
     if (top >= threshold) return
 
-    let amt = Math.min(Math.max(-top + threshold, 0) / threshold, 1)
-    h2.style.transform = `scale(${0.8 + 0.2*(1-amt)})`
+    let progress = Math.min(Math.max(-top + threshold, 0) / threshold, 1)
+    h2.style.transform = `scale(${0.8 + 0.2*Math.pow(1-progress, .54)})`
   })
 });
 
