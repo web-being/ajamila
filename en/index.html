@@ -15,6 +15,10 @@
     <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
   </head>
 
+  <nav id="lang">
+    <a href="/"><small>на Русском</small></a>
+  </nav>
+
   <section id="hero">
     <h4>Based on the 6th canto of Srimad Bhagavatam</h4>
 
@@ -36,11 +40,15 @@
   </section>
 
   <section id="cta" class="container">
-    <button id="play" style="align-self: center;">▶ Watch Trailer</button>
-    <a href="/" id="lang"><small>на Русском</small></a>
+    <button id="play" style="align-self: center;" onclick="unfoldTrailer()">▶ Watch Trailer</button>
   </section>
 
   <hr />
+
+  <video controls class="container folded" id="trailer" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'%3E%3Crect width='100%25' height='100%25' fill='black'/%3E%3C/svg%3E" preload="metadata">
+    <source src="trailer.mp4" type="video/mp4">
+    Ваш браузер не поддерживает воспроизведение видео.
+  </video>
 
   <section id="details" class="container">
     <dl>

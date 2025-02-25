@@ -19,14 +19,10 @@ setInterval(() => frames.scrollLeft += 1, 25)
 
 
 
-
-
 // Initialize Lenis
 const lenis = new Lenis({
   smooth: true,
   lerp: 0.01,
-  easing: t => t,
-  // infinite: true,
   duration: 0.01, // Smoothness duration
   autoRaf: true,
 });
@@ -94,20 +90,8 @@ h2s.forEach(h2 => {
 });
 
 
-// handle feedback form to insert body from text
-function openEmailDialog(event) {
-  event.preventDefault(); // Prevent default form submission
-  const feedback = document.getElementById('feedback').value;
-  const body = encodeURIComponent(feedback);
-  const form = document.getElementById('feedbackForm')
-  const mailtoLink = `${form.action}&body=${body}`;
-  window.location.href = mailtoLink; // Open email client with enhanced body
-}
 
-
-
-
-// add anchor links
+// add anchor links to headers
 function addAnchorLinks() {
   // Get all <h2> elements
   const headings = document.querySelectorAll('section > h2');
@@ -134,3 +118,33 @@ function addAnchorLinks() {
 
 // Run the function when the page loads
 addAnchorLinks()
+
+
+
+// Make play button
+const trailer = document.getElementById('trailer');
+const playButton = document.getElementById('play');
+
+function unfoldTrailer() {
+  trailer.classList.remove('folded');
+
+  lenis.scrollTo(trailer, {
+    offset: -window.innerHeight / 2 + trailer.offsetHeight / 2,
+    duration: 1,
+  });
+
+  trailer.play();
+  document.getElementById('cta').hidden = true;
+}
+
+
+
+// handle feedback form to insert email body from text
+function openEmailDialog(event) {
+  event.preventDefault(); // Prevent default form submission
+  const feedback = document.getElementById('feedback').value;
+  const body = encodeURIComponent(feedback);
+  const form = document.getElementById('feedbackForm')
+  const mailtoLink = `${form.action}&body=${body}`;
+  window.location.href = mailtoLink; // Open email client with enhanced body
+}

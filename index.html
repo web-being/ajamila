@@ -15,6 +15,10 @@
     <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
   </head>
 
+  <nav id="lang">
+    <a href="/en"><small>in English</small></a>
+  </nav>
+
   <section id="hero">
     <h4>Фильм по мотивам 6-й песни<br /> Шримад Бхагаватам</h4>
 
@@ -35,18 +39,16 @@
     </header>
   </section>
 
-  <!-- <video controls class="container" id="trailer" style="width: 100%; display: block; margin: 0 auto 0; padding:0;" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'%3E%3Crect width='100%25' height='100%25' fill='black'/%3E%3C/svg%3E" preload="metadata">
-    <source src="trailer.mp4" type="video/mp4">
-    Ваш браузер не поддерживает воспроизведение видео.
-  </video> -->
-
   <section id="cta" class="container">
-    <button id="play" style="align-self: center;" onclick="trailer.play(), this.hidden=true">▶ Смотреть
-      трейлер</button>
-    <a href="/en" id="lang"><small>in English</small></a>
+    <button id="play" style="align-self: center;" onclick="unfoldTrailer()">▶ Смотреть трейлер</button>
   </section>
 
   <hr />
+
+  <video controls class="container folded" id="trailer" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'%3E%3Crect width='100%25' height='100%25' fill='black'/%3E%3C/svg%3E" preload="metadata">
+    <source src="trailer.mp4" type="video/mp4">
+    Ваш браузер не поддерживает воспроизведение видео.
+  </video>
 
   <section id="details" class="container">
     <dl>

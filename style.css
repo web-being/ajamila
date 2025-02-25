@@ -327,7 +327,6 @@ hr {
 
   #play {
     position: relative;
-    margin-left: 5vw;
 
     &::after {
       position: absolute;
@@ -346,17 +345,6 @@ hr {
       border-radius: 2rem;
     }
   }
-
-  #lang {
-    /* font-family: 'Open Sans', sans-serif; */
-    opacity: .5;
-    font-size: 1.728rem;
-    font-style: italic;
-    /* font-weight: bold;
-    text-transform: lowercase;
-    font-variant: small-caps;
-    */
-  }
 }
 
 @keyframes animateGlow {
@@ -366,6 +354,38 @@ hr {
 
   100% {
     background-position: -200% 50%;
+  }
+}
+
+
+#lang {
+  position: absolute;
+  top: 1rem;
+  right: 1.6rem;
+  z-index: 1;
+  /* font-family: 'Open Sans', sans-serif; */
+  opacity: .25;
+  font-size: 1.6rem;
+  font-style: italic;
+  /* font-weight: bold;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  */
+  @media (max-width: 640px) {
+    display: none;
+  }
+}
+
+#trailer {
+  padding: 0;
+  margin: 0 auto;
+  opacity: 1;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+
+  &.folded {
+    max-height: 0; /* Folded state */
+    opacity: 0;
+    overflow: hidden;
   }
 }
 
