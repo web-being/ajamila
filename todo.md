@@ -1,7 +1,7 @@
 * [x] Cleanup, arrange
 * [x] Responsive (mobile)
 * [x] Content updates from tg
-* [ ] Trailer: watch opens fullscreen
+* [x] Trailer: watch opens fullscreen
 * [ ] Make english trailer
 * [x] EN/RU switch
 * [x] Cast block: mobile layout, videos, mb better text

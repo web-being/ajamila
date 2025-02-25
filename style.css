@@ -55,7 +55,7 @@ select {
 
 
 body {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Cormorant Infant", serif;
   font-weight: normal;
   background: black;
   color: white;
@@ -63,6 +63,10 @@ body {
   flex-direction: column;
   line-height: 1.2;
   font-size: 1.2rem;
+}
+
+em, blockquote, small {
+  font-family: 'Cormorant Garamond', serif;
 }
 
 h1,
@@ -501,6 +505,7 @@ hr {
 
     h4 {
       margin-bottom: 1rem;
+      font-weight: bolder;
     }
   }
 
