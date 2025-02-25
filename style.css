@@ -380,13 +380,33 @@ hr {
   margin: 0 auto;
   opacity: 1;
   transition: max-height 0.5s ease, opacity 0.3s ease;
+  position: relative;
 
   &.folded {
-    max-height: 0; /* Folded state */
+    max-height: 0;
     opacity: 0;
     overflow: hidden;
   }
+
+  video {
+    width: 100%;
+  }
+
+  .close {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    cursor: pointer;
+    rotate: 45deg;
+    font-size: 2rem;
+    text-decoration: none;
+    position: absolute;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    right: -3rem;
+  }
 }
+
 
 #details {
   padding: 0 2rem 0;

@@ -2,7 +2,8 @@
 * [x] Responsive (mobile)
 * [x] Content updates from tg
 * [x] Trailer: watch opens fullscreen
-* [ ] Make english trailer
+* [x] Subtitles
+* [x] ~~Make english trailer~~ Russian with subtitles
 * [x] EN/RU switch
 * [x] Cast block: mobile layout, videos, mb better text
 * [x] English version
