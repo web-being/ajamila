@@ -55,7 +55,7 @@ select {
 
 
 body {
-  font-family: "Cormorant Infant", serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: normal;
   background: black;
   color: white;
@@ -63,10 +63,6 @@ body {
   flex-direction: column;
   line-height: 1.2;
   font-size: 1.2rem;
-}
-
-em, blockquote, small {
-  font-family: 'Cormorant Garamond', serif;
 }
 
 h1,
@@ -361,7 +357,6 @@ hr {
   }
 }
 
-
 #lang {
   position: absolute;
   top: 1rem;
@@ -474,6 +469,7 @@ hr {
   margin-top: 0;
 
   article {
+    font-family: 'Cormorant Infant', sans-serif;
     background: #1a1a1a;
     border-radius: 1rem;
     padding: 1.5rem 2rem;
