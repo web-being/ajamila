@@ -13,21 +13,22 @@ Object.assign(Fancybox.defaults, {
   }
 });
 
-let frames = document.getElementById('frames')
 
+// Frames interactions
+let frames = document.getElementById('frames')
+let stills = document.getElementById('stills')
+
+// Regular animation
 setInterval(() => {
   frames.scrollLeft += parseFloat(getComputedStyle(frames).getPropertyValue('--dx')) || 1
 }, 20)
 
 
-
-// Initialize Lenis
-let slowdown = 1
+// Global Lenis
 const lenis = new Lenis({
   smooth: true,
   duration: 0.01, // Smoothness duration
-  autoRaf: true,
-  virtualScroll: (e) => e.deltaY /= slowdown
+  autoRaf: true
 });
 
 lenis.on('virtual-scroll', ({deltaY}) => {
@@ -42,15 +43,13 @@ lenis.on('virtual-scroll', ({deltaY}) => {
 
   if (shouldStop && deltaY > 0) {
     if (frames.scrollLeft < scrollThreshold) {
-      frames.scrollLeft += deltaY * slowdown
-      slowdown = 54
+      frames.scrollLeft += deltaY
+      lenis.stop()
     }
-    else slowdown = 1
+    else lenis.start()
   }
-  else slowdown = 1
+  else lenis.start()
 });
-
-
 
 // Cards stack
 document.querySelectorAll('#philosophy article').forEach((article, index) => {

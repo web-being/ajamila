@@ -585,13 +585,25 @@ hr {
     figure {
       display: inline-block;
       max-width: 90%;
-      width: 32rem;
+      width: 27rem;
+      overflow: clip;
     }
 
     img {
-      width: 100%;
+      width: calc(100% + 5.4rem);
+      /* CSS scroll-timeline adjustment */
+      animation: adjust-image linear both;
+      animation-timeline: view(x);
     }
   }
+}
+@keyframes adjust-image {
+	0% {
+		translate: -5.4rem 0;
+	}
+	100% {
+    translate: 0rem 0;
+	}
 }
 
 .fancybox__nav {
