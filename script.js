@@ -25,10 +25,12 @@ setInterval(() => {
 
 
 // Global Lenis
+let slowdown = 1
 const lenis = new Lenis({
   smooth: true,
   duration: 0.01, // Smoothness duration
-  autoRaf: true
+  autoRaf: true,
+  virtualScroll: e => e.deltaY /= slowdown
 });
 
 lenis.on('virtual-scroll', ({deltaY}) => {
@@ -43,12 +45,12 @@ lenis.on('virtual-scroll', ({deltaY}) => {
 
   if (shouldStop && deltaY > 0) {
     if (frames.scrollLeft < scrollThreshold) {
-      frames.scrollLeft += deltaY
-      lenis.stop()
+      frames.scrollLeft += deltaY * slowdown
+      slowdown = 108
     }
-    else lenis.start()
+    else slowdown = 1
   }
-  else lenis.start()
+  else slowdown = 1
 });
 
 // Cards stack

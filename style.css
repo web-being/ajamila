@@ -237,6 +237,10 @@ hr {
   min-height: 77vmin;
   width: 100%;
 
+  animation: adjust-bg linear both;
+  animation-timeline: scroll(y);
+  animation-fill-mode: backwards;
+
   h1 {
     line-height: 0.85; text-transform: uppercase;
     small {
@@ -290,6 +294,15 @@ hr {
       margin-top: 3rem;
     }
   }
+}
+
+@keyframes adjust-bg {
+	0% {
+		background-position: center 0%;
+	}
+	100% {
+    background-position: center 100vh;
+	}
 }
 
 @keyframes flicker {
@@ -591,7 +604,6 @@ hr {
 
     img {
       width: calc(100% + 5.4rem);
-      /* CSS scroll-timeline adjustment */
       animation: adjust-image linear both;
       animation-timeline: view(x);
     }

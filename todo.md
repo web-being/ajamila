@@ -24,9 +24,8 @@
   * [x] Frames horizontal section https://scroll-driven-animations.style/demos/horizontal-section/css/ -> can't do log since it's dependent on scroll
   * [ ] Cast scroll effect: stop by lines, animate Ajamil / etc, maybe reverse lines? https://scroll-driven-animations.style/demos/reverse-scroll/css/
   * [x] Frames have parallax effect https://scroll-driven-animations.style/demos/parallax-carousel/css/
-  * [ ] Hero parallax
+  * [x] Hero parallax
   * [x] Stacking cards for features https://scroll-driven-animations.style/demos/stacking-cards/css/
-* [ ] Alternatively: outro - going out to horizon
 * [x] Scroll stuck bug if reloaded lower than frames
 * [ ] Correct information (kinopoisk etc)
 * [x] Playing/pausing scroll bug
