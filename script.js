@@ -23,6 +23,7 @@ setInterval(() => {
   frames.scrollLeft += parseFloat(getComputedStyle(frames).getPropertyValue('--dx')) || 1
 }, 20)
 
+let mobile = /Mobi|Android/i.test(navigator.userAgent)
 
 // Global Lenis
 let slowdown = 1
@@ -30,10 +31,12 @@ const lenis = new Lenis({
   smooth: true,
   duration: 0.01, // Smoothness duration
   autoRaf: true,
-  virtualScroll: e => e.deltaY /= slowdown
+  virtualScroll: e => { e.deltaY /= slowdown; }
 });
 
 lenis.on('virtual-scroll', ({deltaY}) => {
+  if (mobile) return
+
   // handle hanging
   const stillsRect = stills.getBoundingClientRect();
   const framesScrollMax = frames.scrollWidth - frames.clientWidth; // Max scrollable distance
