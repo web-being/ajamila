@@ -6,10 +6,13 @@
 * [x] ~~Make english trailer~~ Russian with subtitles
 * [x] EN/RU switch
 * [x] Cast block: mobile layout, videos, mb better text
+* [ ] English trailer
+* [ ] 1m length trailer
 * [x] English version
 * [x] Setup domain
 * [x] Hero effect: fire (lighting faces)
 * [ ] Meta informations / SEO
+* [x] Cast fixes
 * [x] Improve stills quality
 * [x] Feedback
 * [x] Soundtracks
@@ -18,13 +21,12 @@
 * [x] Scroll effects: sticky titles
 * [ ] Scroll animations
   * [x] Investigate if stopping scroll possible -> possible
-  * [ ] Hero parallax
-  * [ ] Frames horizontal section https://scroll-driven-animations.style/demos/horizontal-section/css/
+  * [x] Frames horizontal section https://scroll-driven-animations.style/demos/horizontal-section/css/ -> can't do log since it's dependent on scroll
   * [ ] Cast scroll effect: stop by lines, animate Ajamil / etc, maybe reverse lines? https://scroll-driven-animations.style/demos/reverse-scroll/css/
   * [ ] Frames have parallax effect https://scroll-driven-animations.style/demos/parallax-carousel/css/
+  * [ ] Hero parallax
   * [x] Stacking cards for features https://scroll-driven-animations.style/demos/stacking-cards/css/
-* [ ] Footer logo "The story of ajamil"
-  * [ ] Alternatively: outro - going out to horizon
+* [ ] Alternatively: outro - going out to horizon
 * [x] Scroll stuck bug if reloaded lower than frames
 * [ ] Correct information (kinopoisk etc)
 * [x] Playing/pausing scroll bug
@@ -40,12 +42,11 @@
     Background on the Vedic tradition and the Puranas, explaining their significance and how they relate to contemporary life.
   * Educational resources
 * [ ] Donate button?
-
 * [ ] Logos: distributors, studios
-
 * [ ] Reviews / testimonials
 * [ ] Soundtrack / soundscapes: enhance playback experience
 * [ ] News / updates / interviews
 * [ ] Social media
 * [ ] Coming soon: Watch, release date
 * [ ] Book reference / buy? (SB)
+* [ ] Festivals

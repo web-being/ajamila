@@ -15,42 +15,40 @@ Object.assign(Fancybox.defaults, {
 
 let frames = document.getElementById('frames')
 
-setInterval(() => frames.scrollLeft += 1, 25)
+setInterval(() => {
+  frames.scrollLeft += parseFloat(getComputedStyle(frames).getPropertyValue('--dx')) || 1
+}, 20)
 
 
 
 // Initialize Lenis
+let slowdown = 1
 const lenis = new Lenis({
   smooth: true,
-  lerp: 0.01,
   duration: 0.01, // Smoothness duration
   autoRaf: true,
+  virtualScroll: (e) => e.deltaY /= slowdown
 });
-// let isScrolling // if page is scrolling (eg. to hover interaction)
-// let scrollTimeout
 
-// window.addEventListener('wheel', (e) => {
-//   // track if page is scrolling
-//   isScrolling = true
-//   if (scrollTimeout) clearTimeout(scrollTimeout);
-//   scrollTimeout = setTimeout(() => isScrolling = false, 200);
+lenis.on('virtual-scroll', ({deltaY}) => {
+  // handle hanging
+  const stillsRect = stills.getBoundingClientRect();
+  const framesScrollMax = frames.scrollWidth - frames.clientWidth; // Max scrollable distance
+  const scrollThreshold = framesScrollMax * 0.15;
+  const stopAt = 100
+  const shouldStop = stillsRect.top <= stopAt && stillsRect.bottom <= window.innerHeight && stillsRect.bottom >= stopAt;
 
-//   // handle hanging
-//   const stillsRect = stills.getBoundingClientRect();
-//   const framesScrollMax = frames.scrollWidth - frames.clientWidth; // Max scrollable distance
-//   const threshold = framesScrollMax * 0.15; // Halfway point
-//   const shouldStop = stillsRect.top <= (window.innerHeight/2-stillsRect.height/2) && stillsRect.bottom <= window.innerHeight && stillsRect.bottom >= stillsRect.height;
+  if (frames.contains(e.target)) frames.scrollLeft += e.deltaX
 
-//   if (frames.contains(e.target)) frames.scrollLeft += e.deltaX
-
-//   if (shouldStop && e.deltaY > 0) {
-//     if (frames.scrollLeft < threshold) {
-//       e.preventDefault() // Hold the page scroll position
-//       frames.scrollLeft += e.deltaY
-//       return;
-//     }
-//   }
-// }, {passive:false});
+  if (shouldStop && deltaY > 0) {
+    if (frames.scrollLeft < scrollThreshold) {
+      frames.scrollLeft += deltaY * slowdown
+      slowdown = 54
+    }
+    else slowdown = 1
+  }
+  else slowdown = 1
+});
 
 
 
