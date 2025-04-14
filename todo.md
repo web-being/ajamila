@@ -19,7 +19,7 @@
 * [x] Headers as anchors
 * [x] Better hero composition
 * [x] Scroll effects: sticky titles
-* x ] Scroll animations
+* [x] Scroll animations
   * [x] Investigate if stopping scroll possible -> possible
   * [x] Frames horizontal section https://scroll-driven-animations.style/demos/horizontal-section/css/ -> can't do log since it's dependent on scroll
   * [x] ~~Cast scroll effect: stop by lines, animate Ajamil / etc, maybe reverse lines? https://scroll-driven-animations.style/demos/reverse-scroll/css/~~
