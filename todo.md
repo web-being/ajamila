@@ -29,7 +29,7 @@
 * [x] Scroll stuck bug if reloaded lower than frames
 * [ ] Redo quiz with sprae
 * [ ] Favicon
-* [ ] Typos
+* [ ] Feedback 1
 * [ ] Correct information (kinopoisk etc)
 * [x] Playing/pausing scroll bug
 * [ ] Sosumi at the bottom
