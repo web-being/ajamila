@@ -19,14 +19,17 @@
 * [x] Headers as anchors
 * [x] Better hero composition
 * [x] Scroll effects: sticky titles
-* [ ] Scroll animations
+* x ] Scroll animations
   * [x] Investigate if stopping scroll possible -> possible
   * [x] Frames horizontal section https://scroll-driven-animations.style/demos/horizontal-section/css/ -> can't do log since it's dependent on scroll
-  * [ ] Cast scroll effect: stop by lines, animate Ajamil / etc, maybe reverse lines? https://scroll-driven-animations.style/demos/reverse-scroll/css/
+  * [x] ~~Cast scroll effect: stop by lines, animate Ajamil / etc, maybe reverse lines? https://scroll-driven-animations.style/demos/reverse-scroll/css/~~
   * [x] Frames have parallax effect https://scroll-driven-animations.style/demos/parallax-carousel/css/
   * [x] Hero parallax
   * [x] Stacking cards for features https://scroll-driven-animations.style/demos/stacking-cards/css/
 * [x] Scroll stuck bug if reloaded lower than frames
+* [ ] Redo quiz with sprae
+* [ ] Favicon
+* [ ] Typos
 * [ ] Correct information (kinopoisk etc)
 * [x] Playing/pausing scroll bug
 * [ ] Sosumi at the bottom
