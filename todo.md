@@ -27,11 +27,14 @@
   * [x] Hero parallax
   * [x] Stacking cards for features https://scroll-driven-animations.style/demos/stacking-cards/css/
 * [x] Scroll stuck bug if reloaded lower than frames
-* [ ] Redo quiz with sprae
-* [ ] Favicon
-* [ ] Feedback 1
-* [ ] Correct information (kinopoisk etc)
+* [x] Favicon
+* [x] Feedback 1
 * [x] Playing/pausing scroll bug
+* [ ] Redo quiz with sprae
+* [ ] Add country: Russia, India
+* [ ] English trailer
+* [ ] Complete trailers
+* [ ] Add link to vimeo?
 * [ ] Sosumi at the bottom
 * [ ] FAQ about the movie?
   * Themes Explored
@@ -43,6 +46,7 @@
   * Cultural & Historical Context
     Background on the Vedic tradition and the Puranas, explaining their significance and how they relate to contemporary life.
   * Educational resources
+* [ ] Old iphone debug
 * [ ] Donate button?
 * [ ] Logos: distributors, studios
 * [ ] Reviews / testimonials
@@ -50,5 +54,6 @@
 * [ ] News / updates / interviews
 * [ ] Social media
 * [ ] Coming soon: Watch, release date
-* [ ] Book reference / buy? (SB)
+* [ ] Book / buy? (SB)
 * [ ] Festivals
+* [ ] Correct information (kinopoisk etc)
