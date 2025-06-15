@@ -808,12 +808,8 @@ hr {
   .quiz-item {
     margin: 0 0;
     border-radius: 8px;
-    display: none;
+    display: block;
     font-variant-numeric: lining-nums;
-
-    &.active {
-      display: block;
-    }
   }
 
   .poll {
@@ -821,15 +817,17 @@ hr {
     flex-direction: column;
     align-items: center;
     gap: .5rem;
-    margin: 2rem 0
-  }
-
-  .poll button {
-    min-width: 50%;
-  }
-
-  .poll button.correct {
-    border-color: #4CAF50;
+    margin: 2rem 0;
+    button {
+      min-width: 50%;
+      transition: linear background-color .1s;
+      &.selected {
+        background: lightcoral;
+      }
+      &.selected.correct {
+        background: lightgreen;
+      }
+    }
   }
 
   #results {
@@ -845,3 +843,6 @@ hr {
   margin-top: 2rem;
   font-variant-numeric: lining-nums;
 }
+
+
+[\:if], [\:else], [\:each] { visibility: hidden }

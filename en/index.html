@@ -74,8 +74,8 @@
         <dd>2025</dd>
       </div>
       <div>
-        <dt>Format</dt>
-        <dd>4K HDR Dolby</dd>
+        <dt>Country</dt>
+        <dd>India ⋅ Russia</dd>
       </div>
       <div>
         <dt>Language</dt>
@@ -347,160 +347,82 @@
     </form>
   </section>
 
-  <section id="quiz" class="container">
-    <h2>Quiz</h2>
+  <section id="quiz" class="container"
+    :with="{total:5, answer:[], next(e) {e.target.classList.add('selected'); const correct = e.target.classList.contains('correct'); quiz.classList.add('reveal'); window.setTimeout(()=>(quiz.classList.remove('reveal'), e.target.classList.remove('selected'), this.answer.push(correct)), 1000);}}">
+    <h2>Test Yourself</h2>
 
-    <div class="quiz-item active">
-      <h4>1. Who was Ajamila by origin?</h4>
-      <div class="poll" data-question="1">
+    <div class="quiz-item" :if="answer.length < 1">
+      <h4>1. What was Ajāmila's origin?</h4>
+      <div class="poll" :onclick="next">
         <button>Bandit</button>
-        <button class="correct">Brahman</button>
+        <button class="correct">Brahmin</button>
         <button>Blogger</button>
       </div>
     </div>
 
-    <div class="quiz-item">
-      <h4>2. Why did Ajamila leave the righteous path?</h4>
-      <div class="poll" data-question="2">
-        <button class="correct">He fell in love with a woman of a lower
-          caste</button>
-        <button>He was cursed by a sage</button>
-        <button>He lost his fortune in cryptocurrencies</button>
+    <div class="quiz-item" :else :if="answer.length < 2">
+      <h4>2. Why did Ajāmila abandon the righteous path?</h4>
+      <div class="poll" :onclick="next">
+        <button class="correct">Fell in love with a lower-caste woman</button>
+        <button>Cursed by a sage</button>
+        <button>Lost money on cryptocurrencies</button>
       </div>
     </div>
 
-    <div class="quiz-item">
-      <h4>3. What was the name of Ajamila's youngest son?</h4>
-      <div class="poll" data-question="3">
+    <div class="quiz-item" :else :if="answer.length < 3">
+      <h4>3. What was the name of Ajāmila's youngest son?</h4>
+      <div class="poll" :onclick="next">
         <button>Madhava</button>
         <button>Gopala</button>
         <button class="correct">Narayana</button>
       </div>
     </div>
 
-    <div class="quiz-item">
-      <h4>4. Why did the messengers of Vishnu save Ajamila?</h4>
-      <div class="poll" data-question="4">
+    <div class="quiz-item" :else :if="answer.length < 4">
+      <h4>4. Why did Vishnu's messengers save Ajāmila?</h4>
+      <div class="poll" :onclick="next">
         <button>His wife prayed for him</button>
-        <button class="correct">He pronounced the name of Narayana</button>
-        <button>He subscribed to their YouTube channel</button>
+        <button class="correct">He uttered Narayana's name</button>
+        <button>He subscribed to their YouTube</button>
       </div>
     </div>
 
-    <div class="quiz-item">
-      <h4>5. How many sons did Ajamila have?</h4>
-      <div class="poll" data-question="5">
+    <div class="quiz-item" :else :if="answer.length < 5">
+      <h4>5. How many sons did Ajāmila have?</h4>
+      <div class="poll" :onclick="next">
         <button class="correct">10</button>
         <button>3</button>
         <button>42</button>
-        <!-- Funny option -->
       </div>
     </div>
 
-    <div id="results" hidden>
+    <div id="results" :else>
       <div class="content">
-        <div class="result-5" hidden>
+        <div class="result-5" :if="answer.reduce((c,i) => c+i,0) >= 5">
           <h3>🌟</h3>
           <h4>Excellent!</h4>
-          <p>You are a true pandit! Your mind shines brighter than a thousand
-            suns! You know the film by heart, including the scenes that were cut
-            during editing.
-            <br>Advice: try reading the original story in <a href="https://vedabase.io/en/library/sb/6/">the 6th canto of
-              Srimad Bhagavatam</a>.
-          </p>
+          <p>You are a true pandit!</p>
         </div>
-        <div class="result-4" hidden>
+        <div class="result-4" :else :if="answer.reduce((c,i) => c+i,0) >= 4">
           <h3>📚</h3>
           <h4>Good!</h4>
-          <p>You are on the threshold of enlightenment! Your knowledge is like
-            that of a screenwriter who has just finished writing the script.
-            <br>Advice: try re-watching the film without getting distracted by
-            your phone, but remember - too many viewings can make you want to
-            quote the dialogue!
-          </p>
+          <p>You are on the verge of enlightenment!</p>
         </div>
-        <div class="result-3" hidden>
+        <div class="result-3" :else :if="answer.reduce((c,i) => c+i,0) >= 3">
           <h3>📖</h3>
           <h4>Okay!</h4>
-          <p>You are on the right path! Your knowledge is like that of a viewer
-            who watched the film but missed a few scenes. <br>Advice: maybe you
-            should re-watch the film?</p>
+          <p>You are on the right path!</p>
         </div>
-        <div class="result-2 result-1 result-0" hidden>
+        <div class="result-2 result-1 result-0" :else>
           <h3>😅</h3>
           <h4>Om Namah Shivaya!</h4>
-          <p>You definitely watched our film, or maybe you slept through it?
-            <br>Advice: grab some popcorn, start from the beginning, and watch
-            carefully.
-          </p>
+          <p>You are looking in the right direction!</p>
         </div>
       </div>
-      <!-- <button style="margin: 2rem auto;">Take again</button> -->
+      <button style="margin: 2rem auto;" :onclick="e => answer.length = 0">Try Again</button>
     </div>
 
-    <script>
-      let currentQuestion = 0;
-      const questions = document.querySelectorAll('.quiz-item');
-      const totalQuestions = questions.length;
-
-      function showNextQuestion() {
-        questions[currentQuestion].classList.remove('active');
-        currentQuestion++;
-        if (currentQuestion < totalQuestions) {
-          questions[currentQuestion].classList.add('active');
-        } else {
-          showFinalResults();
-        }
-      }
-
-      function showFinalResults() {
-        let correctCount = 0;
-        for (let i = 1; i <= totalQuestions; i++) {
-          if (localStorage.getItem(`quiz_${i}`) === 'true') correctCount++;
-        }
-
-        let resultText = '', icon = '';
-        document.querySelector('#results').removeAttribute('hidden')
-        document.querySelector(`#results .result-${correctCount}`).removeAttribute('hidden')
-      }
-
-      document.querySelectorAll('.poll button').forEach(button => {
-        button.addEventListener('click', function () {
-          const poll = this.parentElement;
-          const isCorrect = this.classList.contains('correct');
-
-          // Показываем результат
-          this.style.background = isCorrect ? '#4CAF50' : '#ff4444';
-          this.style.color = 'white';
-
-          // Блокируем другие ответы
-          poll.querySelectorAll('button').forEach(btn => {
-            btn.disabled = true;
-            if (btn.classList.contains('correct')) {
-              btn.style.background = '#4CAF50';
-              btn.style.color = 'white';
-            }
-          });
-
-          // Сохраняем статистику
-          const questionId = poll.dataset.question;
-          localStorage.setItem(`quiz_${questionId}`, isCorrect);
-
-          // Показываем следующий вопрос через секунду
-          setTimeout(showNextQuestion, 1000);
-        });
-      });
-
-      // Показываем первый вопрос при загрузке
-      questions[0].classList.add('active');
-
-      // FIXME: add try again
-      // document.querySelector('#results button').addEventListener('click', () => {
-      //   currentQuestion = 0
-      //   questions[0].classList.add('active');
-      //   questions.forEach(q => q.classList.remove('active'))
-      // })
-    </script>
+    <script src="./sprae.js"></script>
   </section>
 
   <hr>

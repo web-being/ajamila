@@ -74,8 +74,8 @@
         <dd>2025 год</dd>
       </div>
       <div>
-        <dt>Формат</dt>
-        <dd>4K HDR Dolby</dd>
+        <dt>Страна</dt>
+        <dd>Индия ⋅ Россия</dd>
       </div>
       <div>
         <dt>Язык</dt>
@@ -350,48 +350,56 @@
     </form>
   </section>
 
-  <section id="quiz" class="container">
+  <section id="quiz" class="container" :with="{
+    total:5, answer:[],
+    next(e) {
+      e.target.classList.add('selected');
+      const correct = e.target.classList.contains('correct');
+      quiz.classList.add('reveal');
+      window.setTimeout(()=>(quiz.classList.remove('reveal'), e.target.classList.remove('selected'), this.answer.push(correct)), 1000);
+    }
+  }">
     <h2>Проверь себя</h2>
 
-    <div class="quiz-item active">
+    <div class="quiz-item" :if="answer.length < 1">
       <h4>1. Кем был Аджамила по происхождению?</h4>
-      <div class="poll" data-question="1">
+      <div class="poll" :onclick="next">
         <button>Бандитом</button>
         <button class="correct">Брахманом</button>
         <button>Блоггером</button>
       </div>
     </div>
 
-    <div class="quiz-item">
+    <div class="quiz-item" :else :if="answer.length < 2">
       <h4>2. Почему Аджамила оставил праведный путь?</h4>
-      <div class="poll" data-question="2">
+      <div class="poll" :onclick="next">
         <button class="correct">Влюбился в женщину низшей касты</button>
         <button>Был проклят мудрецом</button>
-        <button>Потерял состояние на криптовалютах</button>
+        <button>Прогорел на криптовалютах</button>
       </div>
     </div>
 
-    <div class="quiz-item">
+    <div class="quiz-item" :else :if="answer.length < 3">
       <h4>3. Какое имя носил младший сын Аджамилы?</h4>
-      <div class="poll" data-question="3">
+      <div class="poll" :onclick="next">
         <button>Мадхава</button>
         <button>Гопала</button>
         <button class="correct">Нараяна</button>
       </div>
     </div>
 
-    <div class="quiz-item">
+    <div class="quiz-item" :else :if="answer.length < 4">
       <h4>4. Почему посланники Вишну спасли Аджамилу?</h4>
-      <div class="poll" data-question="4">
+      <div class="poll" :onclick="next">
         <button>Его жена молилась за него</button>
         <button class="correct">Произнес имя Нараяны</button>
-        <button>Он подписался на их YouTube-канал</button>
+        <button>Он подписался на их YouTube</button>
       </div>
     </div>
 
-    <div class="quiz-item">
+    <div class="quiz-item" :else :if="answer.length < 5">
       <h4>5. Сколько сыновей было у Аджамилы?</h4>
-      <div class="poll" data-question="5">
+      <div class="poll" :onclick="next">
         <button class="correct">10</button>
         <button>3</button>
         <button>42</button>
@@ -399,106 +407,33 @@
       </div>
     </div>
 
-    <div id="results" hidden>
+    <div id="results" :else>
       <div class="content">
-        <div class="result-5" hidden>
+        <div class="result-5" :if="answer.reduce((c,i) => c+i,0) >= 5">
           <h3>🌟</h3>
           <h4>Отлично!</h4>
-          <p>Вы настоящий пандит! <br>Ваш ум сияет ярче тысячи Солнц! Вы знаете
-            фильм наизусть, включая те сцены, которые вырезали на монтаже.
-            <br>Совет: попробуйте прочитать оригинал истории в <a href="https://vedabase.io/ru/library/sb/6/">6-й песне Шримад
-              Бхагаватам</a>.
-          </p>
+          <p>Вы настоящий пандит!</p>
         </div>
-        <div class="result-4" hidden>
+        <div class="result-4" :else :if="answer.reduce((c,i) => c+i,0) >= 4">
           <h3>📚</h3>
           <h4>Хорошо!</h4>
-          <p>Вы на пороге просветления! <br>Ваши знания как у сценариста,
-            который только что закончил писать сюжет. <br>Совет: Попробуйте
-            пересмотреть фильм, не отвлекаясь на телефон, но помните – слишком
-            много просмотров может вызвать желание цитировать диалоги!</p>
+          <p>Вы на пороге просветления!</p>
         </div>
-        <div class="result-3" hidden>
+        <div class="result-3" :else  :if="answer.reduce((c,i) => c+i,0) >= 3">
           <h3>📖</h3>
           <h4>Нормально!</h4>
-          <p>Вы на верном пути! <br>Ваши знания как у зрителя, который смотрел
-            фильм, но пропустил пару сцен. <br>Совет: Может, стоит пересмотреть
-            фильм?</p>
+          <p>Вы на верном пути!</p>
         </div>
-        <div class="result-2 result-1 result-0" hidden>
+        <div class="result-2 result-1 result-0" :else>
           <h3>😅</h3>
           <h4>Ом Намах Шивая!</h4>
-          <p>Вы точно смотрели наш фильм, или может быть проспали? <br>Совет:
-            возьмите попкорн, начните с начала фильма и смотрите внимательно.
-          </p>
+          <p>Вы смотрите в верном направлении!</p>
         </div>
       </div>
-      <!-- <button style="margin: 2rem auto;">Пройти снова</button> -->
+      <button style="margin: 2rem auto;" :onclick="e => answer.length = 0">Пройти снова</button>
     </div>
 
-    <script>
-      let currentQuestion = 0;
-      const questions = document.querySelectorAll('.quiz-item');
-      const totalQuestions = questions.length;
-
-      function showNextQuestion() {
-        questions[currentQuestion].classList.remove('active');
-        currentQuestion++;
-        if (currentQuestion < totalQuestions) {
-          questions[currentQuestion].classList.add('active');
-        } else {
-          showFinalResults();
-        }
-      }
-
-      function showFinalResults() {
-        let correctCount = 0;
-        for (let i = 1; i <= totalQuestions; i++) {
-          if (localStorage.getItem(`quiz_${i}`) === 'true') correctCount++;
-        }
-
-        let resultText = '', icon = '';
-        document.querySelector('#results').removeAttribute('hidden')
-        document.querySelector(`#results .result-${correctCount}`).removeAttribute('hidden')
-      }
-
-      document.querySelectorAll('.poll button').forEach(button => {
-        button.addEventListener('click', function () {
-          const poll = this.parentElement;
-          const isCorrect = this.classList.contains('correct');
-
-          // Показываем результат
-          this.style.background = isCorrect ? '#4CAF50' : '#ff4444';
-          this.style.color = 'white';
-
-          // Блокируем другие ответы
-          poll.querySelectorAll('button').forEach(btn => {
-            btn.disabled = true;
-            if (btn.classList.contains('correct')) {
-              btn.style.background = '#4CAF50';
-              btn.style.color = 'white';
-            }
-          });
-
-          // Сохраняем статистику
-          const questionId = poll.dataset.question;
-          localStorage.setItem(`quiz_${questionId}`, isCorrect);
-
-          // Показываем следующий вопрос через секунду
-          setTimeout(showNextQuestion, 1000);
-        });
-      });
-
-      // Показываем первый вопрос при загрузке
-      questions[0].classList.add('active');
-
-      // FIXME: add try again
-      // document.querySelector('#results button').addEventListener('click', () => {
-      //   currentQuestion = 0
-      //   questions[0].classList.add('active');
-      //   questions.forEach(q => q.classList.remove('active'))
-      // })
-    </script>
+    <script src="./sprae.js"></script>
   </section>
 
   <hr>
