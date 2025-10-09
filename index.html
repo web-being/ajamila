@@ -351,13 +351,15 @@
     </form>
   </section>
 
-  <section id="quiz" class="container" :with="{
+  <section id="quiz" class="container" :scope="{
     total:5, answer:[],
     next(e) {
       e.target.classList.add('selected');
       const correct = e.target.classList.contains('correct');
       quiz.classList.add('reveal');
-      window.setTimeout(()=>(quiz.classList.remove('reveal'), e.target.classList.remove('selected'), this.answer.push(correct)), 1000);
+      window.setTimeout(()=>(
+        quiz.classList.remove('reveal'), e.target.classList.remove('selected'), this.answer.push(correct)
+      ), 1000);
     }
   }">
     <h2>Проверь себя</h2>
