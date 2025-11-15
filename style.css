@@ -93,7 +93,7 @@ h6 {
   line-height: 1;
 
   small {
-    font-family: "Cormorant Infant", serif;
+    /* font-family: "Cormorant Infant", serif; */
     font-size: .5em;
   }
 }
@@ -501,12 +501,12 @@ hr {
   font-family: 'Open Sans', sans-serif;
   opacity: .25;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 #synopsis {
   text-align: center;
   font-size: 1.726rem;
-  font-style: italic;
 
   @media (max-width: 640px) {
     font-size: 1.44rem;
@@ -551,9 +551,10 @@ hr {
     }
 
     h4 {
-      font-family: 'Cormorant Infant', serif;
+      /* font-family: 'Cormorant Infant', serif;   */
       margin-bottom: 1rem;
       font-weight: bolder;
+      font-style: italic;
     }
   }
 

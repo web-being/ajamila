@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Cormorant+Infant&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/favicon.png" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
@@ -40,13 +40,14 @@
     </header>
   </section>
 
+
   <section id="cta" class="container">
-    <button id="play" style="align-self: center;" onclick="unfoldTrailer()">▶ Смотреть трейлер</button>
+    <button id="play" style="align-self: center;" :onclick="unfoldTrailer();">▶ Смотреть трейлер</button>
   </section>
 
-  <hr />
+  <hr style="margin-bottom: -2px;" />
 
-  <section id="trailer" class="container folded">
+  <section id="trailer" :ref="trailer" class="container folded">
     <a class="close" onclick="closeTrailer()">+</a>
     <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1085712835?h=d0efe04b3f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Трейлер (60s)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     <!-- <video controls poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'%3E%3Crect width='100%25' height='100%25' fill='black'/%3E%3C/svg%3E" preload="metadata">
@@ -94,9 +95,9 @@
   </section>
 
 
-  <!-- <section id="festivals" class="container">
-    фестивали награды
-  </section> -->
+  <section id="festivals" class="container">
+    <img src="/img/awards.webp" style="max-width: 60%; margin:0 auto">
+  </section>
 
   <blockquote id="synopsis" class="container">
     Чистота, правдивость и аскетизм были жизнью юного Аджамилы. Но неожиданная
