@@ -126,7 +126,7 @@ addAnchorLinks()
 // Make play button
 const trailer = document.getElementById('trailer');
 const playButton = document.getElementById('play');
-const video = trailer.querySelector('video')
+// const video = trailer.querySelector('video');
 
 function unfoldTrailer() {
   trailer.classList.remove('folded');
@@ -136,13 +136,13 @@ function unfoldTrailer() {
     duration: 1,
   });
 
-  video.play();
+  // video.play();
   document.getElementById('cta').hidden = true;
 }
 
 function closeTrailer() {
   trailer.classList.add('folded')
-  video.pause();
+  // video.pause();
   document.getElementById('cta').hidden = null;
 }
 
