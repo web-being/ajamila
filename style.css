@@ -499,9 +499,13 @@ hr {
 #festivals {
   letter-spacing: 10ch;
   font-family: 'Open Sans', sans-serif;
-  opacity: .25;
+  opacity: .5;
   overflow: hidden;
   margin: 0 auto;
+  transition: .5s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 #synopsis {
