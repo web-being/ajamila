@@ -361,7 +361,7 @@
     </form>
   </section>
 
-  <section id="quiz" class="container" :scope="{
+  <section id="quiz" class="container"  :scope="{
     total:5, answer:[],
     next(e) {
       e.target.classList.add('selected');
@@ -444,8 +444,6 @@
       </div>
       <button style="margin: 2rem auto;" :onclick="e => answer.length = 0">Try Again</button>
     </div>
-
-    <script src="./sprae.js"></script>
   </section>
 
   <hr>
@@ -470,5 +468,6 @@
   </footer>
 
   <script src="/script.js"></script>
+  <script src="./sprae.js" data-start></script>
 
 </html>
