@@ -525,14 +525,40 @@ hr {
 }
 
 #festivals {
-  letter-spacing: 10ch;
-  font-family: 'Open Sans', sans-serif;
-  opacity: .5;
-  overflow: hidden;
   margin: 0 auto;
-  transition: .5s ease-in-out;
-  &:hover {
-    opacity: 1;
+
+  .awards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem 3rem;
+    max-width: 100%;
+
+    a {
+      text-decoration: none;
+    }
+
+    &:hover img {
+      filter: saturate(.2) brightness(.85);
+    }
+
+    a:hover img {
+      filter: saturate(1) brightness(1);
+      transform: scale(1.12);
+    }
+
+    img {
+      height: 7rem;
+      width: auto;
+      transition: filter .3s, transform .3s;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .awards-grid img {
+      height: 4.5rem;
+    }
   }
 }
 
