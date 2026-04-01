@@ -97,16 +97,24 @@
   </section>
 
 
-  <section id="festivals" class="container">
+  <section id="festivals" class="container" :scope="{
+    awards: [
+      { id: 'shunyatam', name: 'Shunyatam International Film Festival', place: 'Mumbai, India', date: '2025', status: 'Winner', nom: 'Best Feature Film', url: 'http://www.shunyatam.in/', cert: true },
+      { id: 'bangkok-awards', name: 'Bangkok Movie Awards', place: 'Bangkok, Thailand', date: 'Aug 2025', status: 'Winner', nom: 'Narrative Feature', url: 'https://bangkokmovieawards.com/', cert: true },
+      { id: 'indian-diversity', name: 'Indian Diversity International Filmfare Awards', place: 'India', date: '2025', status: 'Winner', nom: 'Best Debut Film Maker', url: 'https://idifa.in/', cert: true },
+      { id: 'asian-filmfare', name: 'Asian International Filmfare Awards', place: 'India', date: 'Sep 2025', status: 'Official Selection', nom: 'Best Feature Film', url: 'https://asianinternationalfilmfareawards.com/', cert: true },
+      { id: 'indian-independent', name: 'Indian Independent Film Festival', place: 'India', date: 'Aug 2025', status: 'Official Selection', url: 'https://indianindependentfilmfestival.com/', cert: true },
+      { id: 'imff', name: 'International Multicultural Film Festival', place: 'Australia', date: 'Oct 2025', status: 'Official Selection', url: 'https://www.imff.com.au', cert: true },
+      { id: 'coliseum', name: 'COLiseum International Film Festival', place: 'Italy', date: 'Nov 2025', status: 'Official Selection', url: 'https://www.coliffe.it' },
+      { id: 'liftoff', name: 'Lift-Off Global Network', date: '2026', url: 'https://liftoff.network' },
+    ]
+  }">
     <div class="awards-grid">
-      <a href="/img/rewards/certificates/shunyatam.webp" data-fancybox="awards" data-caption="<b>Shunyatam International Film Festival</b><br>Mumbai, India · 2025 · Winner<br>Best Feature Film<br><a href='http://www.shunyatam.in/' target='_blank'>shunyatam.in</a>"><img src="/img/rewards/shunyatam.webp" alt="Shunyatam IFF" loading="lazy"></a>
-      <a href="/img/rewards/certificates/bangkok-awards.webp" data-fancybox="awards" data-caption="<b>Bangkok Movie Awards</b><br>Bangkok, Thailand · Aug 2025 · Winner<br>Narrative Feature<br><a href='https://bangkokmovieawards.com/' target='_blank'>bangkokmovieawards.com</a>"><img src="/img/rewards/bangkok-awards.webp" alt="Bangkok Movie Awards" loading="lazy"></a>
-      <a href="/img/rewards/certificates/indian-diversity.webp" data-fancybox="awards" data-caption="<b>Indian Diversity International Filmfare Awards</b><br>India · 2025 · Winner<br>Best Debut Film Maker<br><a href='https://idifa.in/' target='_blank'>idifa.in</a>"><img src="/img/rewards/indian-diversity.webp" alt="Indian Diversity IFA" loading="lazy"></a>
-      <a href="/img/rewards/certificates/asian-filmfare.webp" data-fancybox="awards" data-caption="<b>Asian International Filmfare Awards</b><br>India · Sep 2025 · Official Selection<br>Best Feature Film<br><a href='https://asianinternationalfilmfareawards.com/' target='_blank'>asianinternationalfilmfareawards.com</a>"><img src="/img/rewards/asian-filmfare.webp" alt="Asian International Filmfare Awards" loading="lazy"></a>
-      <a href="/img/rewards/certificates/indian-independent.webp" data-fancybox="awards" data-caption="<b>Indian Independent Film Festival</b><br>India · Aug 2025 · Official Selection<br><a href='https://indianindependentfilmfestival.com/' target='_blank'>indianindependentfilmfestival.com</a>"><img src="/img/rewards/indian-independent.webp" alt="Indian Independent Film Festival" loading="lazy"></a>
-      <a href="/img/rewards/certificates/imff.webp" data-fancybox="awards" data-caption="<b>International Multicultural Film Festival</b><br>Australia · Oct 2025 · Official Selection<br><a href='https://www.imff.com.au' target='_blank'>imff.com.au</a>"><img src="/img/rewards/imff.webp" alt="IMFF" loading="lazy"></a>
-      <a href="/img/rewards/coliseum.webp" data-fancybox="awards" data-caption="<b>COLiseum International Film Festival</b><br>Italy · Nov 2025 · Official Selection<br><a href='https://www.coliffe.it' target='_blank'>coliffe.it</a>"><img src="/img/rewards/coliseum.webp" alt="COLiseum IFF" loading="lazy"></a>
-      <a href="/img/rewards/liftoff.webp" data-fancybox="awards" data-caption="<b>Lift-Off Global Network</b><br>2026<br><a href='https://liftoff.network' target='_blank'>liftoff.network</a>"><img src="/img/rewards/liftoff.webp" alt="Lift-Off Global Network" loading="lazy"></a>
+      <a :each="a in awards" data-fancybox="awards"
+        :href="a.cert ? '/img/rewards/certificates/' + a.id + '.webp' : '/img/rewards/' + a.id + '.webp'"
+        :data-caption="'<b>' + a.name + '</b><br>' + (a.place ? a.place + ' · ' : '') + (a.date || '') + (a.status ? ' · ' + a.status : '') + (a.nom ? '<br>' + a.nom : '') + (a.url ? '<br><a href=\'' + a.url + '\' target=\'_blank\'>' + a.url.replace(/https?:\/\/(www\.)?/, '').replace(/\/$/, '') + '</a>' : '')">
+        <img :src="'/img/rewards/' + a.id + '.webp'" :alt="a.name" loading="lazy">
+      </a>
     </div>
   </section>
 

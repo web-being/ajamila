@@ -7,6 +7,7 @@ Object.assign(Fancybox.defaults, {
   Thumbs: false,
   wheel: 'slide',
   closeButton: false,
+  hideScrollbar: false,
   on: {
     activate: (e) => (console.log('ACTIVATE', e), isLightbox = true),
     deactivate: () => (isLightbox = false)
