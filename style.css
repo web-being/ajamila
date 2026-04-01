@@ -555,6 +555,33 @@ hr {
     }
   }
 
+  .award-card {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: white;
+
+    img {
+      height: 8rem;
+      margin: 0 auto 1.5rem;
+    }
+
+    h4 { margin-bottom: .5rem; }
+
+    p {
+      opacity: .5;
+      font-family: 'Open Sans', sans-serif;
+      font-size: .9rem;
+      font-variation-settings: "wdth" 75;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 1rem;
+      opacity: .6;
+      &:hover { opacity: 1; }
+    }
+  }
+
   @media (max-width: 640px) {
     .awards-grid img {
       height: 4.5rem;
