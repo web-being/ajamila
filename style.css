@@ -643,19 +643,6 @@ hr {
       line-height: 1.33;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto;
-      width: fit-content;
-      font-size: 1.1rem;
-      line-height: 1.33;
-      text-align: left;
-
-      li::before { content: '– '; }
-      li + li { margin-top: .4rem; }
-    }
-
     h4 {
       /* font-family: 'Cormorant Infant', serif;   */
       margin-bottom: 1rem;
@@ -677,6 +664,38 @@ hr {
         font-size: 1.4rem;
         margin:0 1rem 0.3rem;
       }
+    }
+  }
+}
+
+#awards-list {
+  text-align: center;
+  margin-top: -0.5rem;
+
+  h4 {
+    font-style: italic;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 640px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: fit-content;
+    text-align: left;
+    font-size: 1.726rem;
+    line-height: 1.33;
+
+    li::before { content: '– '; }
+    li + li { margin-top: .4rem; }
+
+    @media (max-width: 640px) {
+      font-size: 1.44rem;
     }
   }
 }
