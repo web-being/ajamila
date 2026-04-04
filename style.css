@@ -601,10 +601,14 @@ hr {
 
 #philosophy {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   row-gap: 3rem;
-  column-gap: 2rem;
   margin-top: 0;
+
+  @media (min-width: 1080px) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+  }
 
   article {
     background: #1a1a1a;
@@ -614,6 +618,9 @@ hr {
     top: calc(var(--index) * 1.5rem);
     transform-origin: center top;
     box-shadow: 0 -30px 60px -20px rgba(0, 0, 0, 1);
+    text-wrap: pretty;
+    max-width: 36rem;
+    margin-inline: auto;
 
     &::before, &::after {
       content: '';
@@ -634,6 +641,19 @@ hr {
     p {
       font-size: 1.2rem;
       line-height: 1.33;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      width: fit-content;
+      font-size: 1.1rem;
+      line-height: 1.33;
+      text-align: left;
+
+      li::before { content: '– '; }
+      li + li { margin-top: .4rem; }
     }
 
     h4 {
