@@ -541,7 +541,7 @@ hr {
     }
 
     &:hover img {
-      filter: saturate(.2) brightness(.85);
+      filter: saturate(.6) brightness(1);
     }
 
     a:hover img {
