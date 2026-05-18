@@ -550,7 +550,7 @@ hr {
     }
 
     img {
-      height: 7rem;
+      height: 6rem;
       width: auto;
       transition: filter .3s, transform .3s;
     }
