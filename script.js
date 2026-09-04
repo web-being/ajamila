@@ -57,6 +57,21 @@ lenis.on('virtual-scroll', ({deltaY}) => {
   else slowdown = 1
 });
 
+// Cast portraits are ~1MB and sit far below the fold: attach their sources on approach
+const castObserver = new IntersectionObserver((entries, obs) => {
+  for (const {isIntersecting, target} of entries) {
+    if (!isIntersecting) continue
+    target.querySelectorAll('source[data-src]').forEach(s => (s.src = s.dataset.src, s.removeAttribute('data-src')))
+    target.load()
+    target.play().catch(() => {}) // autoplay may be refused; the poster frame still shows
+    obs.unobserve(target)
+  }
+}, {rootMargin: '400px'})
+
+document.querySelectorAll('#cast video').forEach(v => castObserver.observe(v))
+
+
+
 // Cards stack
 document.querySelectorAll('#philosophy article').forEach((article, index) => {
   const cardRect = article.getBoundingClientRect();
@@ -127,23 +142,25 @@ addAnchorLinks()
 // Make play button
 const trailer = document.getElementById('trailer');
 const playButton = document.getElementById('play');
-// const video = trailer.querySelector('video');
+const player = trailer.querySelector('iframe');
 
 function unfoldTrailer() {
   trailer.classList.remove('folded');
+
+  // the player is ~1MB: fetch it on demand, not on every page load
+  if (!player.src) player.src = player.dataset.src;
 
   lenis.scrollTo(trailer, {
     offset: -window.innerHeight / 2 + trailer.offsetHeight / 2,
     duration: 1,
   });
 
-  // video.play();
   document.getElementById('cta').hidden = true;
 }
 
 function closeTrailer() {
   trailer.classList.add('folded')
-  // video.pause();
+  player.removeAttribute('src'); // stops playback: the panel only collapses, it isn't unmounted
   document.getElementById('cta').hidden = null;
 }
 

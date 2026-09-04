@@ -11,7 +11,7 @@
 * [x] English version
 * [x] Setup domain
 * [x] Hero effect: fire (lighting faces)
-* [ ] Meta informations / SEO
+* [x] Meta informations / SEO
 * [x] Cast fixes
 * [x] Improve stills quality
 * [x] Feedback

@@ -249,11 +249,17 @@ hr {
     }
   }
 
-  h4 {
+  .tagline {
     padding: 2rem 2rem;
+    font-size: 1.928rem;
+    line-height: 1;
     font-variant: small-caps;
     letter-spacing: .108ch;
     /* background: radial-gradient(40% 100% at 50% 0%, #261411 0%, #00000000 100%) center top no-repeat */
+
+    @media (max-width: 640px) {
+      font-size: 1.44rem;
+    }
   }
 
   #characters {
@@ -287,7 +293,7 @@ hr {
   @media (max-width: 640px) {
     overflow: hidden;
 
-    h4 {
+    .tagline {
       padding: 1rem 2rem;
     }
 
@@ -584,8 +590,20 @@ hr {
   }
 
   @media (max-width: 640px) {
-    .awards-grid img {
-      height: 4.5rem;
+    .awards-grid {
+      gap: 1rem;
+
+      a {
+        flex: 0 0 calc(25% - .75rem);
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        height: auto;
+        max-height: clamp(3rem, 14vw, 4.5rem);
+        max-width: 100%;
+      }
     }
   }
 }
