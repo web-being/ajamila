@@ -30,11 +30,11 @@
 * [x] Favicon
 * [x] Feedback 1
 * [x] Playing/pausing scroll bug
-* [ ] Redo quiz with sprae
-* [ ] Add country: Russia, India
-* [ ] English trailer
-* [ ] Complete trailers
-* [ ] Add link to vimeo?
+* [x] Redo quiz with sprae
+* [x] Add country: Russia, India
+* [x] English trailer
+* [x] Complete trailers
+* [x] Add link to vimeo?
 * [ ] Sosumi at the bottom
 * [ ] FAQ about the movie?
   * Themes Explored
@@ -55,5 +55,5 @@
 * [ ] Social media
 * [ ] Coming soon: Watch, release date
 * [ ] Book / buy? (SB)
-* [ ] Festivals
+* [x] Festivals
 * [ ] Correct information (kinopoisk etc)
