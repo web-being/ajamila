@@ -6,8 +6,8 @@
 * [x] ~~Make english trailer~~ Russian with subtitles
 * [x] EN/RU switch
 * [x] Cast block: mobile layout, videos, mb better text
-* [ ] English trailer
-* [ ] 1m length trailer
+* [x] English trailer
+* [x] 1m length trailer
 * [x] English version
 * [x] Setup domain
 * [x] Hero effect: fire (lighting faces)
