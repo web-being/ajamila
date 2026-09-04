@@ -548,17 +548,6 @@
     </ul>
   </section>
 
-  <section id="reflections" class="container">
-    <h2>Reflections</h2>
-    <h4 style="max-width: 540px; margin-bottom: 1rem"><label for="feedback">What
-        resonated with you in the film? Any thoughts or feedback?</label></h4>
-    <form id="feedbackForm" action="mailto:pvs9@yandex.ru?subject=Story%20of%20Ajamila%20movie%20feedback" method="post" style="max-width: 540px; width: 90vw;">
-      <textarea placeholder="Write to us..." id="feedback" rows="3" style="resize: none; overflow: hidden; max-width: 100%; display: block;" oninput="this.style.height='auto'; this.style.height = this.scrollHeight + 'px'"></textarea>
-      <button onclick="openEmailDialog(event)" style="margin-top: 1rem;">✉️
-        Submit</button>
-    </form>
-  </section>
-
   <section id="quiz" class="container"  :scope="{
     total:5, answer:[],
     next(e) {
@@ -644,6 +633,26 @@
     </div>
   </section>
 
+  <section id="reflections" class="container">
+    <h2>Reflections</h2>
+    <h4 style="max-width: 540px; margin-bottom: 1rem"><label for="feedback">What
+        resonated with you in the film? Any thoughts or feedback?</label></h4>
+    <form id="feedbackForm" action="mailto:pvs9@yandex.ru?subject=Story%20of%20Ajamila%20movie%20feedback" method="post" style="max-width: 540px; width: 90vw;">
+      <textarea placeholder="Write to us..." id="feedback" rows="3" style="resize: none; overflow: hidden; max-width: 100%; display: block;" oninput="this.style.height='auto'; this.style.height = this.scrollHeight + 'px'"></textarea>
+      <button onclick="openEmailDialog(event)" style="margin-top: 1rem;">✉️
+        Submit</button>
+    </form>
+  </section>
+
+  <section id="support" class="container">
+    <h2>Support</h2>
+    <h4 style="max-width: 540px; margin: 0 auto 2rem">If the film resonated with you, you can support the project.</h4>
+    <stripe-buy-button
+      buy-button-id="buy_btn_1SWS0wFTHrOCVoeKz3WKNOqk"
+      publishable-key="pk_live_51SWRYKFTHrOCVoeK5Vw6p9tucvIQbhexzKfnKDeG1rTESBSHp2dJI0RuXv4k3II2eq4JSjvuqoqJowRZe24Dps6n00ZKNmpPcE">
+    </stripe-buy-button>
+  </section>
+
   <hr>
 
   <footer id="footer" class="container">
@@ -662,7 +671,7 @@
       <a href="https://youtube.com" target="_blank">YT</a>
       <a href="https://twitter.com" target="_blank">X</a><br> -->
     <!-- </nav> -->
-    <p> <span id="currentYear">2024
+    <p>© <span id="currentYear">2024
         <script>document.currentScript.parentElement.textContent = new Date().getFullYear()</script>
       </span> One More Chance – The Story of Ajamila.</p>
   </footer>

@@ -750,6 +750,7 @@ hr {
 
     img {
       width: calc(100% + 5.4rem);
+      height: auto; /* the height attribute is a presentational hint: without this it wins literally */
       animation: adjust-image linear both;
       animation-timeline: view(x);
     }
@@ -941,6 +942,16 @@ hr {
       outline: none;
       border-color: white;
     }
+  }
+}
+
+#support {
+  /* Stripe paints its button inside a cross-origin iframe, so its colour is out of
+     reach of CSS. A filter is a paint effect and does apply: this turns Stripe's
+     #0096D6 into the terracotta #C24F41 of the film's own palette. */
+  stripe-buy-button {
+    display: block;
+    filter: hue-rotate(165deg) saturate(0.8) brightness(0.85);
   }
 }
 

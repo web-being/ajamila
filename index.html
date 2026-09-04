@@ -547,18 +547,6 @@
     </ul>
   </section>
 
-  <section id="reflections" class="container">
-    <h2>Осмысление</h2>
-    <h4 style="max-width: 540px; margin-bottom: 1rem"><label for="feedback">Что
-        вам откликнулось в
-        фильме? Какие мысли или фидбек?</label></h4>
-    <form id="feedbackForm" action="mailto:pvs9@yandex.ru?subject=%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F%20%D0%90%D0%B4%D0%B6%D0%B0%D0%BC%D0%B8%D0%BB%D1%8B%3A%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B2%D1%8F%D0%B7%D1%8C"
-      method="post" style="max-width: 540px; width: 90vw;">
-      <textarea placeholder="Напишите нам..." id="feedback" rows="3" style="resize: none; overflow: hidden; max-width: 100%; display: block;" oninput="this.style.height='auto'; this.style.height = this.scrollHeight + 'px'"></textarea>
-      <button onclick="openEmailDialog(event)" style="margin-top: 1rem;">✉️  Отправить</button>
-    </form>
-  </section>
-
   <section id="quiz" class="container" :scope="{
     total:5, answer:[],
     next(e) {
@@ -643,6 +631,27 @@
       </div>
       <button style="margin: 2rem auto;" :onclick="e => answer.length = 0">Пройти снова</button>
     </div>
+  </section>
+
+  <section id="reflections" class="container">
+    <h2>Осмысление</h2>
+    <h4 style="max-width: 540px; margin-bottom: 1rem"><label for="feedback">Что
+        вам откликнулось в
+        фильме? Какие мысли или фидбек?</label></h4>
+    <form id="feedbackForm" action="mailto:pvs9@yandex.ru?subject=%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F%20%D0%90%D0%B4%D0%B6%D0%B0%D0%BC%D0%B8%D0%BB%D1%8B%3A%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B2%D1%8F%D0%B7%D1%8C"
+      method="post" style="max-width: 540px; width: 90vw;">
+      <textarea placeholder="Напишите нам..." id="feedback" rows="3" style="resize: none; overflow: hidden; max-width: 100%; display: block;" oninput="this.style.height='auto'; this.style.height = this.scrollHeight + 'px'"></textarea>
+      <button onclick="openEmailDialog(event)" style="margin-top: 1rem;">✉️  Отправить</button>
+    </form>
+  </section>
+
+  <section id="support" class="container">
+    <h2>Поддержать</h2>
+    <h4 style="max-width: 540px; margin: 0 auto 2rem">Если фильм вам откликнулся, вы можете поддержать проект.</h4>
+    <stripe-buy-button
+      buy-button-id="buy_btn_1SWS0wFTHrOCVoeKz3WKNOqk"
+      publishable-key="pk_live_51SWRYKFTHrOCVoeK5Vw6p9tucvIQbhexzKfnKDeG1rTESBSHp2dJI0RuXv4k3II2eq4JSjvuqoqJowRZe24Dps6n00ZKNmpPcE">
+    </stripe-buy-button>
   </section>
 
   <hr>

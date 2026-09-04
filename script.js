@@ -91,6 +91,19 @@ document.querySelectorAll('#philosophy article').forEach((article, index) => {
 
 
 
+// Stripe's button is third-party and sits at the very bottom: load it on approach
+const buyButton = document.querySelector('stripe-buy-button')
+
+if (buyButton) new IntersectionObserver((entries, obs) => {
+  if (!entries.some(e => e.isIntersecting)) return
+  document.head.append(Object.assign(document.createElement('script'), {
+    src: 'https://js.stripe.com/v3/buy-button.js', async: true
+  }))
+  obs.disconnect()
+}, {rootMargin: '600px'}).observe(buyButton)
+
+
+
 // Handle h2 sticky class
 const h2s = document.querySelectorAll('section > h2');
 
