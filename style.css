@@ -391,21 +391,28 @@ hr {
 }
 
 #lang-container {
-  position: absolute;
-  top: 2.5rem;
+  position: fixed;
+  top: 1.1rem;
   right: 0;
-  left: 0;
-  display: flex;
-  justify-content: flex-end;
-  z-index: 1;
+  z-index: 3;
   pointer-events: none;
-  padding-right: calc(50% - 540px);
 
   #lang {
     pointer-events: auto;
+    writing-mode: vertical-rl;
     opacity: .25;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-style: italic;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    a {
+      display: block;
+      padding: 1rem .5rem;
+    }
 
     .desktop-text {
       display: inline;
@@ -415,14 +422,7 @@ hr {
     }
   }
 
-  @media (max-width: 1100px) {
-    padding-right: 2rem;
-  }
-
   @media (max-width: 640px) {
-    top: 1rem;
-    padding-right: 1rem;
-
     #lang {
       font-size: 1rem;
 
@@ -533,7 +533,7 @@ hr {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem 3rem;
+    gap: 2.5rem;
     max-width: 100%;
 
     a {
@@ -550,7 +550,7 @@ hr {
     }
 
     img {
-      height: 6rem;
+      height: 5.25rem;
       width: auto;
       transition: filter .3s, transform .3s;
     }
@@ -703,6 +703,8 @@ hr {
 #stills {
   max-width: none;
   margin: 2rem 0;
+  position: relative;
+  z-index: 4;
 
   #frames {
     --dx: 1;
